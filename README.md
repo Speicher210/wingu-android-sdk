@@ -2,7 +2,7 @@
 
 wingu SDK requires `minSdkVersion >= 21`.
 
-### In `build.gradle` of you application module add this:
+### In `build.gradle` of your application module add this:
 
 ```
 android {
@@ -31,12 +31,14 @@ Note: to use Spotify you need to download the [Spotify Android SDK](https://deve
 
 ### (Optional) Add Google API key
 
-To use the Location component with Google Maps, add your Google API key in `AndroidManifest.xml` in `<application>`:
+To use the Location component with Google Maps, add your Google API key in `AndroidManifest.xml`:
 
 ```
-<meta-data
-      android:name="com.google.android.geo.API_KEY"
-      android:value="TODO_PUT_YOUR_KEY"/>
+<application>
+  <meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="TODO_PUT_YOUR_KEY"/>
+</application>
 ```
 
 ### Initialize the SDK

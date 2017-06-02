@@ -46,16 +46,10 @@ To use the Location component with Google Maps, add your Google API key in `Andr
 In your `Application` subclass add this:
 
 ```
-private static WinguSDK winguSDK;
-
-public static WinguSDK getWinguSDK() {
-  return winguSDK;
-}
-
 @Override
 public void onCreate() {
   super.onCreate();
-  winguSDK = WinguSDKBuilder.with(this)
+  WinguSDKBuilder.with(this)
     .registerComponent(SpotifyWinguComponent.spec(BuildConfig.SPOTIFY_CLIENT_ID, BuildConfig.SPOTIFY_BACK_URL)) // optional
     .registerComponent(VideoWinguComponent.spec(R.string.google_api_key)) // optional
     .build();
@@ -118,7 +112,7 @@ private void listenForNearbyChannels() {
     channelsSubscription.unsubscribe();
   }
 
-  channelsSubscription = App.getWinguSDK().getNearbyChannelObserver()
+  channelsSubscription = WinguSDK.getInstance().getNearbyChannelObserver()
       .getChannelEvents()
       .subscribe(new Action1<ChannelEvents>() {
         @Override

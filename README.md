@@ -21,13 +21,10 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.Speicher210.wingu-android-sdk:sdk:0.2.0'
-  compile 'com.github.Speicher210.wingu-android-sdk:component-spotify:0.2.0' // optional
-  compile 'com.github.Speicher210.wingu-android-sdk:component-video:0.2.0' // optional
+  compile 'com.github.Speicher210.wingu-android-sdk:sdk:0.3.0'
+  compile 'com.github.Speicher210.wingu-android-sdk:component-video:0.3.0' // optional
 }
 ```
-
-Note: to use Spotify you need to download the [Spotify Android SDK](https://developer.spotify.com/technologies/spotify-android-sdk/) (both playback and auth libraries).
 
 ### (Optional) Add Google API key
 
@@ -50,7 +47,6 @@ In your `Application` subclass add this:
 public void onCreate() {
   super.onCreate();
   WinguSDKBuilder.with(this)
-    .registerComponent(SpotifyWinguComponent.spec(BuildConfig.SPOTIFY_CLIENT_ID, BuildConfig.SPOTIFY_BACK_URL)) // optional
     .registerComponent(VideoWinguComponent.spec(R.string.google_api_key)) // optional
     .build();
 }

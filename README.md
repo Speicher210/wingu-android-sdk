@@ -1,8 +1,14 @@
-# wingu-android-sdk quickstart
+# wingu-android-sdk
+
+## Overview
 
 wingu SDK requires `minSdkVersion >= 21`.
 
-### In `build.gradle` of your application module add this:
+[javadoc](https://speicher210.github.io/wingu-android-sdk/javadoc/)
+
+## Quickstart
+
+#### In `build.gradle` of your application module add this:
 
 ```
 android {
@@ -26,7 +32,7 @@ dependencies {
 }
 ```
 
-### (Optional) Add Google API key
+#### (Optional) Add Google API key
 
 To use the Location component with Google Maps, add your Google API key in `AndroidManifest.xml`:
 
@@ -38,7 +44,7 @@ To use the Location component with Google Maps, add your Google API key in `Andr
 </application>
 ```
 
-### Initialize the SDK
+#### Initialize the SDK
 
 In your `Application` subclass add this:
 
@@ -52,7 +58,7 @@ public void onCreate() {
 }
 ```
 
-### Prerequisites
+#### Prerequisites
 
 To be able to listen for nearby channels you need to have:
 
@@ -95,7 +101,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-### Listening for nearby channels
+#### Listening for nearby channels
 
 Once you have all the prerequisites, you can listen for nearby channel events.
 
@@ -133,7 +139,7 @@ private void stopListeningForNearbyChannels() {
 }
 ```
 
-### Displaying a channel
+#### Displaying a channel
 
 To display channel’s contents, use `ChannelDetailsFragment`:
 

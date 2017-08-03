@@ -22,6 +22,7 @@ android {
 }
 
 repositories {
+  maven { url "https://maven.google.com" }
   maven { url "https://jitpack.io" }
   maven { url "https://github.com/Speicher210/wingu-android-sdk/raw/master/releases" }
 }

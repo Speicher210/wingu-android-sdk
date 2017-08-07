@@ -28,8 +28,8 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.Speicher210.wingu-android-sdk:sdk:0.3.0'
-  compile 'com.github.Speicher210.wingu-android-sdk:component-video:0.3.0' // optional
+  compile 'com.github.Speicher210.wingu-android-sdk:sdk:0.3.1'
+  compile 'com.github.Speicher210.wingu-android-sdk:component-video:0.3.1' // optional
 }
 ```
 
@@ -53,7 +53,7 @@ In your `Application` subclass add this:
 @Override
 public void onCreate() {
   super.onCreate();
-  WinguSDKBuilder.with(this)
+  WinguSDKBuilder.with(this, YOUR_API_KEY)
     .registerComponent(VideoWinguComponent.spec(R.string.google_api_key)) // optional
     .build();
 }

@@ -3,7 +3,7 @@
   <groupId>com.github.Speicher210.wingu-android-sdk</groupId>
   <artifactId>component-video</artifactId>
   <versioning>
-    <release>0.3.0</release>
-    <versions><version>0.2.0</version><version>0.3.0</version></versions><lastUpdated>20170629122343</lastUpdated>
+    <release>0.3.1</release>
+    <versions><version>0.2.0</version><version>0.3.0</version><version>0.3.1</version></versions><lastUpdated>20170807132112</lastUpdated>
   </versioning>
 </metadata>

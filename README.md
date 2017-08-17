@@ -156,7 +156,7 @@ ChannelDetailsFragment fragment = ChannelDetailsFragment.newInstance(channelKey)
 Android Developers @ wingu AG
 
 
-[Mateusz](https://github.com/armatys)
+[Mateusz](https://github.com/armatys)  
 [Wiktor](https://github.com/wingu-wiktor)
 
 ## License

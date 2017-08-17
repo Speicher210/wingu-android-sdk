@@ -161,4 +161,4 @@ Android Developers @ wingu AG
 
 ## License
 
-winguSDK-iOS is available under the Apache 2.0 license. See the LICENSE file for more info.
+winguSDK-android is available under the Apache 2.0 license. See the LICENSE file for more info.

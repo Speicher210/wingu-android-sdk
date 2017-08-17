@@ -1,5 +1,8 @@
 # wingu-android-sdk
 
+![Wingu](https://pbs.twimg.com/profile_banners/4774303042/1452516691/1500x500)
+wingu-android-sdk is an  SDK for [wingu.de](www.wingu.de) service. This framework will allow to connect with beacons and geofences nearby user location. 
+
 ## Overview
 
 wingu SDK requires `minSdkVersion >= 21`.
@@ -148,3 +151,14 @@ To display channel’s contents, use `ChannelDetailsFragment`:
 ChannelKey channelKey = ChannelKey.from(channel);
 ChannelDetailsFragment fragment = ChannelDetailsFragment.newInstance(channelKey);
 ```
+## Authors
+
+Android Developers @ wingu AG
+
+
+[Mateusz](https://github.com/armatys)
+[Wiktor](https://github.com/wingu-wiktor)
+
+## License
+
+winguSDK-iOS is available under the Apache 2.0 license. See the LICENSE file for more info.

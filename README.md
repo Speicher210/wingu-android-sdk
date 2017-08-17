@@ -151,6 +151,9 @@ To display channel’s contents, use `ChannelDetailsFragment`:
 ChannelKey channelKey = ChannelKey.from(channel);
 ChannelDetailsFragment fragment = ChannelDetailsFragment.newInstance(channelKey);
 ```
+## Demo App
+[Demo app](https://github.com/Speicher210/wingu-sdk-android-demoapp)
+
 ## Authors
 
 Android Developers @ wingu AG

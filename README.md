@@ -15,6 +15,13 @@ wingu SDK requires `minSdkVersion >= 21`.
 
 ```
 android {
+  compileSdkVersion 26
+
+  compileOptions {
+    sourceCompatibility 1.8
+    targetCompatibility 1.8
+  }
+
   dataBinding {
     enabled true // data binding is required to display the contents of a channel
   }

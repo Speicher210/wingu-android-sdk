@@ -22,10 +22,6 @@ android {
     targetCompatibility 1.8
   }
 
-  dataBinding {
-    enabled true // data binding is required to display the contents of a channel
-  }
-
   defaultConfig {
     multiDexEnabled true
   }

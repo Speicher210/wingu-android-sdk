@@ -41,7 +41,7 @@ dependencies {
 }
 ```
 
-If you are using Support Libraries, Google Play Services or have issues with dependencies, read [dependency management](docs/dependency-management.md).
+If you are using Support Libraries, Google Play Services or have issues with dependencies, read [dependency management](./docs/dependency-management.md).
 
 #### (Optional) Add Google API key
 

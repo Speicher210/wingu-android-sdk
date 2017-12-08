@@ -4,7 +4,7 @@ If you are already using a library that is also used by wingu sdk, yo can overri
 
 This is especially useful and __recommended__ if you are using Support Libraries or Google Play Services, to make sure that both your app and wingu sdk use the same versions.
 
-See [full list of wingu dependencies](releases/com/github/Speicher210/wingu-android-sdk/bom/1.0.0/bom-1.0.0.pom) which you can override.
+See [full list of wingu dependencies](../releases/com/github/Speicher210/wingu-android-sdk/bom/1.0.0/bom-1.0.0.pom) which you can override.
 
 ### Overriding a library version
 
@@ -29,6 +29,12 @@ ext {
 Then apply the override:
 
 ```
+buildscript {
+    repositories {
+        maven { url "https://github.com/Speicher210/wingu-android-sdk/raw/master/releases" }
+    }
+}
+
 dependencyManagement {
     imports {
         mavenBom("com.github.Speicher210.wingu-android-sdk:bom:${winguSdkVersion}") {

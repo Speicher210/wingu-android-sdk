@@ -41,6 +41,8 @@ dependencies {
 }
 ```
 
+If you are using Support Libraries, Google Play Services or have issues with dependencies, read [dependency management](docs/dependency-management.md).
+
 #### (Optional) Add Google API key
 
 To use the Location component with Google Maps, add your Google API key in `AndroidManifest.xml`:
@@ -87,7 +89,10 @@ protected void onStart() {
   if (PrerequisitesChecker.checkWithDefaultDialogs(this, WINGU_SDK_PREREQUISITES_REQUEST)) {
     // All prerequisites are met
     listenForNearbyChannels();
-  } // otherwise, we show dialogs to resolve any issues, and return results in onActivityResult
+  }
+  // if `checkWithDefaultDialogs` above returned `false`,
+  // dialogs are shown to resolve any issues,
+  // and results are returned in `onActivityResult`
 }
 
 @Override

@@ -5,7 +5,7 @@ wingu-android-sdk is an  SDK for [wingu.de](www.wingu.de) service. This framewor
 
 ## Overview
 
-wingu SDK requires `minSdkVersion >= 21`.
+wingu SDK requires `minSdkVersion >= 21` and `targetSdkVersion <= 25`.
 
 [javadoc](https://speicher210.github.io/wingu-android-sdk/javadoc/)
 
@@ -23,6 +23,8 @@ android {
   }
 
   defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 25
     multiDexEnabled true
   }
 }

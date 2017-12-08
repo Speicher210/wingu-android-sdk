@@ -20,7 +20,7 @@ Optionally, you can define library versions separately to reuse them later in yo
 
 ```
 ext {
-	playServicesVersion = '11.6.0'
+    playServicesVersion = '11.6.0'
     supportLibsVersion = '26.1.0'
     winguSdkVersion = '1.0.0'
 }
@@ -39,7 +39,7 @@ dependencyManagement {
     imports {
         mavenBom("com.github.Speicher210.wingu-android-sdk:bom:${winguSdkVersion}") {
             bomProperties([
-            		'com.google.android.gms.version': playServicesVersion,
+                    'com.google.android.gms.version': playServicesVersion,
                     'com.android.support.version': supportLibsVersion
             ])
         }

@@ -2,7 +2,7 @@
 
 If you are already using a library that is also used by wingu sdk, yo can override a version number of any transitive dependency of wingu, to resolve any potential conflicts. For example, if you are using `com.google.android.gms:play-services-gcm:11.6.0`, but wingu sdk uses `com.google.android.gms:play-services-maps:11.4.0`, your project may not compile.
 
-This is especially useful and __recommended__ if you are using Support Libraries or Google Play Services, to make sure that both your app and wingu sdk use the same versions.
+This is especially useful and __recommended__ if you are using __Kotlin__ standard library, __Support Libraries__ or __Google Play Services__, to make sure that both your app and wingu sdk use the same versions.
 
 See [full list of wingu dependencies](../releases/com/github/Speicher210/wingu-android-sdk/bom/1.0.0/bom-1.0.0.pom) which you can override.
 
@@ -20,6 +20,8 @@ Optionally, you can define library versions separately to reuse them later in yo
 
 ```
 ext {
+    // adjust version numbers as needed by your project
+    kotlinVersion = '1.2.30'
     playServicesVersion = '11.6.0'
     supportLibsVersion = '26.1.0'
     winguSdkVersion = '1.0.0'
@@ -40,7 +42,8 @@ dependencyManagement {
         mavenBom("com.github.Speicher210.wingu-android-sdk:bom:${winguSdkVersion}") {
             bomProperties([
                     'com.google.android.gms.version': playServicesVersion,
-                    'com.android.support.version': supportLibsVersion
+                    'com.android.support.version': supportLibsVersion,
+                    'org.jetbrains.kotlin.version': kotlinVersion
             ])
         }
     }

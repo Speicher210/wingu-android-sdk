@@ -17,11 +17,6 @@ wingu SDK requires `minSdkVersion >= 21` and `targetSdkVersion <= 25`.
 android {
   compileSdkVersion 26
 
-  compileOptions {
-    sourceCompatibility 1.8
-    targetCompatibility 1.8
-  }
-
   defaultConfig {
     minSdkVersion 21
     targetSdkVersion 25
@@ -41,44 +36,44 @@ dependencies {
 }
 ```
 
-If you are using Support Libraries, Google Play Services or have issues with dependencies, read [dependency management](./docs/dependency-management.md).
-
-#### (Optional) Add Google API key
-
-To use the Location component with Google Maps, add your Google API key in `AndroidManifest.xml`:
-
-```
-<application>
-  <meta-data
-    android:name="com.google.android.geo.API_KEY"
-    android:value="TODO_PUT_YOUR_KEY"/>
-</application>
-```
+If you are using __Kotlin__ standard library, __Support Libraries__, __Google Play Services__ or have issues with dependencies, read [dependency management](./docs/dependency-management.md).
 
 #### Initialize the SDK
 
 In your `Application` subclass add this:
 
 ```
-@Override
-public void onCreate() {
-  super.onCreate();
-  WinguSDKBuilder.with(this, YOUR_API_KEY)
-    .registerComponent(VideoWinguComponent.spec(R.string.google_api_key)) // optional
-    .build();
+public class App extends Application {
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
+      .registerComponent(LocationWinguComponent.spec(new PlainString(your_google_api_key), new PlainString(optional_url_signing_secret))) // optional
+      .registerComponent(VideoWinguComponent.spec(new PlainString(your_google_api_key))) // optional
+      .build();
+  }
 }
 ```
 
+#### Location (map) and Video components
+
+To use the Location and Video components, you need to obtain Google API key.
+You can use the same key for both Location and Video, provided that "Google Static Maps API" and "YouTube Data API v3" are enabled.
+
+Optionally, for Location component you can provide a URL signing secret, which tags requests to Google Static Maps API with a higher degree of security and is required if you exceed the free daily quota.
+
+For more information go to [Static Maps API Key and Signature](https://developers.google.com/maps/documentation/static-maps/get-api-key) and [YouTube Android Quickstart](https://developers.google.com/youtube/v3/quickstart/android).
+
 #### Prerequisites
 
-To be able to listen for nearby channels you need to have:
+To be able to listen for nearby channels (iBeacons and geofences) you need to have:
 
 - runtime LOCATION permission (on Android 6+; either ACCESS_COARSE_LOCATION or ACCESS_FINE_LOCATION)
 - bluetooth on
 - location services on
 - Google Play services
 
-You can handle this on your own, or use a `PrerequisitesChecker` class
+You can handle this on your own, or use a `PrerequisitesChecker` class:
 
 ```
 private static final int WINGU_SDK_PREREQUISITES_REQUEST = 535;

@@ -11,7 +11,7 @@ wingu SDK requires `minSdkVersion >= 21` and `targetSdkVersion <= 25`.
 
 ## Quickstart
 
-#### In `build.gradle` of your application module add this:
+### In `build.gradle` of your application module add this:
 
 ```
 android {
@@ -38,7 +38,7 @@ dependencies {
 
 If you are using __Kotlin__ standard library, __Support Libraries__, __Google Play Services__ or have issues with dependencies, read [dependency management](./docs/dependency-management.md).
 
-#### Initialize the SDK
+### Initialize the SDK
 
 In your `Application` subclass add this:
 
@@ -48,23 +48,54 @@ public class App extends Application {
   public void onCreate() {
     super.onCreate();
     WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
-      .registerComponent(LocationWinguComponent.spec(new PlainString(your_google_api_key), new PlainString(optional_url_signing_secret))) // optional
+      .registerComponent(LocationWinguComponent.spec..) // optional
       .registerComponent(VideoWinguComponent.spec(new PlainString(your_google_api_key))) // optional
       .build();
   }
 }
 ```
 
-#### Location (map) and Video components
+### Location (map) component
 
-To use the Location and Video components, you need to obtain Google API key.
-You can use the same key for both Location and Video, provided that "Google Static Maps API" and "YouTube Data API v3" are enabled.
+There are two ways in which the location component is rendered.
 
-Optionally, for Location component you can provide a URL signing secret, which tags requests to Google Static Maps API with a higher degree of security and is required if you exceed the free daily quota.
+#### Option 1 - static maps
 
-For more information go to [Static Maps API Key and Signature](https://developers.google.com/maps/documentation/static-maps/get-api-key) and [YouTube Android Quickstart](https://developers.google.com/youtube/v3/quickstart/android).
+By default, the map is rendered using "Google Static Maps API" without Google API key. This is fine for development, but for production you should provide your own Google API key:
 
-#### Prerequisites
+```
+WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
+  .registerComponent(LocationWinguComponent.specStaticMaps(new PlainString(your_google_api_key)))
+  //...
+```
+
+You can also provide a URL signing secret which tags requests to Google Static Maps API with a higher degree of security and is required if you exceed the free daily quota.
+
+However, when using static maps, it's not really possible to restrict the usage of your Google API key.
+
+[Static Maps API Quickstart](https://developers.google.com/maps/documentation/static-maps/get-api-key)
+
+#### Option 2 - map view
+
+If you want to limit the usage of your Google API key to your app's package ID ([more about API key restrictions](https://developers.google.com/maps/documentation/android-api/signup#restrict-key)), use the "Maps Android API" variant:
+
+```
+WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
+  .registerComponent(LocationWinguComponent.specMapView())
+  //...
+```
+
+Make sure that Google API key is added to your `AndroidManifest.xml` file, otherwise the map will not be displayed.
+
+[Maps Android API Quickstart](https://developers.google.com/maps/documentation/android-api/signup).
+
+### Video component
+
+To use Video component, you need to obtain Google API key, making sure that "YouTube Data API v3" is enabled.
+
+For more information go to [YouTube Android Quickstart](https://developers.google.com/youtube/v3/quickstart/android).
+
+### Prerequisites
 
 To be able to listen for nearby channels (iBeacons and geofences) you need to have:
 
@@ -110,7 +141,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-#### Listening for nearby channels
+### Listening for nearby channels
 
 Once you have all the prerequisites, you can listen for nearby channel events.
 
@@ -148,7 +179,7 @@ private void stopListeningForNearbyChannels() {
 }
 ```
 
-#### Displaying a channel
+### Displaying a channel
 
 To display channel’s contents, use `ChannelDetailsFragment`:
 

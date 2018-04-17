@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LocationWinguComponent - wingu-android-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.ui.component.location</a>&nbsp;/&nbsp;<a href=".">LocationWinguComponent</a><br/>
+<br/>
+<h1>LocationWinguComponent</h1>
+<code><span class="keyword">object </span><span class="identifier">LocationWinguComponent</span></code>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="spec-map-view.html">specMapView</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">specMapView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../de.wingu.sdk.data.api.model.components/-component-spec/index.html"><span class="identifier">ComponentSpec</span></a></code>
+<p>Returns specification for location component.
+The map is rendered using Maps Android API (<a href="#">com.google.android.gms.maps.MapView</a>).
+This is slower than <a href="spec-static-maps.html">specStaticMaps</a>, but you can restrict the usage of your Google API key to your app's package id.
+Google API key needs to be added to <code>AndroidManifest.xml</code> file, otherwise the map is not displayed.
+<a href="https://developers.google.com/maps/documentation/android-api/signup">Get Google API Key</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="spec-static-maps.html">specStaticMaps</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">specStaticMaps</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.component.location.LocationWinguComponent$specStaticMaps(de.wingu.sdk.utils.StringRef, de.wingu.sdk.utils.StringRef)/googleApiKey">googleApiKey</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.utils/-string-ref/index.html"><span class="identifier">StringRef</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.ui.component.location.LocationWinguComponent$specStaticMaps(de.wingu.sdk.utils.StringRef, de.wingu.sdk.utils.StringRef)/urlSigningSecret">urlSigningSecret</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.utils/-string-ref/index.html"><span class="identifier">StringRef</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../../de.wingu.sdk.data.api.model.components/-component-spec/index.html"><span class="identifier">ComponentSpec</span></a></code>
+<p>Returns specification for location component.
+The map is rendered using Google Static Maps API.
+This is faster than using <a href="spec-map-view.html">specMapView</a>, but it's not possible to restrict the usage of your Google API key.
+<a href="https://developers.google.com/maps/documentation/static-maps/get-api-key">Get Google API Key</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,263 @@
+public final class de.wingu.blescanner.ibeacon.model.IbeaconDevice extends java.lang.Object implements de.wingu.blescanner.ibeacon.model.Ibeacon
+public void de.wingu.blescanner.ibeacon.model.IbeaconDevice.<init>(major: int, minor: int, uuid: java.util.UUID, name: java.lang.String, rssi: int, timestampNanos: long, txPower: int)
+public static final class de.wingu.blescanner.ibeacon.model.IbeaconDevice.Companion extends java.lang.Object
+public static final de.wingu.blescanner.ibeacon.model.IbeaconDevice.Companion
+public final double de.wingu.blescanner.ibeacon.model.IbeaconDevice.Companion.calculateDistance$blescanner_publicRelease(rssi: int, txPower: int, envFactor: int)
+public final int de.wingu.blescanner.ibeacon.model.IbeaconDevice.component1()
+public final int de.wingu.blescanner.ibeacon.model.IbeaconDevice.component2()
+public final java.util.UUID de.wingu.blescanner.ibeacon.model.IbeaconDevice.component3()
+public final java.lang.String de.wingu.blescanner.ibeacon.model.IbeaconDevice.component4()
+public final int de.wingu.blescanner.ibeacon.model.IbeaconDevice.component5()
+public final long de.wingu.blescanner.ibeacon.model.IbeaconDevice.component6()
+public final int de.wingu.blescanner.ibeacon.model.IbeaconDevice.component7()
+public final de.wingu.blescanner.ibeacon.model.IbeaconDevice de.wingu.blescanner.ibeacon.model.IbeaconDevice.copy(major: int, minor: int, uuid: java.util.UUID, name: java.lang.String, rssi: int, timestampNanos: long, txPower: int)
+public boolean de.wingu.blescanner.ibeacon.model.IbeaconDevice.equals(other: java.lang.Object)
+public java.lang.String de.wingu.blescanner.ibeacon.model.IbeaconDevice.formattedUUID()
+public final double de.wingu.blescanner.ibeacon.model.IbeaconDevice.getDistance()
+public int de.wingu.blescanner.ibeacon.model.IbeaconDevice.getMajor()
+public int de.wingu.blescanner.ibeacon.model.IbeaconDevice.getMinor()
+public final java.lang.String de.wingu.blescanner.ibeacon.model.IbeaconDevice.getName()
+public final int de.wingu.blescanner.ibeacon.model.IbeaconDevice.getRssi()
+public final long de.wingu.blescanner.ibeacon.model.IbeaconDevice.getTimestampNanos()
+public final int de.wingu.blescanner.ibeacon.model.IbeaconDevice.getTxPower()
+public final java.util.UUID de.wingu.blescanner.ibeacon.model.IbeaconDevice.getUuid()
+public int de.wingu.blescanner.ibeacon.model.IbeaconDevice.hashCode()
+public java.lang.String de.wingu.blescanner.ibeacon.model.IbeaconDevice.toString()
+public abstract class de.wingu.sdk.WinguSDK extends java.lang.Object
+public void de.wingu.sdk.WinguSDK.<init>()
+public static final class de.wingu.sdk.WinguSDK.Companion extends java.lang.Object
+public static final de.wingu.sdk.WinguSDK.Companion
+public final de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDK.Companion.getInstance()
+public static final de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDK.getInstance()
+public abstract de.wingu.sdk.utils.NearbyChannelObserver de.wingu.sdk.WinguSDK.getNearbyChannelObserver()
+public abstract class de.wingu.sdk.WinguSDKBuilder extends java.lang.Object
+public void de.wingu.sdk.WinguSDKBuilder.<init>(sdkConfiguration: de.wingu.sdk.SDKConfiguration)
+public static final class de.wingu.sdk.WinguSDKBuilder.Companion extends java.lang.Object
+public static final de.wingu.sdk.WinguSDKBuilder.Companion
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.Companion.with(application: android.app.Application, apiKey: java.lang.String)
+public abstract de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDKBuilder.build()
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.channelNotificationsConfig(configFactory: java.util.concurrent.Callable<de.wingu.sdk.notification.ChannelNotificationsConfig>)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.geofenceBackgroundScan(enabled: boolean)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.geofenceForegroundScan(enabled: boolean)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.iBeaconBackgroundScan(enabled: boolean)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.iBeaconForegroundScan(enabled: boolean)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.loggingLevel(level: java.util.logging.Level)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.registerComponent(componentSpec: de.wingu.sdk.data.api.model.components.ComponentSpec)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.staging(isStaging: boolean)
+public static final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.with(application: android.app.Application, apiKey: java.lang.String)
+public abstract class de.wingu.sdk.data.api.model.Channel extends java.lang.Object implements de.wingu.sdk.data.Openable, android.os.Parcelable
+public void de.wingu.sdk.data.api.model.Channel.<init>()
+public static final enum de.wingu.sdk.data.api.model.Channel.ChannelType extends java.lang.Enum<de.wingu.sdk.data.api.model.Channel.ChannelType>
+public static final de.wingu.sdk.data.api.model.Channel.ChannelType.BEACON
+public static final de.wingu.sdk.data.api.model.Channel.ChannelType.GEOFENCE
+public static final de.wingu.sdk.data.api.model.Channel.ChannelType.NFC
+public static final de.wingu.sdk.data.api.model.Channel.ChannelType.QRCODE
+public final java.lang.String de.wingu.sdk.data.api.model.Channel.ChannelType.getCode$sdk_publicRelease()
+public java.lang.String de.wingu.sdk.data.api.model.Channel.ChannelType.toString()
+public static de.wingu.sdk.data.api.model.Channel.ChannelType de.wingu.sdk.data.api.model.Channel.ChannelType.valueOf(name: java.lang.String)
+public static de.wingu.sdk.data.api.model.Channel.ChannelType[] de.wingu.sdk.data.api.model.Channel.ChannelType.values()
+public static final class de.wingu.sdk.data.api.model.Channel.ChannelTypeCode extends java.lang.Object
+public static final de.wingu.sdk.data.api.model.Channel.ChannelTypeCode.CODE_BEACON
+public static final de.wingu.sdk.data.api.model.Channel.ChannelTypeCode.CODE_GEOFENCE
+public static final de.wingu.sdk.data.api.model.Channel.ChannelTypeCode.CODE_NFC
+public static final de.wingu.sdk.data.api.model.Channel.ChannelTypeCode.CODE_QRCODE
+public static final de.wingu.sdk.data.api.model.Channel.ChannelTypeCode.INSTANCE
+public static final class de.wingu.sdk.data.api.model.Channel.Companion extends java.lang.Object
+public static final de.wingu.sdk.data.api.model.Channel.Companion
+public static final de.wingu.sdk.data.api.model.Channel.VERSION
+public abstract de.wingu.sdk.data.api.model.Channel.ChannelType de.wingu.sdk.data.api.model.Channel.getChannelType()
+public abstract de.wingu.sdk.data.api.model.Content de.wingu.sdk.data.api.model.Channel.getContent()
+public abstract java.lang.String de.wingu.sdk.data.api.model.Channel.getId()
+public abstract java.lang.String de.wingu.sdk.data.api.model.Channel.getName()
+public final enum de.wingu.sdk.data.api.model.ChannelEventType extends java.lang.Enum<de.wingu.sdk.data.api.model.ChannelEventType>
+public static final de.wingu.sdk.data.api.model.ChannelEventType.DISCOVERED
+public static final de.wingu.sdk.data.api.model.ChannelEventType.LOST
+public static final de.wingu.sdk.data.api.model.ChannelEventType.UPDATED
+public static de.wingu.sdk.data.api.model.ChannelEventType de.wingu.sdk.data.api.model.ChannelEventType.valueOf(name: java.lang.String)
+public static de.wingu.sdk.data.api.model.ChannelEventType[] de.wingu.sdk.data.api.model.ChannelEventType.values()
+public final class de.wingu.sdk.data.api.model.ChannelEvents extends java.lang.Object
+public void de.wingu.sdk.data.api.model.ChannelEvents.<init>(eventType: de.wingu.sdk.data.api.model.ChannelEventType, channels: java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel>)
+public boolean de.wingu.sdk.data.api.model.ChannelEvents.equals(other: java.lang.Object)
+public final java.util.Collection<de.wingu.sdk.data.api.model.Channel> de.wingu.sdk.data.api.model.ChannelEvents.getChannels()
+public final de.wingu.sdk.data.api.model.ChannelEventType de.wingu.sdk.data.api.model.ChannelEvents.getEventType()
+public int de.wingu.sdk.data.api.model.ChannelEvents.hashCode()
+public java.lang.String de.wingu.sdk.data.api.model.ChannelEvents.toString()
+public abstract class de.wingu.sdk.data.api.model.ChannelKey extends java.lang.Object implements android.os.Parcelable
+public void de.wingu.sdk.data.api.model.ChannelKey.<init>()
+public static final class de.wingu.sdk.data.api.model.ChannelKey.Companion extends java.lang.Object
+public static final de.wingu.sdk.data.api.model.ChannelKey.Companion
+public final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.Companion.from(channel: de.wingu.sdk.data.api.model.Channel)
+public final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.Companion.from(geofenceChannel: de.wingu.sdk.data.api.model.GeofenceChannel)
+public final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.Companion.from(iBeaconChannel: de.wingu.sdk.data.api.model.IBeaconChannel)
+public final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.Companion.from(iBeacon: de.wingu.blescanner.ibeacon.model.Ibeacon)
+public final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.Companion.from(qrcodeChannel: de.wingu.sdk.data.api.model.QrcodeChannel)
+public final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.Companion.from(nfcChannel: de.wingu.sdk.data.api.model.NfcChannel)
+public static final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.from(channel: de.wingu.sdk.data.api.model.Channel)
+public static final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.from(geofenceChannel: de.wingu.sdk.data.api.model.GeofenceChannel)
+public static final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.from(iBeaconChannel: de.wingu.sdk.data.api.model.IBeaconChannel)
+public static final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.from(iBeacon: de.wingu.blescanner.ibeacon.model.Ibeacon)
+public static final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.from(qrcodeChannel: de.wingu.sdk.data.api.model.QrcodeChannel)
+public static final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.from(nfcChannel: de.wingu.sdk.data.api.model.NfcChannel)
+public final class de.wingu.sdk.data.api.model.components.ComponentSpec extends java.lang.Object
+public static final class de.wingu.sdk.data.api.model.components.ComponentSpec.Companion extends java.lang.Object
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec.Companion
+public final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.data.api.model.components.ComponentSpec.Companion.create(controllerFactory: rx.functions.Func3<de.wingu.sdk.ui.component.ComponentCallbacks,de.wingu.sdk.internal.di.component.CardComponent,de.wingu.sdk.ui.style.styler.ViewStyler,? extends de.wingu.sdk.ui.component.ComponentView<?,?>>, componentClass: java.lang.Class<? extends de.wingu.sdk.data.api.model.components.Component>, type: java.lang.String)
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.data.api.model.components.ComponentSpec.create(controllerFactory: rx.functions.Func3<de.wingu.sdk.ui.component.ComponentCallbacks,de.wingu.sdk.internal.di.component.CardComponent,de.wingu.sdk.ui.style.styler.ViewStyler,? extends de.wingu.sdk.ui.component.ComponentView<?,?>>, componentClass: java.lang.Class<? extends de.wingu.sdk.data.api.model.components.Component>, type: java.lang.String)
+public boolean de.wingu.sdk.data.api.model.components.ComponentSpec.equals(other: java.lang.Object)
+public final java.lang.Class<? extends de.wingu.sdk.data.api.model.components.Component> de.wingu.sdk.data.api.model.components.ComponentSpec.getComponentClass$sdk_publicRelease()
+public final rx.functions.Func3<de.wingu.sdk.ui.component.ComponentCallbacks,de.wingu.sdk.internal.di.component.CardComponent,de.wingu.sdk.ui.style.styler.ViewStyler,? extends de.wingu.sdk.ui.component.ComponentView<?,?>> de.wingu.sdk.data.api.model.components.ComponentSpec.getControllerFactory$sdk_publicRelease()
+public final java.lang.String de.wingu.sdk.data.api.model.components.ComponentSpec.getType$sdk_publicRelease()
+public int de.wingu.sdk.data.api.model.components.ComponentSpec.hashCode()
+public final void de.wingu.sdk.data.api.model.components.ComponentSpec.setControllerFactory$sdk_publicRelease(p0: rx.functions.Func3<de.wingu.sdk.ui.component.ComponentCallbacks,de.wingu.sdk.internal.di.component.CardComponent,de.wingu.sdk.ui.style.styler.ViewStyler,? extends de.wingu.sdk.ui.component.ComponentView<?,?>>)
+public final class de.wingu.sdk.notification.ChannelNotificationsConfig extends java.lang.Object
+public static final class de.wingu.sdk.notification.ChannelNotificationsConfig.Builder extends java.lang.Object
+public static final class de.wingu.sdk.notification.ChannelNotificationsConfig.Builder extends java.lang.Object
+public void de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.<init>(channelNotificationCallback: de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback)
+public void de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.<init>(channelNotificationCallback: de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.build()
+public final de.wingu.sdk.notification.ChannelNotificationsConfig de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.build()
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setLargeIcon(largeIcon: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setLargeIcon(largeIcon: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSmallIcon(smallIcon: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSmallIcon(smallIcon: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeButtonTitle(text: java.lang.String)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeButtonTitle(text: java.lang.String)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeIcon(snoozeIcon: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeIcon(snoozeIcon: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeTimeMinutes(minutes: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeTimeMinutes(minutes: int)
+public abstract static interface de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback extends none
+public abstract static interface de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback extends none
+public abstract java.util.Collection<de.wingu.sdk.notification.WinguNotification> de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback.winguNotifications(channels: java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel>)
+public abstract java.util.Collection<de.wingu.sdk.notification.WinguNotification> de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback.winguNotifications(channels: java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel>)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback de.wingu.sdk.notification.ChannelNotificationsConfig.getChannelNotificationCallback$sdk_publicRelease()
+public final int de.wingu.sdk.notification.ChannelNotificationsConfig.getLargeIcon$sdk_publicRelease()
+public final int de.wingu.sdk.notification.ChannelNotificationsConfig.getSmallIcon$sdk_publicRelease()
+public final java.lang.String de.wingu.sdk.notification.ChannelNotificationsConfig.getSnoozeButtonTitle$sdk_publicRelease()
+public final int de.wingu.sdk.notification.ChannelNotificationsConfig.getSnoozeIcon$sdk_publicRelease()
+public final int de.wingu.sdk.notification.ChannelNotificationsConfig.getSnoozeTimeMinutes$sdk_publicRelease()
+public final class de.wingu.sdk.notification.WinguNotification extends java.lang.Object
+public static final class de.wingu.sdk.notification.WinguNotification.Companion extends java.lang.Object
+public static final de.wingu.sdk.notification.WinguNotification.Companion
+public final android.app.PendingIntent de.wingu.sdk.notification.WinguNotification.Companion.createDefaultChannelPendingIntent(channel: de.wingu.sdk.data.api.model.Channel, parentIntent: android.content.Intent)
+public final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.Companion.createGroupNotification(channels: java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel>, title: java.lang.String, pendingIntent: android.app.PendingIntent)
+public final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.Companion.createMissedChannelsNotification(title: java.lang.String, contentText: java.lang.String, pendingIntent: android.app.PendingIntent)
+public final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.Companion.createSingleChannelNotification(channel: de.wingu.sdk.data.api.model.Channel, title: java.lang.String, contentText: java.lang.String, pendingIntent: android.app.PendingIntent)
+public static final de.wingu.sdk.notification.WinguNotification.GROUP_NOTIFICATION_TAG
+public static final de.wingu.sdk.notification.WinguNotification.MISSED_CHANNEL_NOTIFICATION_TAG
+public static final android.app.PendingIntent de.wingu.sdk.notification.WinguNotification.createDefaultChannelPendingIntent(channel: de.wingu.sdk.data.api.model.Channel, parentIntent: android.content.Intent)
+public static final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createGroupNotification(channels: java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel>, title: java.lang.String, pendingIntent: android.app.PendingIntent)
+public static final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createMissedChannelsNotification(title: java.lang.String, contentText: java.lang.String, pendingIntent: android.app.PendingIntent)
+public static final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createSingleChannelNotification(channel: de.wingu.sdk.data.api.model.Channel, title: java.lang.String, contentText: java.lang.String, pendingIntent: android.app.PendingIntent)
+public boolean de.wingu.sdk.notification.WinguNotification.equals(other: java.lang.Object)
+public final java.util.List<de.wingu.sdk.data.api.model.Channel> de.wingu.sdk.notification.WinguNotification.getChannelList()
+public final java.lang.String de.wingu.sdk.notification.WinguNotification.getContentText()
+public final java.lang.String de.wingu.sdk.notification.WinguNotification.getGroupSummaryText()
+public final int de.wingu.sdk.notification.WinguNotification.getGroupedNotificationsSize()
+public final java.lang.String de.wingu.sdk.notification.WinguNotification.getNotificationTag()
+public final android.app.PendingIntent de.wingu.sdk.notification.WinguNotification.getPendingIntent()
+public final java.lang.String de.wingu.sdk.notification.WinguNotification.getTitle()
+public int de.wingu.sdk.notification.WinguNotification.hashCode()
+public final boolean de.wingu.sdk.notification.WinguNotification.isGroupNotification()
+public final class de.wingu.sdk.ui.component.location.LocationWinguComponent extends java.lang.Object
+public static final de.wingu.sdk.ui.component.location.LocationWinguComponent.INSTANCE
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.location.LocationWinguComponent.specMapView()
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.location.LocationWinguComponent.specStaticMaps(googleApiKey: de.wingu.sdk.utils.StringRef, urlSigningSecret: de.wingu.sdk.utils.StringRef)
+public class de.wingu.sdk.ui.details.ChannelDetailsActivity extends android.support.v7.app.AppCompatActivity
+public void de.wingu.sdk.ui.details.ChannelDetailsActivity.<init>()
+public static android.content.Intent de.wingu.sdk.ui.details.ChannelDetailsActivity.newInstance(context: android.content.Context, channel: de.wingu.sdk.data.api.model.Channel, title: java.lang.String)
+protected void de.wingu.sdk.ui.details.ChannelDetailsActivity.onCreate(savedInstanceState: android.os.Bundle)
+public final class de.wingu.sdk.ui.details.ChannelDetailsFragment extends de.wingu.sdk.ui.details.BaseChannelDetailsFragment<de.wingu.sdk.ui.details.ChannelDetailsView,de.wingu.sdk.ui.details.ChannelDetailsPresenter> implements de.wingu.sdk.ui.details.ChannelDetailsView, android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.<init>()
+public static final class de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion extends java.lang.Object
+public static final de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion
+public final de.wingu.sdk.ui.details.ChannelDetailsFragment de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion.newInstance(channelKey: de.wingu.sdk.data.api.model.ChannelKey)
+public final de.wingu.sdk.ui.details.ChannelDetailsFragment de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion.newInstance(displayMode: de.wingu.sdk.ui.details.DeckDisplayMode, channelKey: de.wingu.sdk.data.api.model.ChannelKey)
+public abstract static interface de.wingu.sdk.ui.details.ChannelDetailsFragment.OptionalFragmentCallbacks extends none
+public abstract void de.wingu.sdk.ui.details.ChannelDetailsFragment.OptionalFragmentCallbacks.onChannelMapRequested(fragment: de.wingu.sdk.ui.details.ChannelDetailsFragment)
+public de.wingu.sdk.ui.details.ChannelDetailsPresenter de.wingu.sdk.ui.details.ChannelDetailsFragment.createPresenter()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.displayChannel(channel: de.wingu.sdk.data.api.model.Channel)
+public final de.wingu.sdk.ui.details.deck.DeckBrowserFragment de.wingu.sdk.ui.details.ChannelDetailsFragment.getDeckBrowserFragment()
+public static final de.wingu.sdk.ui.details.ChannelDetailsFragment de.wingu.sdk.ui.details.ChannelDetailsFragment.newInstance(channelKey: de.wingu.sdk.data.api.model.ChannelKey)
+public static final de.wingu.sdk.ui.details.ChannelDetailsFragment de.wingu.sdk.ui.details.ChannelDetailsFragment.newInstance(displayMode: de.wingu.sdk.ui.details.DeckDisplayMode, channelKey: de.wingu.sdk.data.api.model.ChannelKey)
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onAttach(context: android.content.Context)
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onChannelLoadError(throwable: java.lang.Throwable)
+public android.view.View de.wingu.sdk.ui.details.ChannelDetailsFragment.onCreateView(inflater: android.view.LayoutInflater, container: android.view.ViewGroup, savedInstanceState: android.os.Bundle)
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onDestroyView()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onDetach()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onError(throwable: java.lang.Throwable)
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onNoContent()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onRefresh()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onStart()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onStop()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.onViewCreated(view: android.view.View, savedInstanceState: android.os.Bundle)
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.showContent()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.startContentFadeOutAnimation()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.startLoaderAnimation()
+public void de.wingu.sdk.ui.details.ChannelDetailsFragment.stopLoaderAnimation()
+public abstract class de.wingu.sdk.ui.details.ChannelProxyFragment extends de.wingu.sdk.ui.details.BaseChannelDetailsFragment<de.wingu.sdk.ui.details.BaseChannelDetailsView,de.wingu.sdk.ui.details.ChannelProxyPresenter> implements de.wingu.sdk.ui.details.BaseChannelDetailsView
+public void de.wingu.sdk.ui.details.ChannelProxyFragment.<init>()
+public de.wingu.sdk.ui.details.ChannelProxyPresenter de.wingu.sdk.ui.details.ChannelProxyFragment.createPresenter()
+public void de.wingu.sdk.ui.details.ChannelProxyFragment.displayChannel(channel: de.wingu.sdk.data.api.model.Channel)
+protected abstract de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.ui.details.ChannelProxyFragment.getChannelKey()
+public void de.wingu.sdk.ui.details.ChannelProxyFragment.onChannelLoadError(throwable: java.lang.Throwable)
+protected abstract void de.wingu.sdk.ui.details.ChannelProxyFragment.onCustomPayload(payload: java.lang.String)
+public abstract void de.wingu.sdk.ui.details.ChannelProxyFragment.onError(throwable: java.lang.Throwable)
+public void de.wingu.sdk.ui.details.ChannelProxyFragment.onNoContent()
+public void de.wingu.sdk.ui.details.ChannelProxyFragment.startLoaderAnimation()
+public void de.wingu.sdk.ui.details.ChannelProxyFragment.stopLoaderAnimation()
+public final class de.wingu.sdk.utils.ByteString extends de.wingu.sdk.utils.StringRef
+public void de.wingu.sdk.utils.ByteString.<init>(b: byte[])
+public final de.wingu.sdk.utils.ByteString de.wingu.sdk.utils.ByteString.copy(b: byte[])
+public boolean de.wingu.sdk.utils.ByteString.equals(other: java.lang.Object)
+public byte[] de.wingu.sdk.utils.ByteString.getBytes(context: android.content.Context)
+public java.lang.String de.wingu.sdk.utils.ByteString.getString(context: android.content.Context)
+public int de.wingu.sdk.utils.ByteString.hashCode()
+public java.lang.String de.wingu.sdk.utils.ByteString.toString()
+public abstract interface de.wingu.sdk.utils.NearbyChannelObserver extends none
+public abstract de.wingu.blescanner.ibeacon.model.IbeaconDevice de.wingu.sdk.utils.NearbyChannelObserver.findBeaconDevice(channel: de.wingu.sdk.data.api.model.Channel)
+public abstract rx.Observable<de.wingu.sdk.data.api.model.ChannelEvents> de.wingu.sdk.utils.NearbyChannelObserver.getChannelEvents()
+public abstract java.util.Collection<de.wingu.sdk.data.api.model.Channel> de.wingu.sdk.utils.NearbyChannelObserver.getCurrentNearbyChannels()
+public abstract boolean de.wingu.sdk.utils.NearbyChannelObserver.isChannelNearby(channel: de.wingu.sdk.data.api.model.Channel)
+public abstract void de.wingu.sdk.utils.NearbyChannelObserver.rescan()
+public final class de.wingu.sdk.utils.PlainString extends de.wingu.sdk.utils.StringRef
+public void de.wingu.sdk.utils.PlainString.<init>(s: java.lang.String)
+public final de.wingu.sdk.utils.PlainString de.wingu.sdk.utils.PlainString.copy(s: java.lang.String)
+public boolean de.wingu.sdk.utils.PlainString.equals(p0: java.lang.Object)
+public byte[] de.wingu.sdk.utils.PlainString.getBytes(context: android.content.Context)
+public java.lang.String de.wingu.sdk.utils.PlainString.getString(context: android.content.Context)
+public int de.wingu.sdk.utils.PlainString.hashCode()
+public java.lang.String de.wingu.sdk.utils.PlainString.toString()
+public abstract class de.wingu.sdk.utils.StringRef extends java.lang.Object
+public abstract byte[] de.wingu.sdk.utils.StringRef.getBytes(context: android.content.Context)
+public abstract java.lang.String de.wingu.sdk.utils.StringRef.getString(context: android.content.Context)
+public final class de.wingu.sdk.utils.StringRes extends de.wingu.sdk.utils.StringRef
+public void de.wingu.sdk.utils.StringRes.<init>(resourceId: int)
+public final de.wingu.sdk.utils.StringRes de.wingu.sdk.utils.StringRes.copy(resourceId: int)
+public boolean de.wingu.sdk.utils.StringRes.equals(p0: java.lang.Object)
+public byte[] de.wingu.sdk.utils.StringRes.getBytes(context: android.content.Context)
+public java.lang.String de.wingu.sdk.utils.StringRes.getString(context: android.content.Context)
+public int de.wingu.sdk.utils.StringRes.hashCode()
+public java.lang.String de.wingu.sdk.utils.StringRes.toString()
+public final enum de.wingu.sdk.utils.prerequisite.Prerequisite extends java.lang.Enum<de.wingu.sdk.utils.prerequisite.Prerequisite>
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.ACCESS_COARSE_LOCATION
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.ACCESS_FINE_LOCATION
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.BLUETOOTH_ON
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.LOCATION_SERVICES_ON
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.PLAY_SERVICES
+public static de.wingu.sdk.utils.prerequisite.Prerequisite de.wingu.sdk.utils.prerequisite.Prerequisite.valueOf(name: java.lang.String)
+public static de.wingu.sdk.utils.prerequisite.Prerequisite[] de.wingu.sdk.utils.prerequisite.Prerequisite.values()
+public final class de.wingu.sdk.utils.prerequisite.PrerequisitesChecker extends java.lang.Object
+public static final de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.INSTANCE
+public static final java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.check()
+public static final boolean de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.checkWithDefaultDialogs(activity: android.app.Activity, requestCode: int)
+public static final de.wingu.sdk.utils.prerequisite.ResolveResults de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.getResolveResults(data: android.content.Intent)
+public final boolean de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.isPlayServicesAvailable$sdk_publicRelease()
+public static final boolean de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.resolveWithDefaultDialogs(activity: android.app.Activity, requestCode: int, toResolve: de.wingu.sdk.utils.prerequisite.Prerequisite[])
+public final class de.wingu.sdk.utils.prerequisite.ResolveResults extends java.lang.Object implements java.io.Serializable
+public void de.wingu.sdk.utils.prerequisite.ResolveResults.<init>(resolved: java.util.Set<? extends de.wingu.sdk.utils.prerequisite.Prerequisite>, failed: java.util.Set<? extends de.wingu.sdk.utils.prerequisite.Prerequisite>)
+public final java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.ResolveResults.getFailed()
+public final java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.ResolveResults.getResolved()
+public final class de.wingu.sdk.ui.component.video.VideoWinguComponent extends java.lang.Object
+public static final de.wingu.sdk.ui.component.video.VideoWinguComponent.INSTANCE
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.video.VideoWinguComponent.spec(googleApiKey: de.wingu.sdk.utils.StringRef)

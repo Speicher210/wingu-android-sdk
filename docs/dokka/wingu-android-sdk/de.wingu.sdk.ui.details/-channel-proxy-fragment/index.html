@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChannelProxyFragment - wingu-android-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.ui.details</a>&nbsp;/&nbsp;<a href=".">ChannelProxyFragment</a><br/>
+<br/>
+<h1>ChannelProxyFragment</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ChannelProxyFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BaseChannelDetailsFragment</span><span class="symbol">&lt;</span><span class="identifier">BaseChannelDetailsView</span><span class="symbol">,</span>&nbsp;<span class="identifier">ChannelProxyPresenter</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">BaseChannelDetailsView</span></code>
+<p>Allows to load custom content based on a payload associated with a channel.</p>
+<p>You should extend this class and implement any abstract methods.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ChannelProxyFragment</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Allows to load custom content based on a payload associated with a channel.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="channel-key.html">channelKey</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">channelKey</span><span class="symbol">: </span><a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a></code>
+<p>Returns a channel key associated with custom payload.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="create-presenter.html">createPresenter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createPresenter</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ChannelProxyPresenter</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="display-channel.html">displayChannel</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">displayChannel</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelProxyFragment$displayChannel(de.wingu.sdk.data.api.model.Channel)/channel">channel</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.data.api.model/-channel/index.html"><span class="identifier">Channel</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-channel-load-error.html">onChannelLoadError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onChannelLoadError</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelProxyFragment$onChannelLoadError(kotlin.Throwable)/throwable">throwable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-custom-payload.html">onCustomPayload</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onCustomPayload</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelProxyFragment$onCustomPayload(kotlin.String)/payload">payload</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Called when a custom payload has been discovered.
+Override this method to display custom content based on the payload.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-error.html">onError</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onError</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelProxyFragment$onError(kotlin.Throwable)/throwable">throwable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Called when an error has occurred while loading the channel,
+or custom payload was not discovered.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-no-content.html">onNoContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onNoContent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="start-loader-animation.html">startLoaderAnimation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">startLoaderAnimation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="stop-loader-animation.html">stopLoaderAnimation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">stopLoaderAnimation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

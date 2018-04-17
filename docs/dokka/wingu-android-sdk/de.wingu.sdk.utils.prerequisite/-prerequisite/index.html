@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Prerequisite - wingu-android-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.utils.prerequisite</a>&nbsp;/&nbsp;<a href=".">Prerequisite</a><br/>
+<br/>
+<h1>Prerequisite</h1>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Prerequisite</span></code>
+<p>Holds all prerequisites required by SDK. Holds two types of location though SDK itself requires
+one of them.</p>
+<h3>Enum Values</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-a-c-c-e-s-s_-c-o-a-r-s-e_-l-o-c-a-t-i-o-n.html">ACCESS_COARSE_LOCATION</a></p>
+</td>
+<td>
+<p>Corresponding to <a href="https://developer.android.com/reference/android/Manifest/permission.html#ACCESS_COARSE_LOCATION">permission.ACCESS_COARSE_LOCATION</a>. Required to make bluetooth
+scanning work.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-a-c-c-e-s-s_-f-i-n-e_-l-o-c-a-t-i-o-n.html">ACCESS_FINE_LOCATION</a></p>
+</td>
+<td>
+<p>Corresponding to <a href="https://developer.android.com/reference/android/Manifest/permission.html#ACCESS_FINE_LOCATION">permission.ACCESS_FINE_LOCATION</a>. Required for <a href="#">Geofencing</a>. It
+is not obligatory, but if it is not met you shouldn't use geofencing feature.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-b-l-u-e-t-o-o-t-h_-o-n.html">BLUETOOTH_ON</a></p>
+</td>
+<td>
+<p>Bluetooth is turned on in the device.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-l-o-c-a-t-i-o-n_-s-e-r-v-i-c-e-s_-o-n.html">LOCATION_SERVICES_ON</a></p>
+</td>
+<td>
+<p>Location turned on in the device.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-p-l-a-y_-s-e-r-v-i-c-e-s.html">PLAY_SERVICES</a></p>
+</td>
+<td>
+<p>SDK requires that GooglePlayServices are available.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

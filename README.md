@@ -5,9 +5,9 @@ wingu-android-sdk is an  SDK for [wingu.de](www.wingu.de) service. This framewor
 
 ## Overview
 
-wingu SDK requires `minSdkVersion >= 21` and `targetSdkVersion <= 25`.
+wingu SDK requires `minSdkVersion >= 21` and `targetSdkVersion <= 27`.
 
-[javadoc](https://speicher210.github.io/wingu-android-sdk/javadoc/)
+[API docs](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/)
 
 ## Quickstart
 
@@ -15,11 +15,11 @@ wingu SDK requires `minSdkVersion >= 21` and `targetSdkVersion <= 25`.
 
 ```
 android {
-  compileSdkVersion 26
+  compileSdkVersion 27
 
   defaultConfig {
     minSdkVersion 21
-    targetSdkVersion 25
+    targetSdkVersion 27
     multiDexEnabled true
   }
 }
@@ -31,8 +31,8 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.Speicher210.wingu-android-sdk:sdk:1.0.0'
-  compile 'com.github.Speicher210.wingu-android-sdk:component-video:1.0.0' // optional
+  compile 'com.github.Speicher210.wingu-android-sdk:sdk:2.0.0'
+  compile 'com.github.Speicher210.wingu-android-sdk:component-video:2.0.0' // optional
 }
 ```
 

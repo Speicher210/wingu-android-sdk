@@ -1,6 +1,5 @@
 # wingu-android-sdk
 
-![Wingu](https://pbs.twimg.com/profile_banners/4774303042/1452516691/1500x500)
 wingu-android-sdk is an  SDK for [wingu.de](www.wingu.de) service. This framework will allow to connect with beacons and geofences nearby user location. 
 
 ## Overview
@@ -197,6 +196,10 @@ Android Developers @ wingu AG
 
 [Mateusz](https://github.com/armatys)  
 [Wiktor](https://github.com/wingu-wiktor)
+
+## wingu
+
+This is a wingu open source project. With wingu platform, API and SDK it is easier then ever to use proximity technologies in new and exciteing ways, such as creating a simple app or adding proximity functionality to your existing application. For more information check out: [https://www.wingu.de/en/developer/](https://www.wingu.de/en/developer/) or start a free trail at [https://wingu-portal.de/register.](https://wingu-portal.de/register.)
 
 ## License
 

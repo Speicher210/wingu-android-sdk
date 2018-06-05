@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StringRef - wingu-android-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="index.html">de.wingu.sdk.utils</a>&nbsp;/&nbsp;<a href="./-string-ref.html">StringRef</a><br/>
+<br/>
+<h1>StringRef</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">StringRef</span></code>
+<p>Reference to a string.</p>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-byte-string/index.html">ByteString</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ByteString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-string-ref.html"><span class="identifier">StringRef</span></a></code>
+<p>Represents a string using a byte array.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-plain-string/index.html">PlainString</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">PlainString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-string-ref.html"><span class="identifier">StringRef</span></a></code>
+<p>Direct reference to a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-string-res/index.html">StringRes</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">StringRes</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-string-ref.html"><span class="identifier">StringRef</span></a></code>
+<p>References a string stored as an Android string resource.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

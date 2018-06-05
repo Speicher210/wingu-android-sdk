@@ -5,12 +5,26 @@
 <link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk</a>&nbsp;/&nbsp;<a href=".">WinguSDKBuilder</a><br/>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk</a>&nbsp;/&nbsp;<a href="./index.html">WinguSDKBuilder</a><br/>
 <br/>
 <h1>WinguSDKBuilder</h1>
 <code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">WinguSDKBuilder</span></code>
 <p>Builder for <a href="../-wingu-s-d-k/index.html">WinguSDK</a>.
 Allows to configure, build and launch wingu SDK.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-build-listener/index.html">BuildListener</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">BuildListener</span></code>
+<p>Provides hooks for different stages of building the sdk.</p>
+</td>
+</tr>
+</tbody>
+</table>
 <h3>Functions</h3>
 <table>
 <tbody>
@@ -19,7 +33,8 @@ Allows to configure, build and launch wingu SDK.</p>
 <p><a href="build.html">build</a></p>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-wingu-s-d-k/index.html"><span class="identifier">WinguSDK</span></a></code>
+<code><span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-wingu-s-d-k/index.html"><span class="identifier">WinguSDK</span></a></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$build(de.wingu.sdk.WinguSDKBuilder.BuildListener)/buildListener">buildListener</span><span class="symbol">:</span>&nbsp;<a href="-build-listener/index.html"><span class="identifier">BuildListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-wingu-s-d-k/index.html"><span class="identifier">WinguSDK</span></a></code>
 <p>Builds and launches the sdk.</p>
 </td>
 </tr>
@@ -28,10 +43,10 @@ Allows to configure, build and launch wingu SDK.</p>
 <p><a href="channel-notifications-config.html">channelNotificationsConfig</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">channelNotificationsConfig</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$channelNotificationsConfig(java.util.concurrent.Callable((de.wingu.sdk.notification.ChannelNotificationsConfig)))/configFactory">configFactory</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/concurrent/Callable.html"><span class="identifier">Callable</span></a><span class="symbol">&lt;</span><a href="../../de.wingu.sdk.notification/-channel-notifications-config/index.html"><span class="identifier">ChannelNotificationsConfig</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WinguSDKBuilder</span></code>
+<code><span class="keyword">fun </span><span class="identifier">channelNotificationsConfig</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$channelNotificationsConfig(java.util.concurrent.Callable((de.wingu.sdk.notification.ChannelNotificationsConfig)))/configFactory">configFactory</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/concurrent/Callable.html"><span class="identifier">Callable</span></a><span class="symbol">&lt;</span><a href="../../de.wingu.sdk.notification/-channel-notifications-config/index.html"><span class="identifier">ChannelNotificationsConfig</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Configures settings for background notifications.
 You need to enable <a href="geofence-background-scan.html">geofenceBackgroundScan</a> or
-<a href="i-beacon-background-scan.html">iBeaconBackgroundScan</a> for notifications to appear.</p>
+<a href="ibeacon-background-scan.html">ibeaconBackgroundScan</a> for notifications to appear.</p>
 </td>
 </tr>
 <tr>
@@ -39,7 +54,7 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="geofence-background-scan.html">geofenceBackgroundScan</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">geofenceBackgroundScan</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$geofenceBackgroundScan(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WinguSDKBuilder</span></code>
+<code><span class="keyword">fun </span><span class="identifier">geofenceBackgroundScan</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$geofenceBackgroundScan(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Configures if the app can scan for geofence channels in background mode.</p>
 </td>
 </tr>
@@ -48,25 +63,25 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="geofence-foreground-scan.html">geofenceForegroundScan</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">geofenceForegroundScan</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$geofenceForegroundScan(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WinguSDKBuilder</span></code>
+<code><span class="keyword">fun </span><span class="identifier">geofenceForegroundScan</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$geofenceForegroundScan(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Configures if the app can scan for geofence channels in foreground mode.</p>
 </td>
 </tr>
 <tr>
 <td>
-<p><a href="i-beacon-background-scan.html">iBeaconBackgroundScan</a></p>
+<p><a href="ibeacon-background-scan.html">ibeaconBackgroundScan</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">iBeaconBackgroundScan</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$iBeaconBackgroundScan(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WinguSDKBuilder</span></code>
+<code><span class="keyword">fun </span><span class="identifier">ibeaconBackgroundScan</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$ibeaconBackgroundScan(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Configures if the app can scan for ibeacon channels in background mode.</p>
 </td>
 </tr>
 <tr>
 <td>
-<p><a href="i-beacon-foreground-scan.html">iBeaconForegroundScan</a></p>
+<p><a href="ibeacon-foreground-scan.html">ibeaconForegroundScan</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">iBeaconForegroundScan</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$iBeaconForegroundScan(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WinguSDKBuilder</span></code>
+<code><span class="keyword">fun </span><span class="identifier">ibeaconForegroundScan</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$ibeaconForegroundScan(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Configures if the app can scan for ibeacon channels in foreground mode.</p>
 </td>
 </tr>
@@ -75,7 +90,7 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="logging-level.html">loggingLevel</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">loggingLevel</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$loggingLevel(java.util.logging.Level)/level">level</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/logging/Level.html"><span class="identifier">Level</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WinguSDKBuilder</span></code>
+<code><span class="keyword">fun </span><span class="identifier">loggingLevel</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$loggingLevel(java.util.logging.Level)/level">level</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/logging/Level.html"><span class="identifier">Level</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Sets logging level for wingu SDK.</p>
 </td>
 </tr>
@@ -84,7 +99,7 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="register-component.html">registerComponent</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">registerComponent</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$registerComponent(de.wingu.sdk.data.api.model.components.ComponentSpec)/componentSpec">componentSpec</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.data.api.model.components/-component-spec/index.html"><span class="identifier">ComponentSpec</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WinguSDKBuilder</span></code>
+<code><span class="keyword">fun </span><span class="identifier">registerComponent</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$registerComponent(de.wingu.sdk.data.api.model.components.ComponentSpec)/componentSpec">componentSpec</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.data.api.model.components/-component-spec.html"><span class="identifier">ComponentSpec</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Registers an additional wingu component.</p>
 </td>
 </tr>
@@ -93,7 +108,7 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="staging.html">staging</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">staging</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$staging(kotlin.Boolean)/isStaging">isStaging</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WinguSDKBuilder</span></code>
+<code><span class="keyword">fun </span><span class="identifier">staging</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$staging(kotlin.Boolean)/isStaging">isStaging</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Forces to use staging server (for test purposes).</p>
 </td>
 </tr>
@@ -107,7 +122,7 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="with.html">with</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Application.html"><span class="identifier">Application</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WinguSDKBuilder</span></code>
+<code><span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Application.html"><span class="identifier">Application</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Creates a new builder.</p>
 </td>
 </tr>

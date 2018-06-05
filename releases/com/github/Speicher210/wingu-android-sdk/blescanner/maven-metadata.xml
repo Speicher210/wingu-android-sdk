@@ -3,7 +3,7 @@
   <groupId>com.github.Speicher210.wingu-android-sdk</groupId>
   <artifactId>blescanner</artifactId>
   <versioning>
-    <release>2.0.0</release>
-    <versions><version>2.0.0</version></versions><lastUpdated>20180417103034</lastUpdated>
+    <release>3.0.0</release>
+    <versions><version>2.0.0</version><version>3.0.0</version></versions><lastUpdated>20180605084900</lastUpdated>
   </versioning>
 </metadata>

@@ -5,12 +5,12 @@
 <link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.utils.prerequisite</a>&nbsp;/&nbsp;<a href="index.html">PrerequisitesChecker</a>&nbsp;/&nbsp;<a href=".">getResolveResults</a><br/>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.utils.prerequisite</a>&nbsp;/&nbsp;<a href="index.html">PrerequisitesChecker</a>&nbsp;/&nbsp;<a href="./get-resolve-results.html">getResolveResults</a><br/>
 <br/>
 <h1>getResolveResults</h1>
 <a name="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$getResolveResults(android.content.Intent)"></a>
 <code><span class="identifier">@JvmStatic</span> <span class="keyword">fun </span><span class="identifier">getResolveResults</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$getResolveResults(android.content.Intent)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-resolve-results/index.html"><span class="identifier">ResolveResults</span></a><span class="symbol">?</span></code>
-<p>This function helps check result of <a href="#">.checkWithDefaultDialogs</a> and <a href="#"> </a>.
+<p>This function helps check result of <a href="check-with-default-dialogs.html">checkWithDefaultDialogs</a> and <a href="resolve-with-default-dialogs.html">resolveWithDefaultDialogs</a>.
 If any of mentioned functions returned false it means they started transparent activity for result.
 Using this function you can get result data form intent passed to <a href="https://developer.android.com/reference/android/app/Activity.html#onActivityResult(int, int, android.content.Intent)">Activity.onActivityResult</a>.</p>
 <p>Remember that you should verify request code passed when called previously mentioned functions.</p>

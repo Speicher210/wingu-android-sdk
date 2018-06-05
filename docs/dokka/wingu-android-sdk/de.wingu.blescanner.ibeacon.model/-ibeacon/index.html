@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Ibeacon - wingu-android-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.blescanner.ibeacon.model</a>&nbsp;/&nbsp;<a href="./index.html">Ibeacon</a><br/>
+<br/>
+<h1>Ibeacon</h1>
+<code><span class="keyword">interface </span><span class="identifier">Ibeacon</span></code>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="major.html">major</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">major</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="minor.html">minor</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">minor</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="uuid.html">uuid</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">uuid</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/UUID.html"><span class="identifier">UUID</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../de.wingu.sdk.data.api.model/-ibeacon-channel/index.html">IbeaconChannel</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">IbeaconChannel</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.data.api.model/-channel/index.html"><span class="identifier">Channel</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Ibeacon</span></a><span class="symbol">, </span><span class="identifier">MapPoint</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
+<p>Ibeacon-based content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-ibeacon-device/index.html">IbeaconDevice</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">IbeaconDevice</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Ibeacon</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../de.wingu.sdk.data.api.model/-ibeacon-key/index.html">IbeaconKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IbeaconKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Ibeacon</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -5,170 +5,20 @@
 <link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.ui.details</a>&nbsp;/&nbsp;<a href=".">ChannelDetailsFragment</a><br/>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.ui.details</a>&nbsp;/&nbsp;<a href="./index.html">ChannelDetailsFragment</a><br/>
 <br/>
 <h1>ChannelDetailsFragment</h1>
-<code><span class="keyword">class </span><span class="identifier">ChannelDetailsFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BaseChannelDetailsFragment</span><span class="symbol">&lt;</span><span class="identifier">ChannelDetailsView</span><span class="symbol">,</span>&nbsp;<span class="identifier">ChannelDetailsPresenter</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">ChannelDetailsView</span><span class="symbol">, </span><span class="identifier">OnRefreshListener</span></code>
+<code><span class="keyword">class </span><span class="identifier">ChannelDetailsFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BaseChannelDetailsFragment</span><span class="symbol">&lt;</span><span class="identifier">ChannelDetailsView</span><span class="symbol">,</span>&nbsp;<span class="identifier">ChannelDetailsPresenter</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">ChannelDetailsView</span></code>
 <p>Shows contents of a <a href="../../de.wingu.sdk.data.api.model/-channel/index.html">Channel</a>.</p>
 <h3>Types</h3>
 <table>
 <tbody>
 <tr>
 <td>
-<p><a href="-optional-fragment-callbacks/index.html">OptionalFragmentCallbacks</a></p>
+<p><a href="-optional-fragment-callbacks.html">OptionalFragmentCallbacks</a></p>
 </td>
 <td>
 <code><span class="keyword">interface </span><span class="identifier">OptionalFragmentCallbacks</span></code></td>
-</tr>
-</tbody>
-</table>
-<h3>Constructors</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<p><a href="-init-.html">&lt;init&gt;</a></p>
-</td>
-<td>
-<code><span class="identifier">ChannelDetailsFragment</span><span class="symbol">(</span><span class="symbol">)</span></code>
-<p>Shows contents of a <a href="../../de.wingu.sdk.data.api.model/-channel/index.html">Channel</a>.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<h3>Properties</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<p><a href="deck-browser-fragment.html">deckBrowserFragment</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">deckBrowserFragment</span><span class="symbol">: </span><span class="identifier">DeckBrowserFragment</span><span class="symbol">?</span></code></td>
-</tr>
-</tbody>
-</table>
-<h3>Functions</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<p><a href="create-presenter.html">createPresenter</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">createPresenter</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ChannelDetailsPresenter</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="display-channel.html">displayChannel</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">displayChannel</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment$displayChannel(de.wingu.sdk.data.api.model.Channel)/channel">channel</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.data.api.model/-channel/index.html"><span class="identifier">Channel</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-attach.html">onAttach</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onAttach</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment$onAttach(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-channel-load-error.html">onChannelLoadError</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onChannelLoadError</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment$onChannelLoadError(kotlin.Throwable)/throwable">throwable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-create-view.html">onCreateView</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-destroy-view.html">onDestroyView</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onDestroyView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-detach.html">onDetach</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onDetach</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-error.html">onError</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onError</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment$onError(kotlin.Throwable)/throwable">throwable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-no-content.html">onNoContent</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onNoContent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-refresh.html">onRefresh</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onRefresh</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-start.html">onStart</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onStart</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-stop.html">onStop</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onStop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-view-created.html">onViewCreated</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">onViewCreated</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment$onViewCreated(android.view.View, android.os.Bundle)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment$onViewCreated(android.view.View, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="show-content.html">showContent</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">showContent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="start-content-fade-out-animation.html">startContentFadeOutAnimation</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">startContentFadeOutAnimation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="start-loader-animation.html">startLoaderAnimation</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">startLoaderAnimation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="stop-loader-animation.html">stopLoaderAnimation</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">stopLoaderAnimation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -180,9 +30,9 @@
 <p><a href="new-instance.html">newInstance</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">newInstance</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion$newInstance(de.wingu.sdk.data.api.model.ChannelKey)/channelKey">channelKey</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ChannelDetailsFragment</span></code>
+<code><span class="keyword">fun </span><span class="identifier">newInstance</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion$newInstance(de.wingu.sdk.data.api.model.ChannelKey)/channelKey">channelKey</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Fragment</span></code>
 <p>Creates a new instance of the fragment.</p>
-<code><span class="keyword">fun </span><span class="identifier">newInstance</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion$newInstance(de.wingu.sdk.ui.details.DeckDisplayMode, de.wingu.sdk.data.api.model.ChannelKey)/displayMode">displayMode</span><span class="symbol">:</span>&nbsp;<span class="identifier">DeckDisplayMode</span><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion$newInstance(de.wingu.sdk.ui.details.DeckDisplayMode, de.wingu.sdk.data.api.model.ChannelKey)/channelKey">channelKey</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ChannelDetailsFragment</span></code></td>
+</td>
 </tr>
 </tbody>
 </table>

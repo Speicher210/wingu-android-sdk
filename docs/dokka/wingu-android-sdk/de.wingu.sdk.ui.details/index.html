@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="../../style.css">
 </HEAD>
 <BODY>
-<a href="../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href=".">de.wingu.sdk.ui.details</a><br/>
+<a href="../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="./index.html">de.wingu.sdk.ui.details</a><br/>
 <br/>
 <h2>Package de.wingu.sdk.ui.details</h2>
 <h3>Types</h3>
@@ -13,10 +13,20 @@
 <tbody>
 <tr>
 <td>
+<p><a href="-channel-details-activity/index.html">ChannelDetailsActivity</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ChannelDetailsActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span></code>
+<p>ChannelDetailsActivity is simple wrapper for <a href="-channel-details-fragment/index.html">ChannelDetailsFragment</a>.
+Use <a href="-channel-details-activity/new-instance.html">ChannelDetailsActivity.newInstance</a> method for proper creation of intent.</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><a href="-channel-details-fragment/index.html">ChannelDetailsFragment</a></p>
 </td>
 <td>
-<code><span class="keyword">class </span><span class="identifier">ChannelDetailsFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BaseChannelDetailsFragment</span><span class="symbol">&lt;</span><span class="identifier">ChannelDetailsView</span><span class="symbol">,</span>&nbsp;<span class="identifier">ChannelDetailsPresenter</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">ChannelDetailsView</span><span class="symbol">, </span><span class="identifier">OnRefreshListener</span></code>
+<code><span class="keyword">class </span><span class="identifier">ChannelDetailsFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BaseChannelDetailsFragment</span><span class="symbol">&lt;</span><span class="identifier">ChannelDetailsView</span><span class="symbol">,</span>&nbsp;<span class="identifier">ChannelDetailsPresenter</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">ChannelDetailsView</span></code>
 <p>Shows contents of a <a href="../de.wingu.sdk.data.api.model/-channel/index.html">Channel</a>.</p>
 </td>
 </tr>
@@ -26,7 +36,8 @@
 </td>
 <td>
 <code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ChannelProxyFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BaseChannelDetailsFragment</span><span class="symbol">&lt;</span><span class="identifier">BaseChannelDetailsView</span><span class="symbol">,</span>&nbsp;<span class="identifier">ChannelProxyPresenter</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">BaseChannelDetailsView</span></code>
-<p>Allows to load custom content based on a payload associated with a channel.</p>
+<p>Allows to load custom content based on a payload associated with a channel.
+You should extend this class and implement any abstract methods.</p>
 </td>
 </tr>
 </tbody>

@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PrerequisitesChecker.checkWithDefaultDialogs - wingu-android-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.utils.prerequisite</a>&nbsp;/&nbsp;<a href="index.html">PrerequisitesChecker</a>&nbsp;/&nbsp;<a href=".">checkWithDefaultDialogs</a><br/>
+<br/>
+<h1>checkWithDefaultDialogs</h1>
+<a name="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$checkWithDefaultDialogs(android.app.Activity, kotlin.Int)"></a>
+<code><span class="identifier">@JvmStatic</span> <span class="keyword">fun </span><span class="identifier">checkWithDefaultDialogs</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$checkWithDefaultDialogs(android.app.Activity, kotlin.Int)/activity">activity</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$checkWithDefaultDialogs(android.app.Activity, kotlin.Int)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Checks for prerequisites. If any of them is not met starts transparent activity that will
+ask user to grant all necessary permissions.</p>
+<p>Note that your activity will receive onPause() callback.</p>
+<p>Note that it is possible that user will not grant permission for bluetooth, or location.
+To make sure everything has been granted you need to call <a href="#">.check</a> method.</p>
+<p>As well if there is no play services available user will be prompted to download it.</p>
+<h3>Parameters</h3>
+<p><a name="requestCode"></a>
+<code>requestCode</code> - request code</p>
+<p><strong>Return</strong><br/>
+true if all prerequisites are met, false otherwise</p>
+</BODY>
+</HTML>

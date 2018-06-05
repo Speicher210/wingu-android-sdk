@@ -1,0 +1,77 @@
+public abstract class de.wingu.core.model.BeaconDevice extends java.lang.Object implements android.os.Parcelable
+public double de.wingu.core.model.BeaconDevice.getDistance()
+public abstract class de.wingu.sdk.WinguSDK extends java.lang.Object
+public static de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDK.getInstance()
+public abstract de.wingu.sdk.utils.NearbyChannelObserver de.wingu.sdk.WinguSDK.getNearbyChannelObserver()
+public abstract class de.wingu.sdk.WinguSDKBuilder extends java.lang.Object
+private static final de.wingu.sdk.WinguSDKBuilder.DEFAULT_GEOFENCE_BACKGROUND_SCAN
+private static final de.wingu.sdk.WinguSDKBuilder.DEFAULT_GEOFENCE_FOREGROUND_SCAN
+private static final de.wingu.sdk.WinguSDKBuilder.DEFAULT_IBEACON_BACKGROUND_SCAN
+private static final de.wingu.sdk.WinguSDKBuilder.DEFAULT_IBEACON_FOREGROUND_SCAN
+public abstract de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDKBuilder.build()
+public de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.channelNotificationsConfig(java.util.concurrent.Callable<de.wingu.sdk.notification.ChannelNotificationsConfig>)
+public de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.geofenceBackgroundScan(boolean)
+public de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.geofenceForegroundScan(boolean)
+public de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.iBeaconBackgroundScan(boolean)
+public de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.iBeaconForegroundScan(boolean)
+public de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.registerComponent(de.wingu.sdk.data.api.model.components.ComponentSpec)
+public de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.staging(boolean)
+public static de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.with(android.app.Application, java.lang.String)
+public abstract class de.wingu.sdk.data.api.model.Channel extends java.lang.Object implements de.wingu.sdk.data.Openable
+public java.lang.String de.wingu.sdk.data.api.model.Channel.getName()
+public final class de.wingu.sdk.data.api.model.ChannelEventType extends java.lang.Enum<de.wingu.sdk.data.api.model.ChannelEventType>
+public static final de.wingu.sdk.data.api.model.ChannelEventType.DISCOVERED
+public static final de.wingu.sdk.data.api.model.ChannelEventType.LOST
+public static final de.wingu.sdk.data.api.model.ChannelEventType.UPDATED
+public class de.wingu.sdk.data.api.model.ChannelEvents extends java.lang.Object
+public java.util.Collection<de.wingu.sdk.data.api.model.Channel> de.wingu.sdk.data.api.model.ChannelEvents.getChannels()
+public de.wingu.sdk.data.api.model.ChannelEventType de.wingu.sdk.data.api.model.ChannelEvents.getEventType()
+public abstract class de.wingu.sdk.data.api.model.ChannelKey extends java.lang.Object implements android.os.Parcelable
+public static de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.from(de.wingu.sdk.data.api.model.Channel)
+public class de.wingu.sdk.data.api.model.components.ComponentSpec extends java.lang.Object
+public class de.wingu.sdk.notification.ChannelNotificationsConfig extends java.lang.Object
+public static class de.wingu.sdk.notification.ChannelNotificationsConfig.Builder extends java.lang.Object
+public de.wingu.sdk.notification.ChannelNotificationsConfig de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.build()
+public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setLargeIcon(int)
+public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSmallIcon(int)
+public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeButtonTitle(java.lang.String)
+public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeIcon(int)
+public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeTimeMinutes(int)
+public static interface de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback
+public java.util.Collection<de.wingu.sdk.notification.WinguNotification> de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback.winguNotifications(java.util.Collection<de.wingu.sdk.data.api.model.Channel>)
+public class de.wingu.sdk.notification.WinguNotification extends java.lang.Object
+static final de.wingu.sdk.notification.WinguNotification.MAX_STACKED_NOTIFICATIONS
+public static android.app.PendingIntent de.wingu.sdk.notification.WinguNotification.createDefaultChannelPendingIntent(de.wingu.sdk.data.api.model.Channel, android.content.Intent)
+public static de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createGroupNotification(java.util.Collection<de.wingu.sdk.data.api.model.Channel>, java.lang.String, android.app.PendingIntent)
+public static de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createMissedChannelsNotification(java.lang.String, java.lang.String, android.app.PendingIntent)
+public static de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createSingleChannelNotification(de.wingu.sdk.data.api.model.Channel, java.lang.String, java.lang.String, android.app.PendingIntent)
+public class de.wingu.sdk.ui.component.video.VideoWinguComponent extends java.lang.Object
+public static de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.video.VideoWinguComponent.spec(int)
+public class de.wingu.sdk.ui.details.ChannelDetailsActivity extends AppCompatActivity
+public static android.content.Intent de.wingu.sdk.ui.details.ChannelDetailsActivity.newInstance(android.content.Context, de.wingu.sdk.data.api.model.Channel, java.lang.String)
+public class de.wingu.sdk.ui.details.ChannelDetailsFragment extends de.wingu.sdk.ui.details.BaseChannelDetailsFragment<de.wingu.sdk.ui.details.ChannelDetailsView, de.wingu.sdk.ui.details.ChannelDetailsPresenter> implements de.wingu.sdk.ui.details.ChannelDetailsView
+public static de.wingu.sdk.ui.details.ChannelDetailsFragment de.wingu.sdk.ui.details.ChannelDetailsFragment.newInstance(de.wingu.sdk.data.api.model.ChannelKey)
+public abstract class de.wingu.sdk.ui.details.ChannelProxyFragment extends de.wingu.sdk.ui.details.BaseChannelDetailsFragment<de.wingu.sdk.ui.details.BaseChannelDetailsView, de.wingu.sdk.ui.details.ChannelProxyPresenter> implements de.wingu.sdk.ui.details.BaseChannelDetailsView
+protected abstract de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.ui.details.ChannelProxyFragment.getChannelKey()
+protected abstract void de.wingu.sdk.ui.details.ChannelProxyFragment.onCustomPayload(java.lang.String)
+public abstract void de.wingu.sdk.ui.details.ChannelProxyFragment.onError(java.lang.Throwable)
+public interface de.wingu.sdk.utils.NearbyChannelObserver
+public de.wingu.core.model.BeaconDevice de.wingu.sdk.utils.NearbyChannelObserver.findBeaconDevice(de.wingu.sdk.data.api.model.Channel)
+public rx.Observable<de.wingu.sdk.data.api.model.ChannelEvents> de.wingu.sdk.utils.NearbyChannelObserver.getChannelEvents()
+public java.util.Collection<de.wingu.sdk.data.api.model.Channel> de.wingu.sdk.utils.NearbyChannelObserver.getCurrentNearbyChannels()
+public boolean de.wingu.sdk.utils.NearbyChannelObserver.isChannelNearby(de.wingu.sdk.data.api.model.Channel)
+public void de.wingu.sdk.utils.NearbyChannelObserver.rescan()
+public final class de.wingu.sdk.utils.prerequisite.Prerequisite extends java.lang.Enum<de.wingu.sdk.utils.prerequisite.Prerequisite>
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.ACCESS_COARSE_LOCATION
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.ACCESS_FINE_LOCATION
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.BLUETOOTH_ON
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.LOCATION_SERVICES_ON
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.PLAY_SERVICES
+public class de.wingu.sdk.utils.prerequisite.PrerequisitesChecker extends java.lang.Object
+public static java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.check()
+public static boolean de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.checkWithDefaultDialogs(android.app.Activity, int)
+public static de.wingu.sdk.utils.prerequisite.ResolveResults de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.getResolveResults(android.content.Intent)
+public static boolean de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.resolveWithDefaultDialogs(android.app.Activity, int, de.wingu.sdk.utils.prerequisite.Prerequisite[])
+public final class de.wingu.sdk.utils.prerequisite.ResolveResults extends java.lang.Object implements java.io.Serializable
+public java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.ResolveResults.getFailed()
+public java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.ResolveResults.getResolved()

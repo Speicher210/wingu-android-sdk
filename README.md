@@ -1,32 +1,24 @@
 # wingu-android-sdk
 
-![Wingu](https://pbs.twimg.com/profile_banners/4774303042/1452516691/1500x500)
 wingu-android-sdk is an  SDK for [wingu.de](www.wingu.de) service. This framework will allow to connect with beacons and geofences nearby user location. 
 
 ## Overview
 
-wingu SDK requires `minSdkVersion >= 21`.
+wingu SDK requires `minSdkVersion >= 21` and `targetSdkVersion <= 27`.
 
-[javadoc](https://speicher210.github.io/wingu-android-sdk/javadoc/)
+[API docs](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/)
 
 ## Quickstart
 
-#### In `build.gradle` of your application module add this:
+### In `build.gradle` of your application module add this:
 
 ```
 android {
-  compileSdkVersion 26
-
-  compileOptions {
-    sourceCompatibility 1.8
-    targetCompatibility 1.8
-  }
-
-  dataBinding {
-    enabled true // data binding is required to display the contents of a channel
-  }
+  compileSdkVersion 27
 
   defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 27
     multiDexEnabled true
   }
 }
@@ -38,47 +30,80 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.Speicher210.wingu-android-sdk:sdk:0.3.4'
-  compile 'com.github.Speicher210.wingu-android-sdk:component-video:0.3.4' // optional
+  compile 'com.github.Speicher210.wingu-android-sdk:sdk:2.0.0'
+  compile 'com.github.Speicher210.wingu-android-sdk:component-video:2.0.0' // optional
 }
 ```
 
-#### (Optional) Add Google API key
+If you are using __Kotlin__ standard library, __Support Libraries__, __Google Play Services__ or have issues with dependencies, read [dependency management](./docs/dependency-management.md).
 
-To use the Location component with Google Maps, add your Google API key in `AndroidManifest.xml`:
-
-```
-<application>
-  <meta-data
-    android:name="com.google.android.geo.API_KEY"
-    android:value="TODO_PUT_YOUR_KEY"/>
-</application>
-```
-
-#### Initialize the SDK
+### Initialize the SDK
 
 In your `Application` subclass add this:
 
 ```
-@Override
-public void onCreate() {
-  super.onCreate();
-  WinguSDKBuilder.with(this, YOUR_API_KEY)
-    .registerComponent(VideoWinguComponent.spec(R.string.google_api_key)) // optional
-    .build();
+public class App extends Application {
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
+      .registerComponent(LocationWinguComponent.spec..) // optional
+      .registerComponent(VideoWinguComponent.spec(new PlainString(your_google_api_key))) // optional
+      .build();
+  }
 }
 ```
 
-#### Prerequisites
+### Location (map) component
 
-To be able to listen for nearby channels you need to have:
+There are two ways in which the location component is rendered.
+
+#### Option 1 - static maps
+
+By default, the map is rendered using "Google Static Maps API" without Google API key. This is fine for development, but for production you should provide your own Google API key:
+
+```
+WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
+  .registerComponent(LocationWinguComponent.specStaticMaps(new PlainString(your_google_api_key)))
+  //...
+```
+
+You can also provide a URL signing secret which tags requests to Google Static Maps API with a higher degree of security and is required if you exceed the free daily quota.
+
+However, when using static maps, it's not really possible to restrict the usage of your Google API key.
+
+[Static Maps API Quickstart](https://developers.google.com/maps/documentation/static-maps/get-api-key)
+
+#### Option 2 - map view
+
+If you want to limit the usage of your Google API key to your app's package ID ([more about API key restrictions](https://developers.google.com/maps/documentation/android-api/signup#restrict-key)), use the "Maps Android API" variant:
+
+```
+WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
+  .registerComponent(LocationWinguComponent.specMapView())
+  //...
+```
+
+Make sure that Google API key is added to your `AndroidManifest.xml` file, otherwise the map will not be displayed.
+
+[Maps Android API Quickstart](https://developers.google.com/maps/documentation/android-api/signup).
+
+### Video component
+
+To use Video component, you need to obtain Google API key, making sure that "YouTube Data API v3" is enabled.
+
+For more information go to [YouTube Android Quickstart](https://developers.google.com/youtube/v3/quickstart/android).
+
+### Prerequisites
+
+To be able to listen for nearby channels (iBeacons and geofences) you need to have:
 
 - runtime LOCATION permission (on Android 6+; either ACCESS_COARSE_LOCATION or ACCESS_FINE_LOCATION)
 - bluetooth on
 - location services on
 - Google Play services
 
-You can handle this on your own, or use a `PrerequisitesChecker` class
+You can handle this on your own, or use a `PrerequisitesChecker` class:
 
 ```
 private static final int WINGU_SDK_PREREQUISITES_REQUEST = 535;
@@ -89,7 +114,10 @@ protected void onStart() {
   if (PrerequisitesChecker.checkWithDefaultDialogs(this, WINGU_SDK_PREREQUISITES_REQUEST)) {
     // All prerequisites are met
     listenForNearbyChannels();
-  } // otherwise, we show dialogs to resolve any issues, and return results in onActivityResult
+  }
+  // if `checkWithDefaultDialogs` above returned `false`,
+  // dialogs are shown to resolve any issues,
+  // and results are returned in `onActivityResult`
 }
 
 @Override
@@ -112,7 +140,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-#### Listening for nearby channels
+### Listening for nearby channels
 
 Once you have all the prerequisites, you can listen for nearby channel events.
 
@@ -150,7 +178,7 @@ private void stopListeningForNearbyChannels() {
 }
 ```
 
-#### Displaying a channel
+### Displaying a channel
 
 To display channel’s contents, use `ChannelDetailsFragment`:
 
@@ -168,6 +196,10 @@ Android Developers @ wingu AG
 
 [Mateusz](https://github.com/armatys)  
 [Wiktor](https://github.com/wingu-wiktor)
+
+## wingu
+
+This is a wingu open source project. With wingu platform, API and SDK it is easier then ever to use proximity technologies in new and exciteing ways, such as creating a simple app or adding proximity functionality to your existing application. For more information check out: [https://www.wingu.de/en/developer/](https://www.wingu.de/en/developer/) or start a free trail at [https://wingu-portal.de/register.](https://wingu-portal.de/register.)
 
 ## License
 

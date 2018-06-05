@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PrerequisitesChecker - wingu-android-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.utils.prerequisite</a>&nbsp;/&nbsp;<a href=".">PrerequisitesChecker</a><br/>
+<br/>
+<h1>PrerequisitesChecker</h1>
+<code><span class="keyword">object </span><span class="identifier">PrerequisitesChecker</span></code>
+<p>Helper class that helps the developer make sure that app meets all prerequisites of WinguSDK.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="check.html">check</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">check</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span class="symbol">&lt;</span><a href="../-prerequisite/index.html"><span class="identifier">Prerequisite</span></a><span class="symbol">&gt;</span></code>
+<p>Checks if all prerequisites of WinguSDK has been met.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="check-with-default-dialogs.html">checkWithDefaultDialogs</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">checkWithDefaultDialogs</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$checkWithDefaultDialogs(android.app.Activity, kotlin.Int)/activity">activity</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$checkWithDefaultDialogs(android.app.Activity, kotlin.Int)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Checks for prerequisites. If any of them is not met starts transparent activity that will
+ask user to grant all necessary permissions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-resolve-results.html">getResolveResults</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getResolveResults</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$getResolveResults(android.content.Intent)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-resolve-results/index.html"><span class="identifier">ResolveResults</span></a><span class="symbol">?</span></code>
+<p>This function helps check result of <a href="#">.checkWithDefaultDialogs</a> and <a href="#"> </a>.
+If any of mentioned functions returned false it means they started transparent activity for result.
+Using this function you can get result data form intent passed to <a href="https://developer.android.com/reference/android/app/Activity.html#onActivityResult(int, int, android.content.Intent)">Activity.onActivityResult</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resolve-with-default-dialogs.html">resolveWithDefaultDialogs</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">resolveWithDefaultDialogs</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$resolveWithDefaultDialogs(android.app.Activity, kotlin.Int, kotlin.Array((de.wingu.sdk.utils.prerequisite.Prerequisite)))/activity">activity</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$resolveWithDefaultDialogs(android.app.Activity, kotlin.Int, kotlin.Array((de.wingu.sdk.utils.prerequisite.Prerequisite)))/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="de.wingu.sdk.utils.prerequisite.PrerequisitesChecker$resolveWithDefaultDialogs(android.app.Activity, kotlin.Int, kotlin.Array((de.wingu.sdk.utils.prerequisite.Prerequisite)))/toResolve">toResolve</span><span class="symbol">:</span>&nbsp;<a href="../-prerequisite/index.html"><span class="identifier">Prerequisite</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Tries to resolve given prerequisites. If any prerequisite is already met, it will be ignored.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

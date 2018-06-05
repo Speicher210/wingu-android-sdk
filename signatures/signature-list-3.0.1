@@ -1,0 +1,369 @@
+public abstract interface de.wingu.blescanner.ibeacon.model.Ibeacon
+public static void de.wingu.blescanner.ibeacon.model.Ibeacon.DefaultImpls.major$annotations()
+public static void de.wingu.blescanner.ibeacon.model.Ibeacon.DefaultImpls.minor$annotations()
+public static void de.wingu.blescanner.ibeacon.model.Ibeacon.DefaultImpls.uuid$annotations()
+public final class de.wingu.blescanner.ibeacon.model.IbeaconDevice implements de.wingu.blescanner.ibeacon.model.Ibeacon
+public static void de.wingu.blescanner.ibeacon.model.IbeaconDevice.distance$annotations()
+public static void de.wingu.blescanner.ibeacon.model.IbeaconDevice.major$annotations()
+public static void de.wingu.blescanner.ibeacon.model.IbeaconDevice.minor$annotations()
+public static void de.wingu.blescanner.ibeacon.model.IbeaconDevice.name$annotations()
+public static void de.wingu.blescanner.ibeacon.model.IbeaconDevice.rssi$annotations()
+public static void de.wingu.blescanner.ibeacon.model.IbeaconDevice.timestampNanos$annotations()
+public static void de.wingu.blescanner.ibeacon.model.IbeaconDevice.txPower$annotations()
+public static void de.wingu.blescanner.ibeacon.model.IbeaconDevice.uuid$annotations()
+public abstract class de.wingu.sdk.WinguSDK
+public static final class de.wingu.sdk.WinguSDK.Companion
+public final de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDK.Companion.getInstance()
+public static final de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDK.getInstance()
+public abstract de.wingu.sdk.utils.NearbyChannelObserver de.wingu.sdk.WinguSDK.getNearbyChannelObserver()
+public abstract class de.wingu.sdk.WinguSDKBuilder
+public abstract static interface de.wingu.sdk.WinguSDKBuilder.BuildListener
+public abstract void de.wingu.sdk.WinguSDKBuilder.BuildListener.onNewInstanceCreated(winguSDK: de.wingu.sdk.WinguSDK)
+public static final class de.wingu.sdk.WinguSDKBuilder.Companion
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.Companion.with(application: android.app.Application, apiKey: java.lang.String)
+public final de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDKBuilder.build()
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.channelNotificationsConfig(configFactory: java.util.concurrent.Callable<de.wingu.sdk.notification.ChannelNotificationsConfig>)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.geofenceBackgroundScan(enabled: boolean)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.geofenceForegroundScan(enabled: boolean)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.ibeaconBackgroundScan(enabled: boolean)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.ibeaconForegroundScan(enabled: boolean)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.loggingLevel(level: java.util.logging.Level)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.registerComponent(componentSpec: de.wingu.sdk.data.api.model.components.ComponentSpec)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.staging(isStaging: boolean)
+public static final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.with(application: android.app.Application, apiKey: java.lang.String)
+public final class de.wingu.sdk.data.api.model.Card
+public static void de.wingu.sdk.data.api.model.Card.component$annotations()
+public static void de.wingu.sdk.data.api.model.Card.id$annotations()
+public static void de.wingu.sdk.data.api.model.Card.position$annotations()
+public abstract class de.wingu.sdk.data.api.model.Channel
+public static final enum de.wingu.sdk.data.api.model.Channel.ChannelType
+public static void de.wingu.sdk.data.api.model.Channel.content$annotations()
+public abstract de.wingu.sdk.data.api.model.Channel.ChannelType de.wingu.sdk.data.api.model.Channel.getChannelType()
+public static void de.wingu.sdk.data.api.model.Channel.id$annotations()
+public static void de.wingu.sdk.data.api.model.Channel.name$annotations()
+public final enum de.wingu.sdk.data.api.model.ChannelEventType
+public static final de.wingu.sdk.data.api.model.ChannelEventType.DISCOVERED
+public static final de.wingu.sdk.data.api.model.ChannelEventType.LOST
+public static final de.wingu.sdk.data.api.model.ChannelEventType.UPDATED
+public final class de.wingu.sdk.data.api.model.ChannelEvents
+public final java.util.Collection<de.wingu.sdk.data.api.model.Channel> de.wingu.sdk.data.api.model.ChannelEvents.getChannels()
+public final de.wingu.sdk.data.api.model.ChannelEventType de.wingu.sdk.data.api.model.ChannelEvents.getEventType()
+public abstract class de.wingu.sdk.data.api.model.ChannelKey
+public static final class de.wingu.sdk.data.api.model.ChannelKey.Companion
+public final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.Companion.from(channel: de.wingu.sdk.data.api.model.Channel)
+public static final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.from(channel: de.wingu.sdk.data.api.model.Channel)
+public final class de.wingu.sdk.data.api.model.Content
+public static void de.wingu.sdk.data.api.model.Content.id$annotations()
+public static void de.wingu.sdk.data.api.model.Content.pack$annotations()
+public final class de.wingu.sdk.data.api.model.Deck
+public static void de.wingu.sdk.data.api.model.Deck.cards$annotations()
+public static void de.wingu.sdk.data.api.model.Deck.description$annotations()
+public static void de.wingu.sdk.data.api.model.Deck.id$annotations()
+public static void de.wingu.sdk.data.api.model.Deck.legalNote$annotations()
+public static void de.wingu.sdk.data.api.model.Deck.title$annotations()
+public final class de.wingu.sdk.data.api.model.GeoBoundaries
+public static final class de.wingu.sdk.data.api.model.GeoBoundaries.Companion
+public static void de.wingu.sdk.data.api.model.GeoBoundaries.Companion.TYPE_POLYGON$annotations()
+public static void de.wingu.sdk.data.api.model.GeoBoundaries.coordinates$annotations()
+public static void de.wingu.sdk.data.api.model.GeoBoundaries.type$annotations()
+public final class de.wingu.sdk.data.api.model.GeofenceChannel extends de.wingu.sdk.data.api.model.Channel
+public static void de.wingu.sdk.data.api.model.GeofenceChannel.boundaries$annotations()
+public static void de.wingu.sdk.data.api.model.GeofenceChannel.content$annotations()
+public static void de.wingu.sdk.data.api.model.GeofenceChannel.id$annotations()
+public static void de.wingu.sdk.data.api.model.GeofenceChannel.name$annotations()
+public final class de.wingu.sdk.data.api.model.GeofenceKey extends de.wingu.sdk.data.api.model.ChannelKey
+public static void de.wingu.sdk.data.api.model.GeofenceKey.geofenceId$annotations()
+public final class de.wingu.sdk.data.api.model.IbeaconChannel extends de.wingu.sdk.data.api.model.Channel
+public static void de.wingu.sdk.data.api.model.IbeaconChannel.content$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconChannel.id$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconChannel.location$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconChannel.major$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconChannel.minor$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconChannel.name$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconChannel.uuid$annotations()
+public final class de.wingu.sdk.data.api.model.IbeaconChannelKey extends de.wingu.sdk.data.api.model.IbeaconKey
+public void de.wingu.sdk.data.api.model.IbeaconChannelKey.<init>(backendId: java.lang.String, major: int, minor: int, uuid: java.util.UUID)
+public static void de.wingu.sdk.data.api.model.IbeaconChannelKey.backendId$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconChannelKey.major$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconChannelKey.minor$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconChannelKey.uuid$annotations()
+public class de.wingu.sdk.data.api.model.IbeaconKey extends de.wingu.sdk.data.api.model.ChannelKey
+public void de.wingu.sdk.data.api.model.IbeaconKey.<init>(major: int, minor: int, uuid: java.util.UUID)
+public static final class de.wingu.sdk.data.api.model.IbeaconKey.Companion
+public final de.wingu.sdk.data.api.model.IbeaconKey de.wingu.sdk.data.api.model.IbeaconKey.Companion.from(beacon: de.wingu.blescanner.ibeacon.model.Ibeacon)
+public static final de.wingu.sdk.data.api.model.IbeaconKey de.wingu.sdk.data.api.model.IbeaconKey.from(beacon: de.wingu.blescanner.ibeacon.model.Ibeacon)
+public static void de.wingu.sdk.data.api.model.IbeaconKey.major$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconKey.minor$annotations()
+public static void de.wingu.sdk.data.api.model.IbeaconKey.uuid$annotations()
+public final class de.wingu.sdk.data.api.model.Locale
+public static void de.wingu.sdk.data.api.model.Locale.languageCode$annotations()
+public final class de.wingu.sdk.data.api.model.Location
+public static void de.wingu.sdk.data.api.model.Location.coordinates$annotations()
+public final class de.wingu.sdk.data.api.model.NfcChannel extends de.wingu.sdk.data.api.model.Channel
+public static void de.wingu.sdk.data.api.model.NfcChannel.content$annotations()
+public static void de.wingu.sdk.data.api.model.NfcChannel.id$annotations()
+public static void de.wingu.sdk.data.api.model.NfcChannel.name$annotations()
+public static void de.wingu.sdk.data.api.model.NfcChannel.payload$annotations()
+public final class de.wingu.sdk.data.api.model.NfcKey extends de.wingu.sdk.data.api.model.ChannelKey
+public static void de.wingu.sdk.data.api.model.NfcKey.nfcId$annotations()
+public final class de.wingu.sdk.data.api.model.Pack
+public static void de.wingu.sdk.data.api.model.Pack.deck$annotations()
+public static void de.wingu.sdk.data.api.model.Pack.id$annotations()
+public static void de.wingu.sdk.data.api.model.Pack.locale$annotations()
+public final class de.wingu.sdk.data.api.model.Position
+public static void de.wingu.sdk.data.api.model.Position.sort$annotations()
+public final class de.wingu.sdk.data.api.model.QrcodeChannel extends de.wingu.sdk.data.api.model.Channel
+public static void de.wingu.sdk.data.api.model.QrcodeChannel.content$annotations()
+public static void de.wingu.sdk.data.api.model.QrcodeChannel.id$annotations()
+public static void de.wingu.sdk.data.api.model.QrcodeChannel.name$annotations()
+public static void de.wingu.sdk.data.api.model.QrcodeChannel.payload$annotations()
+public final class de.wingu.sdk.data.api.model.QrcodeKey extends de.wingu.sdk.data.api.model.ChannelKey
+public static void de.wingu.sdk.data.api.model.QrcodeKey.qrcodeId$annotations()
+public final class de.wingu.sdk.data.api.model.components.ActionComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.ActionComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.ActionComponent.Companion.ACTION_TYPE_OPEN_URL$annotations()
+public static void de.wingu.sdk.data.api.model.components.ActionComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.ActionComponent.actionPayload$annotations()
+public static void de.wingu.sdk.data.api.model.components.ActionComponent.actionType$annotations()
+public static void de.wingu.sdk.data.api.model.components.ActionComponent.buttonCaption$annotations()
+public static void de.wingu.sdk.data.api.model.components.ActionComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.ActionComponent.id$annotations()
+public final class de.wingu.sdk.data.api.model.components.CMSComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.CMSComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.CMSComponent.Companion.CONTENT_TYPE_HTML$annotations()
+public static void de.wingu.sdk.data.api.model.components.CMSComponent.Companion.CONTENT_TYPE_MARKDOWN$annotations()
+public static void de.wingu.sdk.data.api.model.components.CMSComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.CMSComponent.content$annotations()
+public static void de.wingu.sdk.data.api.model.components.CMSComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.CMSComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.CMSComponent.type$annotations()
+public abstract interface de.wingu.sdk.data.api.model.components.Component
+public static void de.wingu.sdk.data.api.model.components.Component.DefaultImpls.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.Component.DefaultImpls.id$annotations()
+public final class de.wingu.sdk.data.api.model.components.ComponentSpec
+public final class de.wingu.sdk.data.api.model.components.LocationComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.LocationComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.LocationComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.LocationComponent.coordinates$annotations()
+public static void de.wingu.sdk.data.api.model.components.LocationComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.LocationComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.LocationComponent.radius$annotations()
+public final class de.wingu.sdk.data.api.model.components.ProxyComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.ProxyComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.ProxyComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.ProxyComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.ProxyComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.ProxyComponent.payload$annotations()
+public final class de.wingu.sdk.data.api.model.components.RatingComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.RatingComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.RatingComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.RatingComponent.description$annotations()
+public static void de.wingu.sdk.data.api.model.components.RatingComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.RatingComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.RatingComponent.title$annotations()
+public static void de.wingu.sdk.data.api.model.components.RatingComponent.type$annotations()
+public final class de.wingu.sdk.data.api.model.components.SeparatorComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion.SEPARATOR_ARTICLE_END$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion.SEPARATOR_BASIC_LINE$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion.SEPARATOR_DASHES$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion.SEPARATOR_DOTS$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion.SEPARATOR_MORSE$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion.SEPARATOR_WAVE$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.colorHex$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.SeparatorComponent.type$annotations()
+public final class de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.description$annotations()
+public static void de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.surveyURL$annotations()
+public static void de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.title$annotations()
+public final class de.wingu.sdk.data.api.model.components.UnsupportedComponent implements de.wingu.sdk.data.api.model.components.Component
+public static void de.wingu.sdk.data.api.model.components.UnsupportedComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.UnsupportedComponent.id$annotations()
+public final class de.wingu.sdk.data.api.model.components.VideoComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.VideoComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.VideoComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.VideoComponent.description$annotations()
+public static void de.wingu.sdk.data.api.model.components.VideoComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.VideoComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.VideoComponent.payload$annotations()
+public static void de.wingu.sdk.data.api.model.components.VideoComponent.type$annotations()
+public final class de.wingu.sdk.data.api.model.components.WebhookComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.WebhookComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.WebhookComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.WebhookComponent.buttonCaption$annotations()
+public static void de.wingu.sdk.data.api.model.components.WebhookComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.WebhookComponent.id$annotations()
+public final class de.wingu.sdk.data.api.model.components.audio.AudioComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.audio.AudioComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.audio.AudioComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioComponent.media$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioComponent.name$annotations()
+public final class de.wingu.sdk.data.api.model.components.audio.AudioItem
+public static void de.wingu.sdk.data.api.model.components.audio.AudioItem.album$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioItem.fileUrl$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioItem.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioItem.length$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioItem.name$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioItem.position$annotations()
+public final class de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum
+public static void de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum.cover$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum.name$annotations()
+public final class de.wingu.sdk.data.api.model.components.audio.CloudinaryImage
+public static final class de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.Companion
+public static void de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.Companion.TYPE_CLOUDINARY$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.cloudinaryId$annotations()
+public static void de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.type$annotations()
+public final class de.wingu.sdk.data.api.model.components.common.Coordinates
+public static void de.wingu.sdk.data.api.model.components.common.Coordinates.latitude$annotations()
+public static void de.wingu.sdk.data.api.model.components.common.Coordinates.longitude$annotations()
+public final class de.wingu.sdk.data.api.model.components.common.Image
+public static void de.wingu.sdk.data.api.model.components.common.Image.cloudinaryId$annotations()
+public static void de.wingu.sdk.data.api.model.components.common.Image.metadata$annotations()
+public static void de.wingu.sdk.data.api.model.components.common.Image.type$annotations()
+public final class de.wingu.sdk.data.api.model.components.common.ImageMetadata
+public static void de.wingu.sdk.data.api.model.components.common.ImageMetadata.format$annotations()
+public static void de.wingu.sdk.data.api.model.components.common.ImageMetadata.height$annotations()
+public static void de.wingu.sdk.data.api.model.components.common.ImageMetadata.width$annotations()
+public final class de.wingu.sdk.data.api.model.components.contact.Address
+public static void de.wingu.sdk.data.api.model.components.contact.Address.city$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.Address.country$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.Address.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.Address.street$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.Address.streetNumber$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.Address.zipCode$annotations()
+public final class de.wingu.sdk.data.api.model.components.contact.ContactComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.contact.ContactComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.address$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.companyName$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.email$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.externalLinks$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.extraInfo$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.firstName$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.lastName$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.mobile$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.openingHours$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.personalTitle$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.phone$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ContactComponent.website$annotations()
+public final class de.wingu.sdk.data.api.model.components.contact.ExternalLinks
+public static void de.wingu.sdk.data.api.model.components.contact.ExternalLinks.facebookName$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ExternalLinks.facebookUrl$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ExternalLinks.googlePlusName$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ExternalLinks.googlePlusUrl$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ExternalLinks.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ExternalLinks.twitterName$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ExternalLinks.twitterUrl$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ExternalLinks.yelpName$annotations()
+public static void de.wingu.sdk.data.api.model.components.contact.ExternalLinks.yelpUrl$annotations()
+public final class de.wingu.sdk.data.api.model.components.coupon.Barcode
+public static void de.wingu.sdk.data.api.model.components.coupon.Barcode.type$annotations()
+public static void de.wingu.sdk.data.api.model.components.coupon.Barcode.value$annotations()
+public final class de.wingu.sdk.data.api.model.components.coupon.CouponComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.coupon.CouponComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.coupon.CouponComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.coupon.CouponComponent.backgroundImage$annotations()
+public static void de.wingu.sdk.data.api.model.components.coupon.CouponComponent.barcode$annotations()
+public static void de.wingu.sdk.data.api.model.components.coupon.CouponComponent.description$annotations()
+public static void de.wingu.sdk.data.api.model.components.coupon.CouponComponent.disclaimer$annotations()
+public static void de.wingu.sdk.data.api.model.components.coupon.CouponComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.coupon.CouponComponent.header$annotations()
+public static void de.wingu.sdk.data.api.model.components.coupon.CouponComponent.id$annotations()
+public final class de.wingu.sdk.data.api.model.components.files.FileData
+public static void de.wingu.sdk.data.api.model.components.files.FileData.fileUrl$annotations()
+public static void de.wingu.sdk.data.api.model.components.files.FileData.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.files.FileData.name$annotations()
+public static void de.wingu.sdk.data.api.model.components.files.FileData.size$annotations()
+public final class de.wingu.sdk.data.api.model.components.files.FilesComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.files.FilesComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.files.FilesComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.files.FilesComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.files.FilesComponent.files$annotations()
+public static void de.wingu.sdk.data.api.model.components.files.FilesComponent.id$annotations()
+public final class de.wingu.sdk.data.api.model.components.image.ImageEntry
+public static void de.wingu.sdk.data.api.model.components.image.ImageEntry.caption$annotations()
+public static void de.wingu.sdk.data.api.model.components.image.ImageEntry.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.image.ImageEntry.image$annotations()
+public static void de.wingu.sdk.data.api.model.components.image.ImageEntry.position$annotations()
+public final class de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.Companion
+public static void de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.Companion.DISCRIMINATOR$annotations()
+public static void de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.discriminator$annotations()
+public static void de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.id$annotations()
+public static void de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.images$annotations()
+public final class de.wingu.sdk.notification.ChannelNotificationsConfig
+public static final class de.wingu.sdk.notification.ChannelNotificationsConfig.Builder
+public void de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.<init>(channelNotificationCallback: de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.build()
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setLargeIcon(largeIcon: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSmallIcon(smallIcon: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeButtonTitle(text: java.lang.String)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeIcon(snoozeIcon: int)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeTimeMinutes(minutes: int)
+public abstract static interface de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback
+public abstract java.util.Collection<de.wingu.sdk.notification.WinguNotification> de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback.winguNotifications(channels: java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel>)
+public final class de.wingu.sdk.notification.WinguNotification
+public static final class de.wingu.sdk.notification.WinguNotification.Companion
+public final android.app.PendingIntent de.wingu.sdk.notification.WinguNotification.Companion.createDefaultChannelPendingIntent(channel: de.wingu.sdk.data.api.model.Channel, parentIntent: android.content.Intent)
+public final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.Companion.createGroupNotification(channels: java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel>, title: java.lang.String, pendingIntent: android.app.PendingIntent)
+public final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.Companion.createMissedChannelsNotification(title: java.lang.String, contentText: java.lang.String, pendingIntent: android.app.PendingIntent)
+public final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.Companion.createSingleChannelNotification(channel: de.wingu.sdk.data.api.model.Channel, title: java.lang.String, contentText: java.lang.String, pendingIntent: android.app.PendingIntent)
+public static final android.app.PendingIntent de.wingu.sdk.notification.WinguNotification.createDefaultChannelPendingIntent(channel: de.wingu.sdk.data.api.model.Channel, parentIntent: android.content.Intent)
+public static final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createGroupNotification(channels: java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel>, title: java.lang.String, pendingIntent: android.app.PendingIntent)
+public static final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createMissedChannelsNotification(title: java.lang.String, contentText: java.lang.String, pendingIntent: android.app.PendingIntent)
+public static final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createSingleChannelNotification(channel: de.wingu.sdk.data.api.model.Channel, title: java.lang.String, contentText: java.lang.String, pendingIntent: android.app.PendingIntent)
+public final class de.wingu.sdk.ui.component.location.LocationWinguComponent
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.location.LocationWinguComponent.specMapView()
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.location.LocationWinguComponent.specStaticMaps(googleApiKey: de.wingu.sdk.utils.StringRef, urlSigningSecret: de.wingu.sdk.utils.StringRef)
+public final class de.wingu.sdk.ui.details.ChannelDetailsActivity
+public static final class de.wingu.sdk.ui.details.ChannelDetailsActivity.Companion
+public final android.content.Intent de.wingu.sdk.ui.details.ChannelDetailsActivity.Companion.newInstance(context: android.content.Context, channel: de.wingu.sdk.data.api.model.Channel, title: java.lang.String)
+public final class de.wingu.sdk.ui.details.ChannelDetailsFragment
+public static final class de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion
+public final android.support.v4.app.Fragment de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion.newInstance(channelKey: de.wingu.sdk.data.api.model.ChannelKey)
+public abstract static interface de.wingu.sdk.ui.details.ChannelDetailsFragment.OptionalFragmentCallbacks
+public static final android.support.v4.app.Fragment de.wingu.sdk.ui.details.ChannelDetailsFragment.newInstance(channelKey: de.wingu.sdk.data.api.model.ChannelKey)
+public abstract class de.wingu.sdk.ui.details.ChannelProxyFragment
+protected static void de.wingu.sdk.ui.details.ChannelProxyFragment.channelKey$annotations()
+protected abstract void de.wingu.sdk.ui.details.ChannelProxyFragment.onCustomPayload(payload: java.lang.String)
+public abstract void de.wingu.sdk.ui.details.ChannelProxyFragment.onError(throwable: java.lang.Throwable)
+public final class de.wingu.sdk.utils.ByteString extends de.wingu.sdk.utils.StringRef
+public void de.wingu.sdk.utils.ByteString.<init>(b: byte[])
+public abstract interface de.wingu.sdk.utils.NearbyChannelObserver
+public abstract de.wingu.blescanner.ibeacon.model.IbeaconDevice de.wingu.sdk.utils.NearbyChannelObserver.findBeaconDevice(channel: de.wingu.sdk.data.api.model.Channel)
+public abstract rx.Observable<de.wingu.sdk.data.api.model.ChannelEvents> de.wingu.sdk.utils.NearbyChannelObserver.getChannelEvents()
+public abstract java.util.Collection<de.wingu.sdk.data.api.model.Channel> de.wingu.sdk.utils.NearbyChannelObserver.getCurrentNearbyChannels()
+public abstract boolean de.wingu.sdk.utils.NearbyChannelObserver.isChannelNearby(channel: de.wingu.sdk.data.api.model.Channel)
+public abstract void de.wingu.sdk.utils.NearbyChannelObserver.rescan()
+public final class de.wingu.sdk.utils.PlainString extends de.wingu.sdk.utils.StringRef
+public void de.wingu.sdk.utils.PlainString.<init>(s: java.lang.String)
+public abstract class de.wingu.sdk.utils.StringRef
+public final class de.wingu.sdk.utils.StringRes extends de.wingu.sdk.utils.StringRef
+public void de.wingu.sdk.utils.StringRes.<init>(resourceId: int)
+public final enum de.wingu.sdk.utils.prerequisite.Prerequisite
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.ACCESS_COARSE_LOCATION
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.ACCESS_FINE_LOCATION
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.BLUETOOTH_ON
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.LOCATION_SERVICES_ON
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite.PLAY_SERVICES
+public final class de.wingu.sdk.utils.prerequisite.PrerequisitesChecker
+public static final java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.check()
+public static final boolean de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.checkWithDefaultDialogs(activity: android.app.Activity, requestCode: int)
+public static final de.wingu.sdk.utils.prerequisite.ResolveResults de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.getResolveResults(data: android.content.Intent)
+public static final boolean de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.resolveWithDefaultDialogs(activity: android.app.Activity, requestCode: int, toResolve: de.wingu.sdk.utils.prerequisite.Prerequisite[])
+public final class de.wingu.sdk.utils.prerequisite.ResolveResults
+public static void de.wingu.sdk.utils.prerequisite.ResolveResults.failed$annotations()
+public static void de.wingu.sdk.utils.prerequisite.ResolveResults.resolved$annotations()
+public final class de.wingu.sdk.ui.component.video.VideoWinguComponent
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.video.VideoWinguComponent.spec(googleApiKey: de.wingu.sdk.utils.StringRef)

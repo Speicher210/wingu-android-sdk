@@ -74,6 +74,20 @@ However, when using static maps, it's not really possible to restrict the usage 
 
 [Static Maps API Quickstart](https://developers.google.com/maps/documentation/static-maps/get-api-key)
 
+### Notifications 
+
+To enable and configure notifications `ChannelNotificationConfig` needs to be registered while initializing SDK: 
+
+```
+WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
+  .channelNotificationsConfig(channelNotificationConfig)
+  //...
+  .build()
+```
+
+`ChannelNotificationConfig.Builder(ChannelNotificationCallback calback)` has to be used to create notifiaction config. 
+The mandatory step is to provide implementation of `ChannelNotifcationCallback`to Builder's constructor. It's used to convert nearby channels to colection of `WinguNotification`. More detailed documetation about notifications can be found [here](https://docs.google.com/document/d/1U9qOQJBh5pXty8Z6YkOU0KLSQ5dZh7nZYk6_n9ov53U/edit?usp=sharing) 
+ 
 #### Option 2 - map view
 
 If you want to limit the usage of your Google API key to your app's package ID ([more about API key restrictions](https://developers.google.com/maps/documentation/android-api/signup#restrict-key)), use the "Maps Android API" variant:

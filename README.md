@@ -77,11 +77,11 @@ WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
   //...
   .build()
 ```
-Both functions `nfc` and `eddystone` are overloaded, so there exist second argument that can be used to create custom activity intent. Be default `ChannelsDetailsActivity` is displayed.
+Both functions `nfc` and `eddystone` are overloaded. Second variant has argument that can be used to create custom activity intent. Be default `ChannelsDetailsActivity` is displayed.
 
 ### Qrcode recognition
 Optionally qr code scanner can be used. You need to add additional dependecy to your `build.gradle` (see top of this page).
-Then `QrCodeScanningActivity` can be used to scan for qr codes and display `ChannelDetailsActivity` if wingu qr codes are recognized. If you wish to customize behaviour extend this activity and override methods: `openDetailsActivity(chanelKey: ChannelKey)` and  'showError(qrCodeError: QrCodeError))'.
+Then `QrCodeScanningActivity` can be used to scan for qr codes and display `ChannelDetailsActivity` if wingu qr codes are recognized. If you wish to customize behaviour extend this activity and override methods: `openDetailsActivity(chanelKey: ChannelKey)` and  `showError(qrCodeError: QrCodeError))`.
 
 ### Location (map) component
 

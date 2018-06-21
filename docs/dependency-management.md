@@ -4,7 +4,7 @@ If you are already using a library that is also used by wingu sdk, yo can overri
 
 This is especially useful and __recommended__ if you are using __Kotlin__ standard library, __Support Libraries__ or __Google Play Services__, to make sure that both your app and wingu sdk use the same versions.
 
-See [full list of wingu dependencies](../releases/com/github/Speicher210/wingu-android-sdk/bom/3.0.3/bom-3.0.3.pom) which you can override.
+See [full list of wingu dependencies](../releases/com/github/Speicher210/wingu-android-sdk/bom/3.1.0/bom-3.1.0.pom) which you can override.
 
 ### Overriding a library version
 
@@ -24,7 +24,7 @@ ext {
     kotlinVersion = '1.2.31'
     playServicesVersion = '15.0.0'
     supportLibsVersion = '27.1.1'
-    winguSdkVersion = '3.0.3'
+    winguSdkVersion = '3.1.0'
 }
 ```
 

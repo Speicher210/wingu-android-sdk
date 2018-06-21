@@ -68,16 +68,16 @@ WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
 `ChannelNotificationConfig.Builder(ChannelNotificationCallback calback)` has to be used to create notifiaction config. 
 The mandatory step is to provide implementation of `ChannelNotifcationCallback`to Builder's constructor. It's used to convert nearby channels to colection of `WinguNotification`. More detailed documetation about notifications can be found [here](https://docs.google.com/document/d/1U9qOQJBh5pXty8Z6YkOU0KLSQ5dZh7nZYk6_n9ov53U/edit?usp=sharing) 
 
-### Nfc, eddystone 
+### Nfc, eddystoneUrl 
 Nfc and url interception by app (eddystone notifications, and other wingu urls that can be displayed in app) can be turned on during initialization:
 ```
 WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
   .nfc(true)
-  .eddystone(true)
+  .eddystoneUrl(true)
   //...
   .build()
 ```
-Both functions `nfc` and `eddystone` are overloaded. Second variant has argument that can be used to create custom activity intent. Be default `ChannelsDetailsActivity` is displayed.
+Both functions `nfc` and `eddystoneUrl` are overloaded. Second funtction variant has argument that can be used to create custom activity intent. Be default `ChannelsDetailsActivity` is displayed.
 
 ### Qrcode recognition
 Optionally qr code scanner can be used. You need to add additional dependecy to your `build.gradle` (see top of this page).

@@ -30,9 +30,9 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.Speicher210.wingu-android-sdk:sdk:3.1.0'
-  compile 'com.github.Speicher210.wingu-android-sdk:component-video:3.1.0' // optional
-  compile 'com.github.Speicher210.wingu-android-sdk:qrcodescanner:3.1.0' // optional
+  compile 'com.github.Speicher210.wingu-android-sdk:sdk:3.2.0'
+  compile 'com.github.Speicher210.wingu-android-sdk:component-video:3.2.0' // optional
+  compile 'com.github.Speicher210.wingu-android-sdk:qrcodescanner:3.2.0' // optional
 }
 ```
 

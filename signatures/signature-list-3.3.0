@@ -1,0 +1,450 @@
+public abstract interface de.wingu.blescanner.ibeacon.model.Ibeacon
+public abstract int de.wingu.blescanner.ibeacon.model.Ibeacon.getMajor()
+public abstract int de.wingu.blescanner.ibeacon.model.Ibeacon.getMinor()
+public abstract java.util.UUID de.wingu.blescanner.ibeacon.model.Ibeacon.getUuid()
+public final class de.wingu.blescanner.ibeacon.model.IbeaconDevice implements de.wingu.blescanner.ibeacon.model.Ibeacon
+public final double de.wingu.blescanner.ibeacon.model.IbeaconDevice.getDistance()
+public int de.wingu.blescanner.ibeacon.model.IbeaconDevice.getMajor()
+public int de.wingu.blescanner.ibeacon.model.IbeaconDevice.getMinor()
+public final java.lang.String de.wingu.blescanner.ibeacon.model.IbeaconDevice.getName()
+public final int de.wingu.blescanner.ibeacon.model.IbeaconDevice.getRssi()
+public final long de.wingu.blescanner.ibeacon.model.IbeaconDevice.getTimestampNanos()
+public final int de.wingu.blescanner.ibeacon.model.IbeaconDevice.getTxPower()
+public java.util.UUID de.wingu.blescanner.ibeacon.model.IbeaconDevice.getUuid()
+public final class de.wingu.sdk.ui.component.video.VideoWinguComponent
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.video.VideoWinguComponent.spec(de.wingu.sdk.utils.StringRef googleApiKey)
+public class de.wingu.qrcodescanner.QrCodeScannerActivity
+public static final class de.wingu.qrcodescanner.QrCodeScannerActivity.Companion
+public final void de.wingu.qrcodescanner.QrCodeScannerActivity.Companion.start(android.content.Context from)
+public static final enum de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError
+public static final de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError.INVALID_CHANNEL_ID
+public static final de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError.NOT_RECOGNIZED
+public void de.wingu.qrcodescanner.QrCodeScannerActivity.openDetailsActivity(de.wingu.sdk.data.api.model.ChannelKey chanelKey)
+public void de.wingu.qrcodescanner.QrCodeScannerActivity.showError(de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError qrCodeError)
+public static final void de.wingu.qrcodescanner.QrCodeScannerActivity.start(android.content.Context from)
+public abstract class de.wingu.sdk.WinguSDK
+public static final class de.wingu.sdk.WinguSDK.Companion
+public final de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDK.Companion.getInstance()
+public static final de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDK.getInstance()
+public abstract de.wingu.sdk.utils.NearbyChannelObserver de.wingu.sdk.WinguSDK.getNearbyChannelObserver()
+public abstract class de.wingu.sdk.WinguSDKBuilder
+public abstract static interface de.wingu.sdk.WinguSDKBuilder.BuildListener
+public abstract void de.wingu.sdk.WinguSDKBuilder.BuildListener.onNewInstanceCreated(de.wingu.sdk.WinguSDK winguSDK)
+public static final class de.wingu.sdk.WinguSDKBuilder.Companion
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.Companion.with(android.app.Application application, java.lang.String apiKey)
+public final de.wingu.sdk.WinguSDK de.wingu.sdk.WinguSDKBuilder.build()
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.channelCacheTime(long time, java.util.concurrent.TimeUnit timeUnit)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.channelNotificationsConfig(java.util.concurrent.Callable<de.wingu.sdk.notification.ChannelNotificationsConfig> configFactory)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.eddystoneUrl(boolean enabled, kotlin.jvm.functions.Function1<? super de.wingu.sdk.data.api.model.ChannelKey,? extends android.content.Intent> urlIntentCreator)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.geofenceBackgroundScan(boolean enabled)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.geofenceForegroundScan(boolean enabled)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.ibeaconBackgroundScan(boolean enabled)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.ibeaconForegroundScan(boolean enabled)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.loggingLevel(java.util.logging.Level level)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.nfc(boolean enabled, kotlin.jvm.functions.Function1<? super de.wingu.sdk.data.api.model.ChannelKey,? extends android.content.Intent> nfcIntentCreator)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.registerComponent(de.wingu.sdk.data.api.model.components.ComponentSpec componentSpec)
+public final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.staging(boolean isStaging)
+public static final de.wingu.sdk.WinguSDKBuilder de.wingu.sdk.WinguSDKBuilder.with(android.app.Application application, java.lang.String apiKey)
+public final class de.wingu.sdk.data.api.model.Card
+public final de.wingu.sdk.data.api.model.components.Component de.wingu.sdk.data.api.model.Card.getComponent()
+public final java.lang.String de.wingu.sdk.data.api.model.Card.getId()
+public final de.wingu.sdk.data.api.model.Position de.wingu.sdk.data.api.model.Card.getPosition()
+public abstract class de.wingu.sdk.data.api.model.Channel
+public static final enum de.wingu.sdk.data.api.model.Channel.ChannelType
+public static final de.wingu.sdk.data.api.model.Channel.ChannelType de.wingu.sdk.data.api.model.Channel.ChannelType.BEACON
+public static final de.wingu.sdk.data.api.model.Channel.ChannelType de.wingu.sdk.data.api.model.Channel.ChannelType.GEOFENCE
+public static final de.wingu.sdk.data.api.model.Channel.ChannelType de.wingu.sdk.data.api.model.Channel.ChannelType.NFC
+public static final de.wingu.sdk.data.api.model.Channel.ChannelType de.wingu.sdk.data.api.model.Channel.ChannelType.QRCODE
+public abstract de.wingu.sdk.data.api.model.Channel.ChannelType de.wingu.sdk.data.api.model.Channel.getChannelType()
+public abstract de.wingu.sdk.data.api.model.Content de.wingu.sdk.data.api.model.Channel.getContent()
+public abstract java.lang.String de.wingu.sdk.data.api.model.Channel.getId()
+public abstract java.lang.String de.wingu.sdk.data.api.model.Channel.getName()
+public final enum de.wingu.sdk.data.api.model.ChannelEventType
+public static final de.wingu.sdk.data.api.model.ChannelEventType de.wingu.sdk.data.api.model.ChannelEventType.DISCOVERED
+public static final de.wingu.sdk.data.api.model.ChannelEventType de.wingu.sdk.data.api.model.ChannelEventType.LOST
+public static final de.wingu.sdk.data.api.model.ChannelEventType de.wingu.sdk.data.api.model.ChannelEventType.UPDATED
+public final class de.wingu.sdk.data.api.model.ChannelEvents
+public final java.util.Collection<de.wingu.sdk.data.api.model.Channel> de.wingu.sdk.data.api.model.ChannelEvents.getChannels()
+public final de.wingu.sdk.data.api.model.ChannelEventType de.wingu.sdk.data.api.model.ChannelEvents.getEventType()
+public abstract class de.wingu.sdk.data.api.model.ChannelKey
+public static final class de.wingu.sdk.data.api.model.ChannelKey.Companion
+public final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.Companion.from(de.wingu.sdk.data.api.model.Channel channel)
+public static final de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.data.api.model.ChannelKey.from(de.wingu.sdk.data.api.model.Channel channel)
+public final class de.wingu.sdk.data.api.model.Content
+public final java.lang.String de.wingu.sdk.data.api.model.Content.getId()
+public final de.wingu.sdk.data.api.model.WinguDate de.wingu.sdk.data.api.model.Content.getLastChange()
+public final de.wingu.sdk.data.api.model.Pack de.wingu.sdk.data.api.model.Content.getPack()
+public final class de.wingu.sdk.data.api.model.Deck
+public final java.util.List<de.wingu.sdk.data.api.model.Card> de.wingu.sdk.data.api.model.Deck.getCards()
+public final java.lang.String de.wingu.sdk.data.api.model.Deck.getDescription()
+public java.lang.String de.wingu.sdk.data.api.model.Deck.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.Deck.getLegalNote()
+public final java.lang.String de.wingu.sdk.data.api.model.Deck.getTitle()
+public final class de.wingu.sdk.data.api.model.EddystoneKey extends de.wingu.sdk.data.api.model.ChannelKey
+public final java.lang.String de.wingu.sdk.data.api.model.EddystoneKey.getEddystoneId()
+public final class de.wingu.sdk.data.api.model.GeoBoundaries
+public static final class de.wingu.sdk.data.api.model.GeoBoundaries.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.GeoBoundaries.TYPE_POLYGON
+public final java.util.List<de.wingu.sdk.data.api.model.components.common.Coordinates> de.wingu.sdk.data.api.model.GeoBoundaries.getCoordinates()
+public final java.lang.String de.wingu.sdk.data.api.model.GeoBoundaries.getType()
+public final class de.wingu.sdk.data.api.model.GeofenceChannel extends de.wingu.sdk.data.api.model.Channel
+public final de.wingu.sdk.data.api.model.GeoBoundaries de.wingu.sdk.data.api.model.GeofenceChannel.getBoundaries()
+public de.wingu.sdk.data.api.model.Content de.wingu.sdk.data.api.model.GeofenceChannel.getContent()
+public java.lang.String de.wingu.sdk.data.api.model.GeofenceChannel.getId()
+public java.lang.String de.wingu.sdk.data.api.model.GeofenceChannel.getName()
+public final class de.wingu.sdk.data.api.model.GeofenceKey extends de.wingu.sdk.data.api.model.ChannelKey
+public final java.lang.String de.wingu.sdk.data.api.model.GeofenceKey.getGeofenceId()
+public final class de.wingu.sdk.data.api.model.IbeaconChannel extends de.wingu.sdk.data.api.model.Channel
+public de.wingu.sdk.data.api.model.Content de.wingu.sdk.data.api.model.IbeaconChannel.getContent()
+public java.lang.String de.wingu.sdk.data.api.model.IbeaconChannel.getId()
+public final de.wingu.sdk.data.api.model.Location de.wingu.sdk.data.api.model.IbeaconChannel.getLocation()
+public int de.wingu.sdk.data.api.model.IbeaconChannel.getMajor()
+public int de.wingu.sdk.data.api.model.IbeaconChannel.getMinor()
+public java.lang.String de.wingu.sdk.data.api.model.IbeaconChannel.getName()
+public java.util.UUID de.wingu.sdk.data.api.model.IbeaconChannel.getUuid()
+public final class de.wingu.sdk.data.api.model.IbeaconChannelKey extends de.wingu.sdk.data.api.model.IbeaconKey
+public void de.wingu.sdk.data.api.model.IbeaconChannelKey.<init>(java.lang.String backendId, int major, int minor, java.util.UUID uuid)
+public final java.lang.String de.wingu.sdk.data.api.model.IbeaconChannelKey.getBackendId()
+public int de.wingu.sdk.data.api.model.IbeaconChannelKey.getMajor()
+public int de.wingu.sdk.data.api.model.IbeaconChannelKey.getMinor()
+public java.util.UUID de.wingu.sdk.data.api.model.IbeaconChannelKey.getUuid()
+public class de.wingu.sdk.data.api.model.IbeaconKey extends de.wingu.sdk.data.api.model.ChannelKey
+public void de.wingu.sdk.data.api.model.IbeaconKey.<init>(int major, int minor, java.util.UUID uuid)
+public static final class de.wingu.sdk.data.api.model.IbeaconKey.Companion
+public final de.wingu.sdk.data.api.model.IbeaconKey de.wingu.sdk.data.api.model.IbeaconKey.Companion.from(de.wingu.blescanner.ibeacon.model.Ibeacon beacon)
+public static final de.wingu.sdk.data.api.model.IbeaconKey de.wingu.sdk.data.api.model.IbeaconKey.from(de.wingu.blescanner.ibeacon.model.Ibeacon beacon)
+public int de.wingu.sdk.data.api.model.IbeaconKey.getMajor()
+public int de.wingu.sdk.data.api.model.IbeaconKey.getMinor()
+public java.util.UUID de.wingu.sdk.data.api.model.IbeaconKey.getUuid()
+public final class de.wingu.sdk.data.api.model.Locale
+public final java.lang.String de.wingu.sdk.data.api.model.Locale.getLanguageCode()
+public final class de.wingu.sdk.data.api.model.Location
+public final de.wingu.sdk.data.api.model.components.common.Coordinates de.wingu.sdk.data.api.model.Location.getCoordinates()
+public final class de.wingu.sdk.data.api.model.NfcChannel extends de.wingu.sdk.data.api.model.Channel
+public de.wingu.sdk.data.api.model.Content de.wingu.sdk.data.api.model.NfcChannel.getContent()
+public java.lang.String de.wingu.sdk.data.api.model.NfcChannel.getId()
+public java.lang.String de.wingu.sdk.data.api.model.NfcChannel.getName()
+public final java.lang.String de.wingu.sdk.data.api.model.NfcChannel.getPayload()
+public final class de.wingu.sdk.data.api.model.NfcKey extends de.wingu.sdk.data.api.model.ChannelKey
+public final java.lang.String de.wingu.sdk.data.api.model.NfcKey.getNfcId()
+public final class de.wingu.sdk.data.api.model.Pack
+public final de.wingu.sdk.data.api.model.Deck de.wingu.sdk.data.api.model.Pack.getDeck()
+public final java.lang.String de.wingu.sdk.data.api.model.Pack.getId()
+public final de.wingu.sdk.data.api.model.Locale de.wingu.sdk.data.api.model.Pack.getLocale()
+public final class de.wingu.sdk.data.api.model.Position
+public final int de.wingu.sdk.data.api.model.Position.getSort()
+public final class de.wingu.sdk.data.api.model.QrcodeChannel extends de.wingu.sdk.data.api.model.Channel
+public de.wingu.sdk.data.api.model.Content de.wingu.sdk.data.api.model.QrcodeChannel.getContent()
+public java.lang.String de.wingu.sdk.data.api.model.QrcodeChannel.getId()
+public java.lang.String de.wingu.sdk.data.api.model.QrcodeChannel.getName()
+public final java.lang.String de.wingu.sdk.data.api.model.QrcodeChannel.getPayload()
+public final class de.wingu.sdk.data.api.model.QrcodeKey extends de.wingu.sdk.data.api.model.ChannelKey
+public final java.lang.String de.wingu.sdk.data.api.model.QrcodeKey.getQrcodeId()
+public final class de.wingu.sdk.data.api.model.WinguDate
+public final long de.wingu.sdk.data.api.model.WinguDate.getTimestamp()
+public final class de.wingu.sdk.data.api.model.components.ActionComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final java.lang.String de.wingu.sdk.data.api.model.components.ActionComponent.ACTION_TYPE_OPEN_URL
+public static final class de.wingu.sdk.data.api.model.components.ActionComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.ActionComponent.DISCRIMINATOR
+public final java.lang.String de.wingu.sdk.data.api.model.components.ActionComponent.getActionPayload()
+public final java.lang.String de.wingu.sdk.data.api.model.components.ActionComponent.getActionType()
+public final java.lang.String de.wingu.sdk.data.api.model.components.ActionComponent.getButtonCaption()
+public java.lang.String de.wingu.sdk.data.api.model.components.ActionComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.ActionComponent.getId()
+public final class de.wingu.sdk.data.api.model.components.BrandBarComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final enum de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment
+public static final class de.wingu.sdk.data.api.model.components.BrandBarComponent.Background
+public final int de.wingu.sdk.data.api.model.components.BrandBarComponent.Background.getColor()
+public static final class de.wingu.sdk.data.api.model.components.BrandBarComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.BrandBarComponent.DISCRIMINATOR
+public static final class de.wingu.sdk.data.api.model.components.BrandBarComponent.ImageContainer
+public final de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment de.wingu.sdk.data.api.model.components.BrandBarComponent.ImageContainer.getAlignment()
+public final de.wingu.sdk.data.api.model.components.common.Image de.wingu.sdk.data.api.model.components.BrandBarComponent.ImageContainer.getImage()
+public static final class de.wingu.sdk.data.api.model.components.BrandBarComponent.Text
+public final de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment de.wingu.sdk.data.api.model.components.BrandBarComponent.Text.getAlignment()
+public final int de.wingu.sdk.data.api.model.components.BrandBarComponent.Text.getColor()
+public final java.lang.String de.wingu.sdk.data.api.model.components.BrandBarComponent.Text.getText()
+public final de.wingu.sdk.data.api.model.components.BrandBarComponent.Background de.wingu.sdk.data.api.model.components.BrandBarComponent.getBackground()
+public java.lang.String de.wingu.sdk.data.api.model.components.BrandBarComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.BrandBarComponent.getId()
+public final de.wingu.sdk.data.api.model.components.BrandBarComponent.ImageContainer de.wingu.sdk.data.api.model.components.BrandBarComponent.getImageContainer()
+public final de.wingu.sdk.data.api.model.components.BrandBarComponent.Text de.wingu.sdk.data.api.model.components.BrandBarComponent.getText()
+public final de.wingu.sdk.data.api.model.WinguDate de.wingu.sdk.data.api.model.components.BrandBarComponent.getUpdatedAt()
+public final class de.wingu.sdk.data.api.model.components.CMSComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final java.lang.String de.wingu.sdk.data.api.model.components.CMSComponent.CONTENT_TYPE_HTML
+public static final java.lang.String de.wingu.sdk.data.api.model.components.CMSComponent.CONTENT_TYPE_MARKDOWN
+public static final class de.wingu.sdk.data.api.model.components.CMSComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.CMSComponent.DISCRIMINATOR
+public final java.lang.String de.wingu.sdk.data.api.model.components.CMSComponent.getContent()
+public java.lang.String de.wingu.sdk.data.api.model.components.CMSComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.CMSComponent.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.CMSComponent.getType()
+public abstract interface de.wingu.sdk.data.api.model.components.Component
+public abstract java.lang.String de.wingu.sdk.data.api.model.components.Component.getDiscriminator()
+public abstract java.lang.String de.wingu.sdk.data.api.model.components.Component.getId()
+public final class de.wingu.sdk.data.api.model.components.ComponentSpec
+public final class de.wingu.sdk.data.api.model.components.LocationComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.LocationComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.LocationComponent.DISCRIMINATOR
+public final de.wingu.sdk.data.api.model.components.common.Coordinates de.wingu.sdk.data.api.model.components.LocationComponent.getCoordinates()
+public java.lang.String de.wingu.sdk.data.api.model.components.LocationComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.LocationComponent.getId()
+public final int de.wingu.sdk.data.api.model.components.LocationComponent.getRadius()
+public final class de.wingu.sdk.data.api.model.components.ProxyComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.ProxyComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.ProxyComponent.DISCRIMINATOR
+public java.lang.String de.wingu.sdk.data.api.model.components.ProxyComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.ProxyComponent.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.ProxyComponent.getPayload()
+public final class de.wingu.sdk.data.api.model.components.RatingComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.RatingComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.RatingComponent.DISCRIMINATOR
+public final java.lang.String de.wingu.sdk.data.api.model.components.RatingComponent.getDescription()
+public java.lang.String de.wingu.sdk.data.api.model.components.RatingComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.RatingComponent.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.RatingComponent.getTitle()
+public final java.lang.String de.wingu.sdk.data.api.model.components.RatingComponent.getType()
+public final class de.wingu.sdk.data.api.model.components.SeparatorComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.DISCRIMINATOR
+public static final java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.SEPARATOR_ARTICLE_END
+public static final java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.SEPARATOR_BASIC_LINE
+public static final java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.SEPARATOR_DASHES
+public static final java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.SEPARATOR_DOTS
+public static final java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.SEPARATOR_MORSE
+public static final java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.SEPARATOR_WAVE
+public final java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.getColorHex()
+public java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.SeparatorComponent.getType()
+public final class de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.DISCRIMINATOR
+public final java.lang.String de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.getDescription()
+public java.lang.String de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.getSurveyURL()
+public final java.lang.String de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.getTitle()
+public final class de.wingu.sdk.data.api.model.components.UnsupportedComponent implements de.wingu.sdk.data.api.model.components.Component
+public java.lang.String de.wingu.sdk.data.api.model.components.UnsupportedComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.UnsupportedComponent.getId()
+public final class de.wingu.sdk.data.api.model.components.VideoComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.VideoComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.VideoComponent.DISCRIMINATOR
+public final java.lang.String de.wingu.sdk.data.api.model.components.VideoComponent.getDescription()
+public java.lang.String de.wingu.sdk.data.api.model.components.VideoComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.VideoComponent.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.VideoComponent.getPayload()
+public final java.lang.String de.wingu.sdk.data.api.model.components.VideoComponent.getType()
+public final class de.wingu.sdk.data.api.model.components.WebhookComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.WebhookComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.WebhookComponent.DISCRIMINATOR
+public final java.lang.String de.wingu.sdk.data.api.model.components.WebhookComponent.getButtonCaption()
+public java.lang.String de.wingu.sdk.data.api.model.components.WebhookComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.WebhookComponent.getId()
+public final class de.wingu.sdk.data.api.model.components.audio.AudioComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.audio.AudioComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.audio.AudioComponent.DISCRIMINATOR
+public java.lang.String de.wingu.sdk.data.api.model.components.audio.AudioComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.audio.AudioComponent.getId()
+public final java.util.ArrayList<de.wingu.sdk.data.api.model.components.audio.AudioItem> de.wingu.sdk.data.api.model.components.audio.AudioComponent.getMedia()
+public final java.lang.String de.wingu.sdk.data.api.model.components.audio.AudioComponent.getName()
+public final class de.wingu.sdk.data.api.model.components.audio.AudioItem
+public final de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum de.wingu.sdk.data.api.model.components.audio.AudioItem.getAlbum()
+public final java.lang.String de.wingu.sdk.data.api.model.components.audio.AudioItem.getFileUrl()
+public final java.lang.String de.wingu.sdk.data.api.model.components.audio.AudioItem.getId()
+public final int de.wingu.sdk.data.api.model.components.audio.AudioItem.getLength()
+public final java.lang.String de.wingu.sdk.data.api.model.components.audio.AudioItem.getName()
+public final int de.wingu.sdk.data.api.model.components.audio.AudioItem.getPosition()
+public final class de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum
+public final de.wingu.sdk.data.api.model.components.audio.CloudinaryImage de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum.getCover()
+public final java.lang.String de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum.getName()
+public final class de.wingu.sdk.data.api.model.components.audio.CloudinaryImage
+public static final class de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.TYPE_CLOUDINARY
+public final java.lang.String de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.getCloudinaryId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.getType()
+public final class de.wingu.sdk.data.api.model.components.common.Coordinates
+public final double de.wingu.sdk.data.api.model.components.common.Coordinates.getLatitude()
+public final double de.wingu.sdk.data.api.model.components.common.Coordinates.getLongitude()
+public final class de.wingu.sdk.data.api.model.components.common.Image
+public final java.lang.String de.wingu.sdk.data.api.model.components.common.Image.getCloudinaryId()
+public final de.wingu.sdk.data.api.model.components.common.ImageMetadata de.wingu.sdk.data.api.model.components.common.Image.getMetadata()
+public final java.lang.String de.wingu.sdk.data.api.model.components.common.Image.getType()
+public final class de.wingu.sdk.data.api.model.components.common.ImageMetadata
+public final java.lang.String de.wingu.sdk.data.api.model.components.common.ImageMetadata.getFormat()
+public final int de.wingu.sdk.data.api.model.components.common.ImageMetadata.getHeight()
+public final int de.wingu.sdk.data.api.model.components.common.ImageMetadata.getWidth()
+public final class de.wingu.sdk.data.api.model.components.contact.Address
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.Address.getCity()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.Address.getCountry()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.Address.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.Address.getStreet()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.Address.getStreetNumber()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.Address.getZipCode()
+public final class de.wingu.sdk.data.api.model.components.contact.ContactComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.contact.ContactComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.DISCRIMINATOR
+public final de.wingu.sdk.data.api.model.components.contact.Address de.wingu.sdk.data.api.model.components.contact.ContactComponent.getAddress()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getCompanyName()
+public java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getDiscriminator()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getEmail()
+public final de.wingu.sdk.data.api.model.components.contact.ExternalLinks de.wingu.sdk.data.api.model.components.contact.ContactComponent.getExternalLinks()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getExtraInfo()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getFirstName()
+public java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getLastName()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getMobile()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getOpeningHours()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getPersonalTitle()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getPhone()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ContactComponent.getWebsite()
+public final class de.wingu.sdk.data.api.model.components.contact.ExternalLinks
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ExternalLinks.getFacebookName()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ExternalLinks.getFacebookUrl()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ExternalLinks.getGooglePlusName()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ExternalLinks.getGooglePlusUrl()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ExternalLinks.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ExternalLinks.getTwitterName()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ExternalLinks.getTwitterUrl()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ExternalLinks.getYelpName()
+public final java.lang.String de.wingu.sdk.data.api.model.components.contact.ExternalLinks.getYelpUrl()
+public final class de.wingu.sdk.data.api.model.components.coupon.Barcode
+public final java.lang.String de.wingu.sdk.data.api.model.components.coupon.Barcode.getType()
+public final java.lang.String de.wingu.sdk.data.api.model.components.coupon.Barcode.getValue()
+public final class de.wingu.sdk.data.api.model.components.coupon.CouponComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.coupon.CouponComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.coupon.CouponComponent.DISCRIMINATOR
+public final de.wingu.sdk.data.api.model.components.common.Image de.wingu.sdk.data.api.model.components.coupon.CouponComponent.getBackgroundImage()
+public final de.wingu.sdk.data.api.model.components.coupon.Barcode de.wingu.sdk.data.api.model.components.coupon.CouponComponent.getBarcode()
+public final java.lang.String de.wingu.sdk.data.api.model.components.coupon.CouponComponent.getDescription()
+public final java.lang.String de.wingu.sdk.data.api.model.components.coupon.CouponComponent.getDisclaimer()
+public java.lang.String de.wingu.sdk.data.api.model.components.coupon.CouponComponent.getDiscriminator()
+public final java.lang.String de.wingu.sdk.data.api.model.components.coupon.CouponComponent.getHeader()
+public java.lang.String de.wingu.sdk.data.api.model.components.coupon.CouponComponent.getId()
+public final class de.wingu.sdk.data.api.model.components.files.FileData
+public final java.lang.String de.wingu.sdk.data.api.model.components.files.FileData.getFileUrl()
+public final java.lang.String de.wingu.sdk.data.api.model.components.files.FileData.getId()
+public final java.lang.String de.wingu.sdk.data.api.model.components.files.FileData.getName()
+public final int de.wingu.sdk.data.api.model.components.files.FileData.getSize()
+public final class de.wingu.sdk.data.api.model.components.files.FilesComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.files.FilesComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.files.FilesComponent.DISCRIMINATOR
+public java.lang.String de.wingu.sdk.data.api.model.components.files.FilesComponent.getDiscriminator()
+public final java.util.ArrayList<de.wingu.sdk.data.api.model.components.files.FileData> de.wingu.sdk.data.api.model.components.files.FilesComponent.getFiles()
+public java.lang.String de.wingu.sdk.data.api.model.components.files.FilesComponent.getId()
+public final enum de.wingu.sdk.data.api.model.components.form.ElementType
+public final class de.wingu.sdk.data.api.model.components.form.FormComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.form.FormComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.form.FormComponent.DISCRIMINATOR
+public java.lang.String de.wingu.sdk.data.api.model.components.form.FormComponent.getDiscriminator()
+public final java.util.List<de.wingu.sdk.data.api.model.components.form.FormElement> de.wingu.sdk.data.api.model.components.form.FormComponent.getElements()
+public java.lang.String de.wingu.sdk.data.api.model.components.form.FormComponent.getId()
+public final de.wingu.sdk.data.api.model.components.form.FormResubmit de.wingu.sdk.data.api.model.components.form.FormComponent.getResubmit()
+public final java.lang.String de.wingu.sdk.data.api.model.components.form.FormComponent.getTitle()
+public abstract interface de.wingu.sdk.data.api.model.components.form.FormElement
+public abstract java.lang.String de.wingu.sdk.data.api.model.components.form.FormElement.getDiscriminator()
+public abstract de.wingu.sdk.data.api.model.components.form.ElementType de.wingu.sdk.data.api.model.components.form.FormElement.getElementType()
+public abstract java.lang.String de.wingu.sdk.data.api.model.components.form.FormElement.getLabel()
+public abstract java.lang.String de.wingu.sdk.data.api.model.components.form.FormElement.getName()
+public abstract boolean de.wingu.sdk.data.api.model.components.form.FormElement.getRequired()
+public final class de.wingu.sdk.data.api.model.components.form.FormResubmit
+public final boolean de.wingu.sdk.data.api.model.components.form.FormResubmit.getAllowed()
+public final java.lang.Integer de.wingu.sdk.data.api.model.components.form.FormResubmit.getAllowedAfterSeconds()
+public final class de.wingu.sdk.data.api.model.components.form.InputFormElement implements de.wingu.sdk.data.api.model.components.form.FormElement
+public java.lang.String de.wingu.sdk.data.api.model.components.form.InputFormElement.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.form.InputFormElement.getLabel()
+public java.lang.String de.wingu.sdk.data.api.model.components.form.InputFormElement.getName()
+public boolean de.wingu.sdk.data.api.model.components.form.InputFormElement.getRequired()
+public final java.lang.String de.wingu.sdk.data.api.model.components.form.InputFormElement.getType()
+public final class de.wingu.sdk.data.api.model.components.form.SelectFormElement implements de.wingu.sdk.data.api.model.components.form.FormElement
+public java.lang.String de.wingu.sdk.data.api.model.components.form.SelectFormElement.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.form.SelectFormElement.getLabel()
+public final boolean de.wingu.sdk.data.api.model.components.form.SelectFormElement.getMultiple()
+public java.lang.String de.wingu.sdk.data.api.model.components.form.SelectFormElement.getName()
+public final java.util.List<de.wingu.sdk.data.api.model.components.form.SelectFormOption> de.wingu.sdk.data.api.model.components.form.SelectFormElement.getOptions()
+public boolean de.wingu.sdk.data.api.model.components.form.SelectFormElement.getRequired()
+public final class de.wingu.sdk.data.api.model.components.form.SelectFormOption
+public final java.lang.String de.wingu.sdk.data.api.model.components.form.SelectFormOption.getLabel()
+public final java.lang.String de.wingu.sdk.data.api.model.components.form.SelectFormOption.getValue()
+public final class de.wingu.sdk.data.api.model.components.form.UnknownFormElement implements de.wingu.sdk.data.api.model.components.form.FormElement
+public java.lang.String de.wingu.sdk.data.api.model.components.form.UnknownFormElement.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.form.UnknownFormElement.getLabel()
+public java.lang.String de.wingu.sdk.data.api.model.components.form.UnknownFormElement.getName()
+public boolean de.wingu.sdk.data.api.model.components.form.UnknownFormElement.getRequired()
+public final class de.wingu.sdk.data.api.model.components.image.ImageEntry
+public final java.lang.String de.wingu.sdk.data.api.model.components.image.ImageEntry.getCaption()
+public final java.lang.String de.wingu.sdk.data.api.model.components.image.ImageEntry.getId()
+public final de.wingu.sdk.data.api.model.components.common.Image de.wingu.sdk.data.api.model.components.image.ImageEntry.getImage()
+public final int de.wingu.sdk.data.api.model.components.image.ImageEntry.getPosition()
+public final class de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent implements de.wingu.sdk.data.api.model.components.Component
+public static final class de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.Companion
+public static final java.lang.String de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.DISCRIMINATOR
+public java.lang.String de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.getDiscriminator()
+public java.lang.String de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.getId()
+public final java.util.ArrayList<de.wingu.sdk.data.api.model.components.image.ImageEntry> de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.getImages()
+public final class de.wingu.sdk.notification.ChannelNotificationsConfig
+public static final class de.wingu.sdk.notification.ChannelNotificationsConfig.Builder
+public void de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.<init>(de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback channelNotificationCallback)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.build()
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setLargeIcon(int largeIcon)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSmallIcon(int smallIcon)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeButtonTitle(java.lang.String text)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeIcon(int snoozeIcon)
+public final de.wingu.sdk.notification.ChannelNotificationsConfig.Builder de.wingu.sdk.notification.ChannelNotificationsConfig.Builder.setSnoozeTimeMinutes(int minutes)
+public abstract static interface de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback
+public abstract java.util.Collection<de.wingu.sdk.notification.WinguNotification> de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback.winguNotifications(java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel> channels)
+public final class de.wingu.sdk.notification.WinguNotification
+public static final class de.wingu.sdk.notification.WinguNotification.Companion
+public final android.app.PendingIntent de.wingu.sdk.notification.WinguNotification.Companion.createDefaultChannelPendingIntent(de.wingu.sdk.data.api.model.Channel channel, android.content.Intent parentIntent)
+public final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.Companion.createGroupNotification(java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel> channels, java.lang.String title, android.app.PendingIntent pendingIntent)
+public final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.Companion.createMissedChannelsNotification(java.lang.String title, java.lang.String contentText, android.app.PendingIntent pendingIntent)
+public final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.Companion.createSingleChannelNotification(de.wingu.sdk.data.api.model.Channel channel, java.lang.String title, java.lang.String contentText, android.app.PendingIntent pendingIntent)
+public static final int de.wingu.sdk.notification.WinguNotification.MAX_STACKED_NOTIFICATIONS
+public static final android.app.PendingIntent de.wingu.sdk.notification.WinguNotification.createDefaultChannelPendingIntent(de.wingu.sdk.data.api.model.Channel channel, android.content.Intent parentIntent)
+public static final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createGroupNotification(java.util.Collection<? extends de.wingu.sdk.data.api.model.Channel> channels, java.lang.String title, android.app.PendingIntent pendingIntent)
+public static final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createMissedChannelsNotification(java.lang.String title, java.lang.String contentText, android.app.PendingIntent pendingIntent)
+public static final de.wingu.sdk.notification.WinguNotification de.wingu.sdk.notification.WinguNotification.createSingleChannelNotification(de.wingu.sdk.data.api.model.Channel channel, java.lang.String title, java.lang.String contentText, android.app.PendingIntent pendingIntent)
+public final class de.wingu.sdk.ui.component.location.LocationWinguComponent
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.location.LocationWinguComponent.specMapView()
+public static final de.wingu.sdk.data.api.model.components.ComponentSpec de.wingu.sdk.ui.component.location.LocationWinguComponent.specStaticMaps(de.wingu.sdk.utils.StringRef googleApiKey, de.wingu.sdk.utils.StringRef urlSigningSecret)
+public final class de.wingu.sdk.ui.details.ChannelDetailsActivity
+public static final class de.wingu.sdk.ui.details.ChannelDetailsActivity.Companion
+public final android.content.Intent de.wingu.sdk.ui.details.ChannelDetailsActivity.Companion.newInstance(android.content.Context context, de.wingu.sdk.data.api.model.Channel channel, java.lang.String title)
+public static final android.content.Intent de.wingu.sdk.ui.details.ChannelDetailsActivity.newInstance(android.content.Context context, de.wingu.sdk.data.api.model.Channel channel, java.lang.String title)
+public final class de.wingu.sdk.ui.details.ChannelDetailsFragment
+public static final class de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion
+public final android.support.v4.app.Fragment de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion.newInstance(de.wingu.sdk.data.api.model.ChannelKey channelKey)
+public abstract static interface de.wingu.sdk.ui.details.ChannelDetailsFragment.OptionalFragmentCallbacks
+public static final android.support.v4.app.Fragment de.wingu.sdk.ui.details.ChannelDetailsFragment.newInstance(de.wingu.sdk.data.api.model.ChannelKey channelKey)
+public abstract class de.wingu.sdk.ui.details.ChannelProxyFragment
+protected abstract de.wingu.sdk.data.api.model.ChannelKey de.wingu.sdk.ui.details.ChannelProxyFragment.getChannelKey()
+protected abstract void de.wingu.sdk.ui.details.ChannelProxyFragment.onCustomPayload(java.lang.String payload)
+public abstract void de.wingu.sdk.ui.details.ChannelProxyFragment.onError(java.lang.Throwable throwable)
+public final class de.wingu.sdk.utils.ByteString extends de.wingu.sdk.utils.StringRef
+public void de.wingu.sdk.utils.ByteString.<init>(byte[] b)
+public abstract interface de.wingu.sdk.utils.NearbyChannelObserver
+public abstract de.wingu.blescanner.ibeacon.model.IbeaconDevice de.wingu.sdk.utils.NearbyChannelObserver.findBeaconDevice(de.wingu.sdk.data.api.model.Channel channel)
+public abstract rx.Observable<de.wingu.sdk.data.api.model.ChannelEvents> de.wingu.sdk.utils.NearbyChannelObserver.getChannelEvents()
+public abstract java.util.Collection<de.wingu.sdk.data.api.model.Channel> de.wingu.sdk.utils.NearbyChannelObserver.getCurrentNearbyChannels()
+public abstract boolean de.wingu.sdk.utils.NearbyChannelObserver.isChannelNearby(de.wingu.sdk.data.api.model.Channel channel)
+public abstract void de.wingu.sdk.utils.NearbyChannelObserver.rescan()
+public final class de.wingu.sdk.utils.PlainString extends de.wingu.sdk.utils.StringRef
+public void de.wingu.sdk.utils.PlainString.<init>(java.lang.String s)
+public abstract class de.wingu.sdk.utils.StringRef
+public final class de.wingu.sdk.utils.StringRes extends de.wingu.sdk.utils.StringRef
+public void de.wingu.sdk.utils.StringRes.<init>(int resourceId)
+public final enum de.wingu.sdk.utils.prerequisite.Prerequisite
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite de.wingu.sdk.utils.prerequisite.Prerequisite.ACCESS_COARSE_LOCATION
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite de.wingu.sdk.utils.prerequisite.Prerequisite.ACCESS_FINE_LOCATION
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite de.wingu.sdk.utils.prerequisite.Prerequisite.BLUETOOTH_ON
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite de.wingu.sdk.utils.prerequisite.Prerequisite.LOCATION_SERVICES_ON
+public static final de.wingu.sdk.utils.prerequisite.Prerequisite de.wingu.sdk.utils.prerequisite.Prerequisite.PLAY_SERVICES
+public final class de.wingu.sdk.utils.prerequisite.PrerequisitesChecker
+public static final java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.check()
+public static final boolean de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.checkWithDefaultDialogs(android.app.Activity activity, int requestCode)
+public static final de.wingu.sdk.utils.prerequisite.ResolveResults de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.getResolveResults(android.content.Intent data)
+public static final boolean de.wingu.sdk.utils.prerequisite.PrerequisitesChecker.resolveWithDefaultDialogs(android.app.Activity activity, int requestCode, de.wingu.sdk.utils.prerequisite.Prerequisite[] toResolve)
+public final class de.wingu.sdk.utils.prerequisite.ResolveResults
+public final java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.ResolveResults.getFailed()
+public final java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> de.wingu.sdk.utils.prerequisite.ResolveResults.getResolved()

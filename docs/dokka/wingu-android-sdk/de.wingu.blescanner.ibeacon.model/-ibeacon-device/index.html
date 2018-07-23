@@ -9,6 +9,7 @@
 <br/>
 <h1>IbeaconDevice</h1>
 <code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">IbeaconDevice</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-ibeacon/index.html"><span class="identifier">Ibeacon</span></a></code>
+<p>Represents a Bluetooth low-energy device that advertises using iBeacon protocol.</p>
 <h3>Properties</h3>
 <table>
 <tbody>
@@ -40,28 +41,40 @@
 <p><a href="name.html">name</a></p>
 </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Name of the device.
+<a href="https://developer.android.com/reference/android/bluetooth/le/ScanRecord.html#getDeviceName()">android.bluetooth.le.ScanRecord.getDeviceName</a></p>
+</td>
 </tr>
 <tr>
 <td>
 <p><a href="rssi.html">rssi</a></p>
 </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">rssi</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+<code><span class="keyword">val </span><span class="identifier">rssi</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Received signal strength.
+<a href="https://developer.android.com/reference/android/bluetooth/le/ScanResult.html#getRssi()">android.bluetooth.le.ScanResult.getRssi</a></p>
+</td>
 </tr>
 <tr>
 <td>
 <p><a href="timestamp-nanos.html">timestampNanos</a></p>
 </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">timestampNanos</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+<code><span class="keyword">val </span><span class="identifier">timestampNanos</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code>
+<p>Timestamp in nanoseconds since boot, when the device has been observed.
+<a href="https://developer.android.com/reference/android/bluetooth/le/ScanResult.html#getTimestampNanos()">android.bluetooth.le.ScanResult.getTimestampNanos</a></p>
+</td>
 </tr>
 <tr>
 <td>
 <p><a href="tx-power.html">txPower</a></p>
 </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">txPower</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+<code><span class="keyword">val </span><span class="identifier">txPower</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Transmit power in dBm.
+<a href="https://developer.android.com/reference/android/bluetooth/le/ScanResult.html#getTxPower()">android.bluetooth.le.ScanResult.getTxPower</a></p>
+</td>
 </tr>
 <tr>
 <td>

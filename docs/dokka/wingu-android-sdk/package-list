@@ -2,6 +2,7 @@ $dokka.format:html
 $dokka.linkExtension:html
 
 de.wingu.blescanner.ibeacon.model
+de.wingu.qrcodescanner
 de.wingu.sdk
 de.wingu.sdk.data.api.model
 de.wingu.sdk.data.api.model.components
@@ -10,6 +11,7 @@ de.wingu.sdk.data.api.model.components.common
 de.wingu.sdk.data.api.model.components.contact
 de.wingu.sdk.data.api.model.components.coupon
 de.wingu.sdk.data.api.model.components.files
+de.wingu.sdk.data.api.model.components.form
 de.wingu.sdk.data.api.model.components.image
 de.wingu.sdk.notification
 de.wingu.sdk.ui.component.location

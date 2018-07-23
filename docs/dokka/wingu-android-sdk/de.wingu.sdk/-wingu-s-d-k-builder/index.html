@@ -40,6 +40,16 @@ Allows to configure, build and launch wingu SDK.</p>
 </tr>
 <tr>
 <td>
+<p><a href="channel-cache-time.html">channelCacheTime</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">channelCacheTime</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$channelCacheTime(kotlin.Long, java.util.concurrent.TimeUnit)/time">time</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$channelCacheTime(kotlin.Long, java.util.concurrent.TimeUnit)/timeUnit">timeUnit</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/concurrent/TimeUnit.html"><span class="identifier">TimeUnit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
+<p>Defines how long channels responses from backend should be cached if not set,
+channels are cached for 1 hour, if value is less then 60 seconds it will be set to 60 seconds</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><a href="channel-notifications-config.html">channelNotificationsConfig</a></p>
 </td>
 <td>
@@ -48,6 +58,13 @@ Allows to configure, build and launch wingu SDK.</p>
 You need to enable <a href="geofence-background-scan.html">geofenceBackgroundScan</a> or
 <a href="ibeacon-background-scan.html">ibeaconBackgroundScan</a> for notifications to appear.</p>
 </td>
+</tr>
+<tr>
+<td>
+<p><a href="eddystone-url.html">eddystoneUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">eddystoneUrl</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$eddystoneUrl(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, android.content.Intent)))/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$eddystoneUrl(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, android.content.Intent)))/urlIntentCreator">urlIntentCreator</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -93,6 +110,13 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <code><span class="keyword">fun </span><span class="identifier">loggingLevel</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$loggingLevel(java.util.logging.Level)/level">level</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/logging/Level.html"><span class="identifier">Level</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Sets logging level for wingu SDK.</p>
 </td>
+</tr>
+<tr>
+<td>
+<p><a href="nfc.html">nfc</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">nfc</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$nfc(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, android.content.Intent)))/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$nfc(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, android.content.Intent)))/nfcIntentCreator">nfcIntentCreator</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code></td>
 </tr>
 <tr>
 <td>

@@ -30,8 +30,8 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.Speicher210.wingu-android-sdk:sdk:3.3.2'
-  compile 'com.github.Speicher210.wingu-android-sdk:component-video:3.3.2' // optional
+  compile 'com.github.Speicher210.wingu-android-sdk:sdk:3.3.3'
+  compile 'com.github.Speicher210.wingu-android-sdk:component-video:3.3.3' // optional
 }
 ```
 

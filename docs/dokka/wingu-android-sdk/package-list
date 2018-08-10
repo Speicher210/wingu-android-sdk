@@ -1,6 +1,7 @@
 $dokka.format:html
 $dokka.linkExtension:html
 
+de.wingu.blescanner.ble
 de.wingu.blescanner.ibeacon.model
 de.wingu.qrcodescanner
 de.wingu.sdk

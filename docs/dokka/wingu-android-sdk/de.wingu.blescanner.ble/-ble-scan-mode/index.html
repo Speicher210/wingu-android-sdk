@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BleScanMode - wingu-android-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.blescanner.ble</a>&nbsp;/&nbsp;<a href="./index.html">BleScanMode</a><br/>
+<br/>
+<h1>BleScanMode</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">BleScanMode</span></code>
+<h3>Parameters</h3>
+<p><a name="lostBeaconTimeMillis"></a>
+<code>lostBeaconTimeMillis</code> - If we don't receive a signal from a given beacon for this amount of time, we consider it lost.</p>
+<p><a name="scanDurationMillis"></a>
+<code>scanDurationMillis</code> - Duration for which the scanner will actively listen for BLE devices.</p>
+<p><a name="sleepDurationMillis"></a>
+<code>sleepDurationMillis</code> - Duration for which the scanner will stay idle.</p>
+<p><a name="sleepOverrideDeadlineMillis"></a>
+<code>sleepOverrideDeadlineMillis</code> - Duration for which the job scheduler can postpone starting another scan.</p>
+<p><a name="scanMode"></a>
+<code>scanMode</code> - One of the SCAN_MODE_* values from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanSettings.html">ScanSettings</a>.</p>
+<p><a name="firstEvictionDelayMs"></a>
+<code>firstEvictionDelayMs</code> - Specifies the duration (relative to the time when this configuration has been applied), during which we shouldn't evict lost devices.</p>
+<p><a name="relativeRssiExpirationDelayMs"></a>
+<code>relativeRssiExpirationDelayMs</code> - Specifies the duration (relative to the time when this configuration has been applied), during which we should still consider expired rssi values (<a href="#">de.wingu.blescanner.ble.rssi.RssiFilter.getExpirationTimeNanos</a>).</p>
+<p><a name="matchMode"></a>
+<code>matchMode</code> - One of the MATCH_MODE_* values from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanSettings.html">ScanSettings</a>.</p>
+<p><a name="matchNum"></a>
+<code>matchNum</code> - One of the MATCH_NUM_* values from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanSettings.html">ScanSettings</a>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BleScanMode</span><span class="symbol">(</span><span class="identifier" id="de.wingu.blescanner.ble.BleScanMode$<init>(kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Int)/lostBeaconTimeMillis">lostBeaconTimeMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.blescanner.ble.BleScanMode$<init>(kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Int)/scanDurationMillis">scanDurationMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.blescanner.ble.BleScanMode$<init>(kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Int)/sleepDurationMillis">sleepDurationMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.blescanner.ble.BleScanMode$<init>(kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Int)/scanMode">scanMode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -54,6 +54,37 @@ public class App extends Application {
   }
 }
 ```
+
+### Scan settings 
+
+To enable/disable beacon or geofence scan for foreground or background call following methods on WinguSdkBuilder:
+
+```
+WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
+        .ibeaconForegroundScan(true) //default true
+        .ibeaconBackgroundScan(true) // default false
+        .geofenceForegroundScan(true) // default true
+        .geofenceBackgroundScan(true)// default false
+        .build();
+```
+
+#### Bluetooth scan configuration
+
+There are also overloaded version of methods:
+ - `ibeaconForegroundScan(enabled:Boolean,scanMode:BleScanMode)` 
+ - `ibeaconBackgroundScan(enabled:Boolean,scanMode:BleScanMode)` 
+ 
+In BleScanMode it's possible to set:
+- lostBeaconTimeMillis - If we don't receive a signal from a given beacon for this amount of time, we consider it lost.
+- scanDurationMillis - Duration for which the scanner will actively listen for BLE devices.
+- sleepDurationMillis -  Duration for which the scanner will stay idle.
+- scanMode One of the: [[SCAN_MODE_BALANCED](https://developer.android.com/reference/android/bluetooth/le/ScanSettings.html#SCAN_MODE_BALANCED),
+[SCAN_MODE_LOW_LATENCY](https://developer.android.com/reference/android/bluetooth/le/ScanSettings.html#SCAN_MODE_LOW_LATENCY),
+[SCAN_MODE_LOW_POWER](https://developer.android.com/reference/android/bluetooth/le/ScanSettings.html#SCAN_MODE_LOW_POWER)
+].
+ 
+ 
+
 ### Notifications 
 
 To enable and configure notifications `ChannelNotificationConfig` needs to be registered while initializing SDK: 

@@ -1,10 +1,12 @@
+![Platform](https://img.shields.io/badge/platform-Android-%23A4C639.svg)
+![Version](https://img.shields.io/badge/version-3.5.0-%2346C800.svg)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![API docs](https://img.shields.io/badge/API-docs-%2346C800.svg)](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/)
+
+
 # wingu-android-sdk
 
-wingu-android-sdk is an  SDK for [wingu.de](www.wingu.de) service. This framework will allow to connect with beacons and geofences nearby user location. 
-
-## Overview
-
-wingu SDK requires `minSdkVersion >= 21` and `targetSdkVersion <= 27`.
+wingu-android-sdk is an  SDK for [wingu.de](www.wingu.de) service. This framework will allow to connect with beacons and geofences nearby user location.
 
 [API docs](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/)
 
@@ -17,6 +19,7 @@ android {
   compileSdkVersion 27
 
   defaultConfig {
+    // wingu SDK requires `minSdkVersion >= 21` and `targetSdkVersion <= 27`.
     minSdkVersion 21
     targetSdkVersion 27
     multiDexEnabled true

@@ -1,0 +1,21 @@
+// Signature format: 2.0
+package de.wingu.qrcodescanner {
+
+  public class QrCodeScannerActivity extends android.support.v7.app.AppCompatActivity {
+    method public void openDetailsActivity(de.wingu.sdk.data.api.model.ChannelKey chanelKey);
+    method public void showError(de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError qrCodeError);
+    method public static final void start(android.content.Context from);
+    field public static final de.wingu.qrcodescanner.QrCodeScannerActivity.Companion! Companion;
+  }
+
+  public static final class QrCodeScannerActivity.Companion {
+    method public void start(android.content.Context from);
+  }
+
+  public static enum QrCodeScannerActivity.QrCodeError {
+    enum_constant public static final de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError! INVALID_CHANNEL_ID;
+    enum_constant public static final de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError! NOT_RECOGNIZED;
+  }
+
+}
+

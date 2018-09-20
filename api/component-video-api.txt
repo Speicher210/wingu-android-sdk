@@ -1,0 +1,10 @@
+// Signature format: 2.0
+package de.wingu.sdk.ui.component.video {
+
+  public final class VideoWinguComponent {
+    method public static de.wingu.sdk.data.api.model.components.ComponentSpec spec(de.wingu.sdk.utils.StringRef googleApiKey);
+    field public static final de.wingu.sdk.ui.component.video.VideoWinguComponent! INSTANCE;
+  }
+
+}
+

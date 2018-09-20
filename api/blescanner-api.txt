@@ -1,0 +1,41 @@
+// Signature format: 2.0
+package de.wingu.blescanner.ble {
+
+  public final class BleScanMode {
+    ctor public BleScanMode(long lostBeaconTimeMillis, long scanDurationMillis, long sleepDurationMillis, int scanMode);
+    field public static final de.wingu.blescanner.ble.BleScanMode BALANCED;
+    field public static final de.wingu.blescanner.ble.BleScanMode.Companion! Companion;
+    field public static final de.wingu.blescanner.ble.BleScanMode LOW_LATENCY;
+    field public static final de.wingu.blescanner.ble.BleScanMode LOW_POWER;
+  }
+
+  public static final class BleScanMode.Companion {
+  }
+
+}
+
+package de.wingu.blescanner.ibeacon.model {
+
+  public interface Ibeacon {
+    method public int getMajor();
+    method public int getMinor();
+    method public java.util.UUID getUuid();
+    property public int major;
+    property public int minor;
+    property public java.util.UUID uuid;
+  }
+
+  public final class IbeaconDevice implements de.wingu.blescanner.ibeacon.model.Ibeacon {
+    method public double getDistance();
+    method public int getMajor();
+    method public int getMinor();
+    method public String getName();
+    method public int getRssi();
+    method public long getTimestampNanos();
+    method public int getTxPower();
+    method public java.util.UUID getUuid();
+    property public final double distance;
+  }
+
+}
+

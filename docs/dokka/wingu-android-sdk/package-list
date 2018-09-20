@@ -5,6 +5,7 @@ de.wingu.blescanner.ble
 de.wingu.blescanner.ibeacon.model
 de.wingu.qrcodescanner
 de.wingu.sdk
+de.wingu.sdk.channel.filter
 de.wingu.sdk.data.api.model
 de.wingu.sdk.data.api.model.components
 de.wingu.sdk.data.api.model.components.audio
@@ -14,6 +15,8 @@ de.wingu.sdk.data.api.model.components.coupon
 de.wingu.sdk.data.api.model.components.files
 de.wingu.sdk.data.api.model.components.form
 de.wingu.sdk.data.api.model.components.image
+de.wingu.sdk.data.timestamps
+de.wingu.sdk.deckstyles
 de.wingu.sdk.notification
 de.wingu.sdk.ui.component.location
 de.wingu.sdk.ui.component.video

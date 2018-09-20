@@ -9,13 +9,18 @@
 <br/>
 <h1>channelNotificationsConfig</h1>
 <a name="de.wingu.sdk.WinguSDKBuilder$channelNotificationsConfig(java.util.concurrent.Callable((de.wingu.sdk.notification.ChannelNotificationsConfig)))"></a>
-<code><span class="keyword">fun </span><span class="identifier">channelNotificationsConfig</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$channelNotificationsConfig(java.util.concurrent.Callable((de.wingu.sdk.notification.ChannelNotificationsConfig)))/configFactory">configFactory</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/concurrent/Callable.html"><span class="identifier">Callable</span></a><span class="symbol">&lt;</span><a href="../../de.wingu.sdk.notification/-channel-notifications-config/index.html"><span class="identifier">ChannelNotificationsConfig</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
+<code><span class="keyword">fun </span><s><span class="identifier">channelNotificationsConfig</span></s><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$channelNotificationsConfig(java.util.concurrent.Callable((de.wingu.sdk.notification.ChannelNotificationsConfig)))/configFactory">configFactory</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/concurrent/Callable.html"><span class="identifier">Callable</span></a><span class="symbol">&lt;</span><a href="../../de.wingu.sdk.notification/-channel-notifications-config/index.html"><span class="identifier">ChannelNotificationsConfig</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">WinguSDKBuilder</span></a></code><br/>
+<strong>Deprecated:</strong> Don't wrap the configuration in a Callable but pass it directly<br/>
+<br/>
+<p><strong>Deprecated</strong><br/>
+</p>
+<a name="de.wingu.sdk.WinguSDKBuilder$channelNotificationsConfig(de.wingu.sdk.notification.ChannelNotificationsConfig)"></a>
+<code><span class="keyword">fun </span><span class="identifier">channelNotificationsConfig</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$channelNotificationsConfig(de.wingu.sdk.notification.ChannelNotificationsConfig)/config">config</span><span class="symbol">:</span>&nbsp;<a href="../../de.wingu.sdk.notification/-channel-notifications-config/index.html"><span class="identifier">ChannelNotificationsConfig</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Configures settings for background notifications.
 You need to enable <a href="geofence-background-scan.html">geofenceBackgroundScan</a> or
 <a href="ibeacon-background-scan.html">ibeaconBackgroundScan</a> for notifications to appear.</p>
 <h3>Parameters</h3>
-<p><a name="configFactory"></a>
-<code>configFactory</code> - Factory for creating configuration for notifications. If null, or returns
-null, notifications are disabled (default).</p>
+<p><a name="config"></a>
+<code>config</code> - Configuration for creating notifications. If null, notifications are disabled (default).</p>
 </BODY>
 </HTML>

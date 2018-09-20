@@ -19,15 +19,15 @@
 <p><a name="sleepOverrideDeadlineMillis"></a>
 <code>sleepOverrideDeadlineMillis</code> - Duration for which the job scheduler can postpone starting another scan.</p>
 <p><a name="scanMode"></a>
-<code>scanMode</code> - One of the SCAN_MODE_* values from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanSettings.html">ScanSettings</a>.</p>
+<code>scanMode</code> - One of the SCAN_MODE_* values from <a href="#">ScanSettings</a>.</p>
 <p><a name="firstEvictionDelayMs"></a>
 <code>firstEvictionDelayMs</code> - Specifies the duration (relative to the time when this configuration has been applied), during which we shouldn't evict lost devices.</p>
 <p><a name="relativeRssiExpirationDelayMs"></a>
 <code>relativeRssiExpirationDelayMs</code> - Specifies the duration (relative to the time when this configuration has been applied), during which we should still consider expired rssi values (<a href="#">de.wingu.blescanner.ble.rssi.RssiFilter.getExpirationTimeNanos</a>).</p>
 <p><a name="matchMode"></a>
-<code>matchMode</code> - One of the MATCH_MODE_* values from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanSettings.html">ScanSettings</a>.</p>
+<code>matchMode</code> - One of the MATCH_MODE_* values from <a href="#">ScanSettings</a>.</p>
 <p><a name="matchNum"></a>
-<code>matchNum</code> - One of the MATCH_NUM_* values from <a href="https://developer.android.com/reference/android/bluetooth/le/ScanSettings.html">ScanSettings</a>.</p>
+<code>matchNum</code> - One of the MATCH_NUM_* values from <a href="#">ScanSettings</a>.</p>
 <h3>Constructors</h3>
 <table>
 <tbody>
@@ -37,6 +37,32 @@
 </td>
 <td>
 <code><span class="identifier">BleScanMode</span><span class="symbol">(</span><span class="identifier" id="de.wingu.blescanner.ble.BleScanMode$<init>(kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Int)/lostBeaconTimeMillis">lostBeaconTimeMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.blescanner.ble.BleScanMode$<init>(kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Int)/scanDurationMillis">scanDurationMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.blescanner.ble.BleScanMode$<init>(kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Int)/sleepDurationMillis">sleepDurationMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.blescanner.ble.BleScanMode$<init>(kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Int)/scanMode">scanMode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-b-a-l-a-n-c-e-d.html">BALANCED</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">BALANCED</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">BleScanMode</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-l-o-w_-l-a-t-e-n-c-y.html">LOW_LATENCY</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">LOW_LATENCY</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">BleScanMode</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-l-o-w_-p-o-w-e-r.html">LOW_POWER</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">LOW_POWER</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">BleScanMode</span></a></code></td>
 </tr>
 </tbody>
 </table>

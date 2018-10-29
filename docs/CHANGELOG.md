@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - pre-defined set of channel filters (subclasses of `de.wingu.sdk.channel.filter.ChannelFilter`) that can be used 
     when subscribing to `NearbyChannelObserver#getChannelEvents`, e.g. to receive events only with channels which were not displayed:
 ```
-    nearbyChannelObserver.getChannelEvents().filter(UnseenContentOnly()).subscribe(...) 
+    nearbyChannelObserver.getChannelEvents().map(UnseenContentOnly()).subscribe(...) 
 ```
 - ability to apply channel filters before displaying notifications via `ChannelNotificationsConfig.Builder#addChannelFilter`
 

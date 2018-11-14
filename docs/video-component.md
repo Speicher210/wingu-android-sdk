@@ -1,6 +1,6 @@
 # Enabling video component
 
-To use Video component, you need to obtain Google API key, making sure that "YouTube Data API v3" is enabled. Then you need to register video component when initializing wingu SDK:
+To use Video component, you need to obtain a Google API key. Then you need to register video component when initializing wingu SDK:
 
 ```kotlin
 WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)

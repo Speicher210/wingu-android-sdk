@@ -84,7 +84,6 @@ package de.wingu.sdk.channel.filter {
 package de.wingu.sdk.data.api.model {
 
   public final class Card implements java.lang.Comparable<de.wingu.sdk.data.api.model.Card> android.os.Parcelable {
-    method public int compareTo(de.wingu.sdk.data.api.model.Card other);
     method public de.wingu.sdk.data.api.model.components.Component getComponent();
     method public String getId();
     method public de.wingu.sdk.data.api.model.Position getPosition();
@@ -191,22 +190,18 @@ package de.wingu.sdk.data.api.model {
   public final class IbeaconChannelKey extends de.wingu.sdk.data.api.model.IbeaconKey implements android.os.Parcelable {
     ctor public IbeaconChannelKey(String backendId, int major, int minor, java.util.UUID uuid);
     ctor public IbeaconChannelKey(de.wingu.sdk.data.api.model.IbeaconChannel ibeaconChannel);
-    method public int describeContents();
     method public String getBackendId();
-    method public void writeToParcel(android.os.Parcel parcel, int flags);
   }
 
   public class IbeaconKey extends de.wingu.sdk.data.api.model.ChannelKey implements de.wingu.blescanner.ibeacon.model.Ibeacon android.os.Parcelable {
     ctor public IbeaconKey(int major, int minor, java.util.UUID uuid);
     ctor public IbeaconKey(de.wingu.blescanner.ibeacon.model.Ibeacon iBeacon);
-    method public int describeContents();
     method public static final de.wingu.sdk.data.api.model.IbeaconKey from(de.wingu.blescanner.ibeacon.model.Ibeacon beacon);
     method public static final de.wingu.sdk.data.api.model.IbeaconKey from(int major, int minor, java.util.UUID uuid);
     method public static final de.wingu.sdk.data.api.model.IbeaconKey from(de.wingu.sdk.data.api.model.IbeaconChannel ibeaconChannel);
     method public int getMajor();
     method public int getMinor();
     method public java.util.UUID getUuid();
-    method public void writeToParcel(android.os.Parcel parcel, int flags);
     field public static final de.wingu.sdk.data.api.model.IbeaconKey.Companion! Companion;
   }
 
@@ -243,7 +238,6 @@ package de.wingu.sdk.data.api.model {
   }
 
   public final class Position implements java.lang.Comparable<de.wingu.sdk.data.api.model.Position> android.os.Parcelable {
-    method public int compareTo(de.wingu.sdk.data.api.model.Position other);
     method public int getSort();
   }
 
@@ -260,7 +254,6 @@ package de.wingu.sdk.data.api.model {
   }
 
   public final class WinguDate implements java.lang.Comparable<de.wingu.sdk.data.api.model.WinguDate> android.os.Parcelable {
-    method public int compareTo(de.wingu.sdk.data.api.model.WinguDate other);
     method public long getTimestamp();
   }
 

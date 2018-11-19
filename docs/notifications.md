@@ -1,6 +1,6 @@
 # Notifications
 
-To enable and configure notifications, [ChannelNotificationConfig](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.notification/-channel-notifications-config/index.html) needs to be registered while initializing SDK and at least one of the background scanning modes has to be enabled.
+To enable and configure notifications, [ChannelNotificationConfig](https://wingu-GmbH.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.notification/-channel-notifications-config/index.html) needs to be registered while initializing SDK and at least one of the background scanning modes has to be enabled.
 
 ```kotlin
 val context: Context = this
@@ -33,4 +33,4 @@ WinguSDKBuilder.with(this, YOUR_WINGU_API_KEY)
     .build()
 ```
 
-To customize your notifications look at [ChannelNotificationsConfig.Builder](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.notification/-channel-notifications-config/-builder/index.html) class. Among others, it allows you to add a [ChannelFilter](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.channel.filter/-channel-filter/index.html) which changes the way the notifications show up.
+To customize your notifications look at [ChannelNotificationsConfig.Builder](https://wingu-GmbH.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.notification/-channel-notifications-config/-builder/index.html) class. Among others, it allows you to add a [ChannelFilter](https://wingu-GmbH.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.channel.filter/-channel-filter/index.html) which changes the way the notifications show up.

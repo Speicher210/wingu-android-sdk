@@ -1,7 +1,7 @@
 # Displaying channel content
 
 
-You can display wingu content using [ChannelDetailsActivity](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.ui.details/-channel-details-activity/index.html), or by inserting [ChannelDetailsFragment](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.ui.details/-channel-details-fragment/index.html) into your own activity.
+You can display wingu content using [ChannelDetailsActivity](https://wingu-GmbH.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.ui.details/-channel-details-activity/index.html), or by inserting [ChannelDetailsFragment](https://wingu-GmbH.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.ui.details/-channel-details-fragment/index.html) into your own activity.
 
 To create `ChannelDetailsFragment`:
 

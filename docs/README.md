@@ -1,7 +1,7 @@
 ![Platform](https://img.shields.io/badge/platform-Android%205.0+-%23A4C639.svg)
-[![Version](https://img.shields.io/badge/version-3.5.0-%2346C800.svg)](https://speicher210.github.io/wingu-android-sdk/CHANGELOG.html)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/Speicher210/wingu-android-sdk/blob/master/LICENSE)
-[![API docs](https://img.shields.io/badge/API-docs-%2346C800.svg)](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/)
+[![Version](https://img.shields.io/badge/version-3.5.0-%2346C800.svg)](https://wingu-GmbH.github.io/wingu-android-sdk/CHANGELOG.html)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/wingu-GmbH/wingu-android-sdk/blob/master/LICENSE)
+[![API docs](https://img.shields.io/badge/API-docs-%2346C800.svg)](https://wingu-GmbH.github.io/wingu-android-sdk/dokka/wingu-android-sdk/)
 
 
 # wingu-android-sdk
@@ -37,7 +37,7 @@ android {
 repositories {
   maven { url "https://maven.google.com" }
   maven { url "https://jitpack.io" }
-  maven { url "https://github.com/Speicher210/wingu-android-sdk/raw/master/releases" }
+  maven { url "https://github.com/wingu-GmbH/wingu-android-sdk/raw/master/releases" }
 }
 
 dependencies {
@@ -47,7 +47,7 @@ dependencies {
 }
 ```
 
-If you are using __Kotlin__ standard library, __Support Libraries__, __Google Play Services__ or have issues with dependencies, read [dependency management](https://speicher210.github.io/wingu-android-sdk/dependency-management).
+If you are using __Kotlin__ standard library, __Support Libraries__, __Google Play Services__ or have issues with dependencies, read [dependency management](https://wingu-GmbH.github.io/wingu-android-sdk/dependency-management).
 
 Initialize wingu SDK in your `Application` subclass:
 
@@ -105,7 +105,7 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
 
 <h2 id="listening-nearby-channels">3. Listening for nearby channels</h2>
 
-Once you have all the prerequisites, you can listen for nearby channel events. Using [NearbyChannelObserver](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.utils/-nearby-channel-observer/index.html) you can be notified for example when you enter a geofence zone, or go out of beacon range.
+Once you have all the prerequisites, you can listen for nearby channel events. Using [NearbyChannelObserver](https://wingu-GmbH.github.io/wingu-android-sdk/dokka/wingu-android-sdk/de.wingu.sdk.utils/-nearby-channel-observer/index.html) you can be notified for example when you enter a geofence zone, or go out of beacon range.
 
 ```kotlin
 private var channelsSubscription: Subscription? = null
@@ -144,19 +144,19 @@ private fun onChannelClicked(channel: Channel) {
 
 <h2 id="documentation">4. Documentation</h2>
 
-- [API docs](https://speicher210.github.io/wingu-android-sdk/dokka/wingu-android-sdk/)
-- [Changelog](https://speicher210.github.io/wingu-android-sdk/CHANGELOG.html)
-- [Demo app](https://github.com/Speicher210/wingu-sdk-android-demoapp)
+- [API docs](https://wingu-GmbH.github.io/wingu-android-sdk/dokka/wingu-android-sdk/)
+- [Changelog](https://wingu-GmbH.github.io/wingu-android-sdk/CHANGELOG.html)
+- [Demo app](https://github.com/wingu-GmbH/wingu-sdk-android-demoapp)
 
-- [Dependency management](https://speicher210.github.io/wingu-android-sdk/dependency-management)
-- [Displaying channel content](https://speicher210.github.io/wingu-android-sdk/displaying-channel-content)
-- [Enabling location (maps) component](https://speicher210.github.io/wingu-android-sdk/location-component)
-- [Enabling video component](https://speicher210.github.io/wingu-android-sdk/video-component)
-- [Notifications](https://speicher210.github.io/wingu-android-sdk/notifications)
-- [NFC & Eddystone](https://speicher210.github.io/wingu-android-sdk/nfc-eddystone)
-- [Permissions](https://speicher210.github.io/wingu-android-sdk/permissions)
-- [QR codes](https://speicher210.github.io/wingu-android-sdk/qr-codes)
-- [Scan configuration & autostart](https://speicher210.github.io/wingu-android-sdk/scan-configuration)
+- [Dependency management](https://wingu-GmbH.github.io/wingu-android-sdk/dependency-management)
+- [Displaying channel content](https://wingu-GmbH.github.io/wingu-android-sdk/displaying-channel-content)
+- [Enabling location (maps) component](https://wingu-GmbH.github.io/wingu-android-sdk/location-component)
+- [Enabling video component](https://wingu-GmbH.github.io/wingu-android-sdk/video-component)
+- [Notifications](https://wingu-GmbH.github.io/wingu-android-sdk/notifications)
+- [NFC & Eddystone](https://wingu-GmbH.github.io/wingu-android-sdk/nfc-eddystone)
+- [Permissions](https://wingu-GmbH.github.io/wingu-android-sdk/permissions)
+- [QR codes](https://wingu-GmbH.github.io/wingu-android-sdk/qr-codes)
+- [Scan configuration & autostart](https://wingu-GmbH.github.io/wingu-android-sdk/scan-configuration)
 
 <h2 id="wingu">5. About wingu</h2>
 
@@ -171,4 +171,4 @@ Android Developers @ wingu GmbH
 
 <h2 id="license">7. License</h2>
 
-wingu-android-sdk is available under the Apache 2.0 license. See the [LICENSE](https://github.com/Speicher210/wingu-android-sdk/blob/master/LICENSE) file for more info.
+wingu-android-sdk is available under the Apache 2.0 license. See the [LICENSE](https://github.com/wingu-GmbH/wingu-android-sdk/blob/master/LICENSE) file for more info.

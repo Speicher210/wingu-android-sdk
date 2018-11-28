@@ -1,0 +1,21 @@
+// Signature format: 2.0
+package de.wingu.whitelabel {
+
+  public final class WinguWhiteLabel {
+    field public static final de.wingu.whitelabel.WinguWhiteLabel.Companion! Companion;
+  }
+
+  public static final class WinguWhiteLabel.Companion {
+    method public rx.Observable<de.wingu.whitelabel.WinguWhiteLabel> loadWithKey(String wlKey, boolean isStaging);
+  }
+
+}
+
+package de.wingu.whitelabel.model {
+
+  @Keep public final class ContentLocale implements android.os.Parcelable {
+    method public String getLanguageCode();
+  }
+
+}
+

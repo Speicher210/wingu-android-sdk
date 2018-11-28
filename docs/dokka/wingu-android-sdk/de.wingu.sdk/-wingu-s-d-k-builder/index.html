@@ -71,7 +71,7 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="eddystone-url.html">eddystoneUrl</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">eddystoneUrl</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$eddystoneUrl(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, )))/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$eddystoneUrl(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, )))/urlIntentCreator">urlIntentCreator</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code></td>
+<code><span class="keyword">fun </span><span class="identifier">eddystoneUrl</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$eddystoneUrl(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, android.content.Intent)))/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$eddystoneUrl(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, android.content.Intent)))/urlIntentCreator">urlIntentCreator</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -123,7 +123,7 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="nfc.html">nfc</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">nfc</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$nfc(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, )))/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$nfc(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, )))/nfcIntentCreator">nfcIntentCreator</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code></td>
+<code><span class="keyword">fun </span><span class="identifier">nfc</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$nfc(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, android.content.Intent)))/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$nfc(kotlin.Boolean, kotlin.Function1((de.wingu.sdk.data.api.model.ChannelKey, android.content.Intent)))/nfcIntentCreator">nfcIntentCreator</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../de.wingu.sdk.data.api.model/-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -145,6 +145,18 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 </tr>
 </tbody>
 </table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-d-e-m-o_-a-p-p_-i-d.html">DEMO_APP_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEMO_APP_ID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
 <h3>Companion Object Functions</h3>
 <table>
 <tbody>
@@ -153,7 +165,8 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="with.html">with</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
+<code><span class="keyword">fun </span><s><span class="identifier">with</span></s><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Application.html"><span class="identifier">Application</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
 <p>Creates a new builder.</p>
 </td>
 </tr>

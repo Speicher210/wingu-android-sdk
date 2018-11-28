@@ -1,5 +1,5 @@
 ![Platform](https://img.shields.io/badge/platform-Android%205.0+-%23A4C639.svg)
-[![Version](https://img.shields.io/badge/version-3.5.0-%2346C800.svg)](https://wingu-GmbH.github.io/wingu-android-sdk/CHANGELOG.html)
+[![Version](https://img.shields.io/badge/version-3.6.0-%2346C800.svg)](https://wingu-GmbH.github.io/wingu-android-sdk/CHANGELOG.html)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/wingu-GmbH/wingu-android-sdk/blob/master/LICENSE)
 [![API docs](https://img.shields.io/badge/API-docs-%2346C800.svg)](https://wingu-GmbH.github.io/wingu-android-sdk/dokka/wingu-android-sdk/)
 
@@ -41,9 +41,9 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.github.Speicher210.wingu-android-sdk:sdk:3.5.0'
-  implementation 'com.github.Speicher210.wingu-android-sdk:component-video:3.5.0' // optional
-  implementation 'com.github.Speicher210.wingu-android-sdk:qrcodescanner:3.5.0' // optional
+  implementation 'com.github.Speicher210.wingu-android-sdk:sdk:3.6.0'
+  implementation 'com.github.Speicher210.wingu-android-sdk:component-video:3.6.0' // optional
+  implementation 'com.github.Speicher210.wingu-android-sdk:qrcodescanner:3.6.0' // optional
 }
 ```
 

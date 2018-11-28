@@ -1,0 +1,71 @@
+// Signature format: 2.0
+package de.wingu.channeladapters {
+
+  public abstract sealed class AdapterItem {
+  }
+
+  public abstract class BaseChannelAdapter<VH extends android.support.v7.widget.RecyclerView.ViewHolder> extends android.support.v7.widget.RecyclerView.Adapter<VH> implements android.arch.lifecycle.LifecycleObserver {
+  }
+
+  public final class BluetoothAdapterItem extends de.wingu.channeladapters.AdapterItem {
+    field public static final de.wingu.channeladapters.BluetoothAdapterItem! INSTANCE;
+  }
+
+  public interface ChannelAdapterCallbacks {
+    method public void channelsLoadingStateChanged(de.wingu.channeladapters.LoadingState loadingState);
+    method public void onChannelSelected(de.wingu.sdk.data.api.model.Channel channel, de.wingu.channeladapters.TransitionHelper transitionHelper);
+  }
+
+  public final class ChannelAdapterItem extends de.wingu.channeladapters.AdapterItem {
+    ctor public ChannelAdapterItem(de.wingu.sdk.data.api.model.Channel channel, de.wingu.channeladapters.ChannelProximity channelProximity, boolean hasBeenSeen, de.wingu.sdk.data.api.model.WinguDate discoveredAt);
+    method public de.wingu.sdk.data.api.model.Channel getChannel();
+    method public de.wingu.channeladapters.ChannelProximity getChannelProximity();
+    method public de.wingu.sdk.data.api.model.WinguDate getDiscoveredAt();
+    method public boolean getHasBeenSeen();
+  }
+
+  public final class ChannelAdapters {
+    method public static void attachToCarouselAdapter(android.support.v7.widget.RecyclerView recyclerView, de.wingu.channeladapters.ChannelAdapterCallbacks onChannelSelectedCallback, android.arch.lifecycle.LifecycleOwner lifecycleOwner, boolean showBluetoothAndLocationCard = true);
+    method public static void attachToCarouselAdapter(android.support.v7.widget.RecyclerView recyclerView, de.wingu.channeladapters.ChannelAdapterCallbacks onChannelSelectedCallback, android.arch.lifecycle.LifecycleOwner lifecycleOwner);
+    field public static final de.wingu.channeladapters.ChannelAdapters! INSTANCE;
+  }
+
+  public enum ChannelProximity {
+    enum_constant public static final de.wingu.channeladapters.ChannelProximity FAR;
+    enum_constant public static final de.wingu.channeladapters.ChannelProximity IMMEDIATE;
+    enum_constant public static final de.wingu.channeladapters.ChannelProximity NEAR;
+  }
+
+  public enum LoadingState {
+  }
+
+  public final class LocationAdapterItem extends de.wingu.channeladapters.AdapterItem {
+    field public static final de.wingu.channeladapters.LocationAdapterItem! INSTANCE;
+  }
+
+  public final class TransitionHelper {
+    method public android.support.v4.app.FragmentTransaction addSharedChannelAnimationToFragmentTransaction(android.support.v4.app.FragmentTransaction fragmentTransaction, String transitionName);
+    method public android.support.v4.app.ActivityOptionsCompat prepareOptionsForActivity(String transitionName);
+  }
+
+}
+
+package de.wingu.channeladapters.carousel {
+
+  public class CarouselAdapter extends de.wingu.channeladapters.BaseChannelAdapter<de.wingu.channeladapters.carousel.CarouselAdapter.AdapterItemViewHolder> {
+    method public void onBindViewHolder(de.wingu.channeladapters.carousel.CarouselAdapter.AdapterItemViewHolder holder, int position);
+    method public de.wingu.channeladapters.carousel.CarouselAdapter.AdapterItemViewHolder onCreateViewHolder(android.view.ViewGroup parent, int viewType);
+  }
+
+  public static final class CarouselAdapter.AdapterItemViewHolder extends android.support.v7.widget.RecyclerView.ViewHolder implements kotlinx.android.extensions.LayoutContainer {
+  }
+
+}
+
+package de.wingu.channeladapters.utils {
+
+  public enum LocationState {
+  }
+
+}
+

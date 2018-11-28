@@ -13,8 +13,8 @@ package de.wingu.qrcodescanner {
   }
 
   public static enum QrCodeScannerActivity.QrCodeError {
-    enum_constant public static final de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError! INVALID_CHANNEL_ID;
-    enum_constant public static final de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError! NOT_RECOGNIZED;
+    enum_constant public static final de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError INVALID_CHANNEL_ID;
+    enum_constant public static final de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError NOT_RECOGNIZED;
   }
 
 }

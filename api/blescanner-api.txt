@@ -20,9 +20,9 @@ package de.wingu.blescanner.ibeacon.model {
     method public int getMajor();
     method public int getMinor();
     method public java.util.UUID getUuid();
-    property public int major;
-    property public int minor;
-    property public java.util.UUID uuid;
+    property public abstract int major;
+    property public abstract int minor;
+    property public abstract java.util.UUID uuid;
   }
 
   public final class IbeaconDevice implements de.wingu.blescanner.ibeacon.model.Ibeacon {

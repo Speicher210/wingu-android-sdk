@@ -16,7 +16,7 @@ package de.wingu.sdk {
   public static interface WinguSDK.Configurator {
     method public boolean getPersistentIbeaconScanning();
     method public void setPersistentIbeaconScanning(boolean p);
-    property public boolean persistentIbeaconScanning;
+    property public abstract boolean persistentIbeaconScanning;
   }
 
   public abstract class WinguSDKBuilder {
@@ -40,8 +40,10 @@ package de.wingu.sdk {
     method public final de.wingu.sdk.WinguSDKBuilder nfc(boolean enabled);
     method public final de.wingu.sdk.WinguSDKBuilder registerComponent(de.wingu.sdk.data.api.model.components.ComponentSpec componentSpec);
     method public final de.wingu.sdk.WinguSDKBuilder staging(boolean isStaging);
-    method public static final de.wingu.sdk.WinguSDKBuilder with(android.app.Application application, String? apiKey);
+    method @Deprecated public static final de.wingu.sdk.WinguSDKBuilder with(android.app.Application application, String? apiKey);
+    method public static final de.wingu.sdk.WinguSDKBuilder with(String apiKey);
     field public static final de.wingu.sdk.WinguSDKBuilder.Companion! Companion;
+    field public static final String DEMO_APP_ID = "94686f2f-6c1f-4c53-aaf2-38c351ceb5af";
   }
 
   public static interface WinguSDKBuilder.BuildListener {
@@ -49,33 +51,32 @@ package de.wingu.sdk {
   }
 
   public static final class WinguSDKBuilder.Companion {
-    method public de.wingu.sdk.WinguSDKBuilder with(android.app.Application application, String? apiKey);
+    method @Deprecated public de.wingu.sdk.WinguSDKBuilder with(android.app.Application application, String? apiKey);
+    method public de.wingu.sdk.WinguSDKBuilder with(String apiKey);
   }
 
 }
 
 package de.wingu.sdk.channel.filter {
 
-  public abstract class ChannelFilter {
+  public abstract class ChannelFilter implements rx.functions.Func1<de.wingu.sdk.data.api.model.ChannelEvents,de.wingu.sdk.data.api.model.ChannelEvents> {
     method protected abstract boolean shouldPass(de.wingu.sdk.data.api.model.ChannelEventType channelEventType);
     method protected abstract boolean shouldPass(de.wingu.sdk.data.api.model.Channel channel, de.wingu.sdk.data.timestamps.ChannelTimestamps channelTimestamps);
   }
 
-  public final class NewContentOnly extends de.wingu.sdk.channel.filter.ChannelFilter {
+  public final class NewContentOnly extends de.wingu.sdk.channel.filter.NewlyDiscoveredOrLost {
     ctor public NewContentOnly();
-    method protected boolean shouldPass(de.wingu.sdk.data.api.model.ChannelEventType channelEventType);
     method protected boolean shouldPass(de.wingu.sdk.data.api.model.Channel channel, de.wingu.sdk.data.timestamps.ChannelTimestamps channelTimestamps);
   }
 
-  public final class NewlyDiscoveredOrLost extends de.wingu.sdk.channel.filter.ChannelFilter {
+  public class NewlyDiscoveredOrLost extends de.wingu.sdk.channel.filter.ChannelFilter {
     ctor public NewlyDiscoveredOrLost();
     method protected boolean shouldPass(de.wingu.sdk.data.api.model.ChannelEventType channelEventType);
     method protected boolean shouldPass(de.wingu.sdk.data.api.model.Channel channel, de.wingu.sdk.data.timestamps.ChannelTimestamps channelTimestamps);
   }
 
-  public final class UnseenContentOnly extends de.wingu.sdk.channel.filter.ChannelFilter {
+  public final class UnseenContentOnly extends de.wingu.sdk.channel.filter.NewlyDiscoveredOrLost {
     ctor public UnseenContentOnly();
-    method protected boolean shouldPass(de.wingu.sdk.data.api.model.ChannelEventType channelEventType);
     method protected boolean shouldPass(de.wingu.sdk.data.api.model.Channel channel, de.wingu.sdk.data.timestamps.ChannelTimestamps channelTimestamps);
   }
 
@@ -100,16 +101,16 @@ package de.wingu.sdk.data.api.model {
   }
 
   public static enum Channel.ChannelType {
-    enum_constant public static final de.wingu.sdk.data.api.model.Channel.ChannelType! BEACON;
-    enum_constant public static final de.wingu.sdk.data.api.model.Channel.ChannelType! GEOFENCE;
-    enum_constant public static final de.wingu.sdk.data.api.model.Channel.ChannelType! NFC;
-    enum_constant public static final de.wingu.sdk.data.api.model.Channel.ChannelType! QRCODE;
+    enum_constant public static final de.wingu.sdk.data.api.model.Channel.ChannelType BEACON;
+    enum_constant public static final de.wingu.sdk.data.api.model.Channel.ChannelType GEOFENCE;
+    enum_constant public static final de.wingu.sdk.data.api.model.Channel.ChannelType NFC;
+    enum_constant public static final de.wingu.sdk.data.api.model.Channel.ChannelType QRCODE;
   }
 
   public enum ChannelEventType {
-    enum_constant public static final de.wingu.sdk.data.api.model.ChannelEventType! DISCOVERED;
-    enum_constant public static final de.wingu.sdk.data.api.model.ChannelEventType! LOST;
-    enum_constant public static final de.wingu.sdk.data.api.model.ChannelEventType! UPDATED;
+    enum_constant public static final de.wingu.sdk.data.api.model.ChannelEventType DISCOVERED;
+    enum_constant public static final de.wingu.sdk.data.api.model.ChannelEventType LOST;
+    enum_constant public static final de.wingu.sdk.data.api.model.ChannelEventType UPDATED;
   }
 
   public final class ChannelEvents {
@@ -324,8 +325,8 @@ package de.wingu.sdk.data.api.model.components {
   public interface Component extends android.os.Parcelable {
     method public String getDiscriminator();
     method public String getId();
-    property public String discriminator;
-    property public String id;
+    property public abstract String discriminator;
+    property public abstract String id;
   }
 
   public final class ComponentSpec {
@@ -595,11 +596,13 @@ package de.wingu.sdk.data.api.model.components.form {
     method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
     method public String getLabel();
     method public String getName();
+    method public boolean getPersistent();
     method public boolean getRequired();
-    property public String discriminator;
-    property public String label;
-    property public String name;
-    property public boolean required;
+    property public abstract String discriminator;
+    property public abstract String label;
+    property public abstract String name;
+    property public abstract boolean persistent;
+    property public abstract boolean required;
   }
 
   public final class FormResubmit implements android.os.Parcelable {
@@ -612,6 +615,7 @@ package de.wingu.sdk.data.api.model.components.form {
     method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
     method public String getLabel();
     method public String getName();
+    method public boolean getPersistent();
     method public boolean getRequired();
     method public String getType();
   }
@@ -623,6 +627,7 @@ package de.wingu.sdk.data.api.model.components.form {
     method public boolean getMultiple();
     method public String getName();
     method public java.util.List<de.wingu.sdk.data.api.model.components.form.SelectFormOption> getOptions();
+    method public boolean getPersistent();
     method public boolean getRequired();
   }
 
@@ -636,6 +641,7 @@ package de.wingu.sdk.data.api.model.components.form {
     method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
     method public String getLabel();
     method public String getName();
+    method public boolean getPersistent();
     method public boolean getRequired();
   }
 
@@ -692,8 +698,9 @@ package de.wingu.sdk.notification {
 
   public static final class ChannelNotificationsConfig.Builder {
     ctor public ChannelNotificationsConfig.Builder(de.wingu.sdk.notification.ChannelNotificationsConfig.ChannelNotificationCallback channelNotificationCallback);
-    method public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder addChannelFilter(de.wingu.sdk.channel.filter.ChannelFilter channelFilter);
+    method @Deprecated public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder addChannelFilter(de.wingu.sdk.channel.filter.ChannelFilter channelFilter);
     method public de.wingu.sdk.notification.ChannelNotificationsConfig build();
+    method public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder setChannelFilter(de.wingu.sdk.channel.filter.ChannelFilter channelFilter);
     method public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder setLargeIcon(@DrawableRes int largeIcon);
     method public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder setSmallIcon(@DrawableRes int smallIcon);
     method public de.wingu.sdk.notification.ChannelNotificationsConfig.Builder setSnoozeButtonTitle(String? text);
@@ -801,17 +808,17 @@ package de.wingu.sdk.utils {
 package de.wingu.sdk.utils.prerequisite {
 
   public enum Prerequisite {
-    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite! ACCESS_COARSE_LOCATION;
-    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite! ACCESS_FINE_LOCATION;
-    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite! BLUETOOTH_ON;
-    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite! LOCATION_SERVICES_ON;
-    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite! PLAY_SERVICES;
+    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite ACCESS_COARSE_LOCATION;
+    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite ACCESS_FINE_LOCATION;
+    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite BLUETOOTH_ON;
+    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite LOCATION_SERVICES_ON;
+    enum_constant public static final de.wingu.sdk.utils.prerequisite.Prerequisite PLAY_SERVICES;
   }
 
   public final class PrerequisitesChecker {
     method public static java.util.Set<de.wingu.sdk.utils.prerequisite.Prerequisite> check();
     method public static boolean checkWithDefaultDialogs(android.app.Activity activity, int requestCode);
-    method public static de.wingu.sdk.utils.prerequisite.ResolveResults? getResolveResults(android.content.Intent data);
+    method public static de.wingu.sdk.utils.prerequisite.ResolveResults? getResolveResults(android.content.Intent? data);
     method public static boolean resolveWithDefaultDialogs(android.app.Activity activity, int requestCode, de.wingu.sdk.utils.prerequisite.Prerequisite... toResolve);
     field public static final de.wingu.sdk.utils.prerequisite.PrerequisitesChecker! INSTANCE;
   }

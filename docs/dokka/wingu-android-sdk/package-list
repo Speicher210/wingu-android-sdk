@@ -3,6 +3,9 @@ $dokka.linkExtension:html
 
 de.wingu.blescanner.ble
 de.wingu.blescanner.ibeacon.model
+de.wingu.channeladapters
+de.wingu.channeladapters.carousel
+de.wingu.channeladapters.utils
 de.wingu.qrcodescanner
 de.wingu.sdk
 de.wingu.sdk.channel.filter
@@ -23,3 +26,5 @@ de.wingu.sdk.ui.component.video
 de.wingu.sdk.ui.details
 de.wingu.sdk.utils
 de.wingu.sdk.utils.prerequisite
+de.wingu.whitelabel
+de.wingu.whitelabel.model

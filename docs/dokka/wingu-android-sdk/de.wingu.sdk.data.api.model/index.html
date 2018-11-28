@@ -16,14 +16,14 @@
 <p><a href="-card/index.html">Card</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Card</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="-card/index.html"><span class="identifier">Card</span></a><span class="symbol">&gt;</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Card</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="-card/index.html"><span class="identifier">Card</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-channel/index.html">Channel</a></p>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">Channel</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Openable</span></code>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">Channel</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Openable</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Represents discoverable content.</p>
 </td>
 </tr>
@@ -46,7 +46,7 @@
 <p><a href="-channel-key/index.html">ChannelKey</a></p>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ChannelKey</span></code>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ChannelKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Allows to uniquely identify a <a href="-channel/index.html">Channel</a>.</p>
 </td>
 </tr>
@@ -55,21 +55,21 @@
 <p><a href="-content/index.html">Content</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Content</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Content</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-deck/index.html">Deck</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Deck</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Openable</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Deck</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Openable</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-eddystone-key/index.html">EddystoneKey</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EddystoneKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a></code>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EddystoneKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Allows to uniquely identify a <a href="-eddystone-key/index.html">EddystoneKey</a>.</p>
 </td>
 </tr>
@@ -78,14 +78,14 @@
 <p><a href="-geo-boundaries/index.html">GeoBoundaries</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GeoBoundaries</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GeoBoundaries</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-geofence-channel/index.html">GeofenceChannel</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GeofenceChannel</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel/index.html"><span class="identifier">Channel</span></a></code>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GeofenceChannel</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel/index.html"><span class="identifier">Channel</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Geofence-based content.</p>
 </td>
 </tr>
@@ -94,7 +94,7 @@
 <p><a href="-geofence-key/index.html">GeofenceKey</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GeofenceKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a></code>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GeofenceKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Allows to uniquely identify a <a href="-geofence-channel/index.html">GeofenceChannel</a>.</p>
 </td>
 </tr>
@@ -103,7 +103,7 @@
 <p><a href="-ibeacon-channel/index.html">IbeaconChannel</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">IbeaconChannel</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel/index.html"><span class="identifier">Channel</span></a><span class="symbol">, </span><a href="../de.wingu.blescanner.ibeacon.model/-ibeacon/index.html"><span class="identifier">Ibeacon</span></a></code>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">IbeaconChannel</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel/index.html"><span class="identifier">Channel</span></a><span class="symbol">, </span><a href="../de.wingu.blescanner.ibeacon.model/-ibeacon/index.html"><span class="identifier">Ibeacon</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Ibeacon-based content.</p>
 </td>
 </tr>
@@ -112,7 +112,7 @@
 <p><a href="-ibeacon-channel-key/index.html">IbeaconChannelKey</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">IbeaconChannelKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-ibeacon-key/index.html"><span class="identifier">IbeaconKey</span></a></code>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">IbeaconChannelKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-ibeacon-key/index.html"><span class="identifier">IbeaconKey</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Allows to identify an ibeacon channel using its server id, or UUID, major and minor.</p>
 </td>
 </tr>
@@ -121,35 +121,35 @@
 <p><a href="-ibeacon-key/index.html">IbeaconKey</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IbeaconKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">, </span><a href="../de.wingu.blescanner.ibeacon.model/-ibeacon/index.html"><span class="identifier">Ibeacon</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IbeaconKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">, </span><a href="../de.wingu.blescanner.ibeacon.model/-ibeacon/index.html"><span class="identifier">Ibeacon</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-locale/index.html">Locale</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Locale</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Locale</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-location/index.html">Location</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Location</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Location</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-nfc-channel/index.html">NfcChannel</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NfcChannel</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel/index.html"><span class="identifier">Channel</span></a></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NfcChannel</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel/index.html"><span class="identifier">Channel</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-nfc-key/index.html">NfcKey</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NfcKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a></code>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NfcKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Allows to uniquely identify an <a href="-nfc-channel/index.html">NfcChannel</a>.</p>
 </td>
 </tr>
@@ -158,28 +158,28 @@
 <p><a href="-pack/index.html">Pack</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Pack</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Pack</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-position/index.html">Position</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Position</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="-position/index.html"><span class="identifier">Position</span></a><span class="symbol">&gt;</span></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Position</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="-position/index.html"><span class="identifier">Position</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-qrcode-channel/index.html">QrcodeChannel</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">QrcodeChannel</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel/index.html"><span class="identifier">Channel</span></a></code></td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">QrcodeChannel</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel/index.html"><span class="identifier">Channel</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="-qrcode-key/index.html">QrcodeKey</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">QrcodeKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a></code>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">QrcodeKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-channel-key/index.html"><span class="identifier">ChannelKey</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Allows to uniquely identify a <a href="-qrcode-channel/index.html">QrcodeChannel</a>.</p>
 </td>
 </tr>
@@ -188,7 +188,7 @@
 <p><a href="-wingu-date/index.html">WinguDate</a></p>
 </td>
 <td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">WinguDate</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="-wingu-date/index.html"><span class="identifier">WinguDate</span></a><span class="symbol">&gt;</span></code>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">WinguDate</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="-wingu-date/index.html"><span class="identifier">WinguDate</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a></code>
 <p>Container for timestamp
 It prevents from mutability issues of <a href="https://developer.android.com/reference/java/util/Date.html">Date</a> and <a href="https://developer.android.com/reference/java/util/Calendar.html">Calendar</a></p>
 </td>

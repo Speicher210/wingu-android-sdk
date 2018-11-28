@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 3.6.0
+
+### Added
+- additional module `channeladapters` for RecyclerView
+
+### Changed
+- __The URL for the maven repository has been changed to `https://github.com/wingu-GmbH/wingu-android-sdk/raw/master/releases`__ (the old one will still work and redirect to the new one)
+- When using video component, the "YouTube Data API v3" is not needed anymore
+- `PrerequisitesChecker#getResolveResults` accepts nullable data `Intent`
+
+### Fixed 
+- IllegalStateException ("BT Adapter is not turned ON") when scanning BLE on Android>=8 [#1](https://github.com/wingu-GmbH/wingu-android-sdk/issues/1)
+- NPE when scanning for geofences [#2](https://github.com/wingu-GmbH/wingu-android-sdk/issues/2)
+ 
 ## 3.5.0
 
 ### Added

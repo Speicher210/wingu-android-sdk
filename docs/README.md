@@ -60,6 +60,8 @@ override fun onCreate() {
 }
 ```
 
+> For start, you can use `WinguSDKBuilder.DEMO_APP_ID` key.
+
 <h2 id="requirements">2. Requirements</h2>
 
 To be able to listen for nearby channels (iBeacons and geofences) you need to have:
@@ -90,14 +92,14 @@ override fun onStop() {
     super.onStop()
 }
 
-override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     super.onActivityResult(requestCode, resultCode, data)
     if (requestCode == WINGU_SDK_PREREQUISITES_REQUEST) {
         val results = PrerequisitesChecker.getResolveResults(data)
         if (results != null && results.failed.isEmpty()) {
             listenForNearbyChannels()
         } else {
-            Log.e(TAG, "Could not get ResolveResults or some failed")
+            Log.e("wingu", "Could not get ResolveResults or some failed")
         }
     }
 }
@@ -116,8 +118,8 @@ private fun listenForNearbyChannels() {
         .getNearbyChannelObserver()
         .getChannelEvents()
         .subscribe(
-            { channelEvents -> Log.d(TAG, "$channelEvents") },
-            { throwable -> Log.e(TAG, "Could not get nearby channels", throwable) }
+            { channelEvents -> Log.d("wingu", "$channelEvents") },
+            { throwable -> Log.e("wingu", "Could not get nearby channels", throwable) }
         )
 }
 
@@ -141,6 +143,12 @@ private fun onChannelClicked(channel: Channel) {
     startActivity(intent)
 }
 ```
+
+> If you used `WinguSDKBuilder.DEMO_APP_ID` in the first step, you can launch
+> the Android Emulator and set latitude to `37.422` and longitude to `-122.084`.
+> Within a few seconds you will receive your first channel event.
+> If you change the location (for example set the latitude to `38.422`) you will receive a `LOST` event, and the content will no longer be accessible.
+> _Note_: due to limitations in the Emulator, it's not possible to receive iBeacon or geofence events when the app is in background.
 
 <h2 id="documentation">4. Documentation</h2>
 

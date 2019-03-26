@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 4.0.0
+
+### Added
+- added `ChannelListAdapter` to `channeladapters` module
+- option to enable/disable analytics
+- added `WinguSDK#getStorage` (e.g. to store coupons or whole channels)
+- ability to set preferred content languages via `WinguSDK#configurator#preferredContentLanguages`
+
+### Changed
+- migrated to AndroidX
+- GeofenceChannels are subject to cache time expiration (can be set via `WinguSDKBuilder#channelCacheTime`)
+- form component: if form was filled but not submitted, an alert will be shown
+- form component: if a field is optional it will be marked with `(optional)` text
+
+### Fixed
+- fetching wingu channels only once (even if there would otherwise be multiple requests issued)
+
 ## 3.6.0
 
 ### Added

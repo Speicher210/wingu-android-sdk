@@ -61,6 +61,15 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 </tr>
 <tr>
 <td>
+<p><a href="coupon-storage.html">couponStorage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">couponStorage</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$couponStorage(kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>If <a href="coupon-storage.html#de.wingu.sdk.WinguSDKBuilder$couponStorage(kotlin.Boolean)/enabled">enabled</a> is true, users will be able to store coupons in <a href="../-wingu-s-d-k/get-storage.html">WinguSDK.getStorage</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><a href="deck-style.html">deckStyle</a></p>
 </td>
 <td>
@@ -127,6 +136,15 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 </tr>
 <tr>
 <td>
+<p><a href="preferred-content-languages.html">preferredContentLanguages</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">preferredContentLanguages</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder$preferredContentLanguages(java.util.LinkedHashSet((kotlin.String)))/languageCodes">languageCodes</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/LinkedHashSet.html"><span class="identifier">LinkedHashSet</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
+<p>Allows to specify preferred languages for displaying wingu content.</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><a href="register-component.html">registerComponent</a></p>
 </td>
 <td>
@@ -150,10 +168,10 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <tbody>
 <tr>
 <td>
-<p><a href="-d-e-m-o_-a-p-p_-i-d.html">DEMO_APP_ID</a></p>
+<p><a href="-d-e-m-o_-a-p-p_-k-e-y.html">DEMO_APP_KEY</a></p>
 </td>
 <td>
-<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEMO_APP_ID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEMO_APP_KEY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -165,9 +183,9 @@ You need to enable <a href="geofence-background-scan.html">geofenceBackgroundSca
 <p><a href="with.html">with</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><s><span class="identifier">with</span></s><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Application.html"><span class="identifier">Application</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code><br/>
-<code><span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
-<p>Creates a new builder.</p>
+<code><span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Application.html"><span class="identifier">Application</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.WinguSDKBuilder.Companion$with(android.app.Application, kotlin.String)/appKey">appKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WinguSDKBuilder</span></a></code>
+<p>Creates a new builder.
+Should be called from your Application's "onCreate". Otherwise, background scanning will not work properly.</p>
 </td>
 </tr>
 </tbody>

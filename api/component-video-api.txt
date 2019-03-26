@@ -1,4 +1,16 @@
 // Signature format: 2.0
+package de.wingu.componentvideo {
+
+  public final class VideoComponentView extends androidx.cardview.widget.CardView {
+    ctor public VideoComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.VideoComponent component, androidx.fragment.app.FragmentManager fragmentManager, de.wingu.sdk.utils.StringRef googleApiKey);
+    ctor public VideoComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public VideoComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+    field public androidx.fragment.app.FragmentManager fragmentManager;
+    field public de.wingu.sdk.utils.StringRef googleApiKey;
+  }
+
+}
+
 package de.wingu.sdk.ui.component.video {
 
   public final class VideoWinguComponent {

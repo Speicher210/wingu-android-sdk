@@ -1,7 +1,7 @@
 // Signature format: 2.0
 package de.wingu.qrcodescanner {
 
-  public class QrCodeScannerActivity extends android.support.v7.app.AppCompatActivity {
+  public class QrCodeScannerActivity extends androidx.appcompat.app.AppCompatActivity {
     method public void openDetailsActivity(de.wingu.sdk.data.api.model.ChannelKey chanelKey);
     method public void showError(de.wingu.qrcodescanner.QrCodeScannerActivity.QrCodeError qrCodeError);
     method public static final void start(android.content.Context from);

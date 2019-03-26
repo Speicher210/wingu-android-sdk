@@ -4,11 +4,8 @@ package de.wingu.channeladapters {
   public abstract sealed class AdapterItem {
   }
 
-  public abstract class BaseChannelAdapter<VH extends android.support.v7.widget.RecyclerView.ViewHolder> extends android.support.v7.widget.RecyclerView.Adapter<VH> implements android.arch.lifecycle.LifecycleObserver {
-  }
-
-  public final class BluetoothAdapterItem extends de.wingu.channeladapters.AdapterItem {
-    field public static final de.wingu.channeladapters.BluetoothAdapterItem! INSTANCE;
+  public interface ChannelAdapter {
+    method public void rescan();
   }
 
   public interface ChannelAdapterCallbacks {
@@ -25,8 +22,9 @@ package de.wingu.channeladapters {
   }
 
   public final class ChannelAdapters {
-    method public static void attachToCarouselAdapter(android.support.v7.widget.RecyclerView recyclerView, de.wingu.channeladapters.ChannelAdapterCallbacks onChannelSelectedCallback, android.arch.lifecycle.LifecycleOwner lifecycleOwner, boolean showBluetoothAndLocationCard = true);
-    method public static void attachToCarouselAdapter(android.support.v7.widget.RecyclerView recyclerView, de.wingu.channeladapters.ChannelAdapterCallbacks onChannelSelectedCallback, android.arch.lifecycle.LifecycleOwner lifecycleOwner);
+    method public static de.wingu.channeladapters.ChannelAdapter attachToCarouselAdapter(androidx.recyclerview.widget.RecyclerView recyclerView, de.wingu.channeladapters.ChannelAdapterCallbacks onChannelSelectedCallback, androidx.lifecycle.LifecycleOwner lifecycleOwner);
+    method public static de.wingu.channeladapters.ChannelAdapter attachToListAdapter(androidx.recyclerview.widget.RecyclerView recyclerView, de.wingu.channeladapters.ChannelAdapterCallbacks onChannelSelectedCallback, androidx.lifecycle.LifecycleOwner lifecycleOwner, boolean notifyUserAboutNewContent = true);
+    method public static de.wingu.channeladapters.ChannelAdapter attachToListAdapter(androidx.recyclerview.widget.RecyclerView recyclerView, de.wingu.channeladapters.ChannelAdapterCallbacks onChannelSelectedCallback, androidx.lifecycle.LifecycleOwner lifecycleOwner);
     field public static final de.wingu.channeladapters.ChannelAdapters! INSTANCE;
   }
 
@@ -37,34 +35,14 @@ package de.wingu.channeladapters {
   }
 
   public enum LoadingState {
-  }
-
-  public final class LocationAdapterItem extends de.wingu.channeladapters.AdapterItem {
-    field public static final de.wingu.channeladapters.LocationAdapterItem! INSTANCE;
+    enum_constant public static final de.wingu.channeladapters.LoadingState CHANNELS_DISPLAYED;
+    enum_constant public static final de.wingu.channeladapters.LoadingState LOADING;
+    enum_constant public static final de.wingu.channeladapters.LoadingState NO_CHANNELS_NEARBY;
   }
 
   public final class TransitionHelper {
-    method public android.support.v4.app.FragmentTransaction addSharedChannelAnimationToFragmentTransaction(android.support.v4.app.FragmentTransaction fragmentTransaction, String transitionName);
-    method public android.support.v4.app.ActivityOptionsCompat prepareOptionsForActivity(String transitionName);
-  }
-
-}
-
-package de.wingu.channeladapters.carousel {
-
-  public class CarouselAdapter extends de.wingu.channeladapters.BaseChannelAdapter<de.wingu.channeladapters.carousel.CarouselAdapter.AdapterItemViewHolder> {
-    method public void onBindViewHolder(de.wingu.channeladapters.carousel.CarouselAdapter.AdapterItemViewHolder holder, int position);
-    method public de.wingu.channeladapters.carousel.CarouselAdapter.AdapterItemViewHolder onCreateViewHolder(android.view.ViewGroup parent, int viewType);
-  }
-
-  public static final class CarouselAdapter.AdapterItemViewHolder extends android.support.v7.widget.RecyclerView.ViewHolder implements kotlinx.android.extensions.LayoutContainer {
-  }
-
-}
-
-package de.wingu.channeladapters.utils {
-
-  public enum LocationState {
+    method public androidx.fragment.app.FragmentTransaction addSharedChannelAnimationToFragmentTransaction(androidx.fragment.app.FragmentTransaction fragmentTransaction, String transitionName);
+    method public androidx.core.app.ActivityOptionsCompat prepareOptionsForActivity(String transitionName);
   }
 
 }

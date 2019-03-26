@@ -5,6 +5,7 @@ package de.wingu.sdk {
     method public abstract de.wingu.sdk.WinguSDK.Configurator getConfigurator();
     method public static final de.wingu.sdk.WinguSDK getInstance();
     method public abstract de.wingu.sdk.utils.NearbyChannelObserver getNearbyChannelObserver();
+    method public abstract de.wingu.sdk.data.WinguStorage getStorage();
     property public abstract de.wingu.sdk.WinguSDK.Configurator configurator;
     field public static final de.wingu.sdk.WinguSDK.Companion! Companion;
   }
@@ -15,8 +16,11 @@ package de.wingu.sdk {
 
   public static interface WinguSDK.Configurator {
     method public boolean getPersistentIbeaconScanning();
+    method public java.util.LinkedHashSet<java.lang.String> getPreferredContentLanguages();
     method public void setPersistentIbeaconScanning(boolean p);
+    method public void setPreferredContentLanguages(java.util.LinkedHashSet<java.lang.String> p);
     property public abstract boolean persistentIbeaconScanning;
+    property public abstract java.util.LinkedHashSet<java.lang.String> preferredContentLanguages;
   }
 
   public abstract class WinguSDKBuilder {
@@ -25,6 +29,7 @@ package de.wingu.sdk {
     method public final de.wingu.sdk.WinguSDKBuilder channelCacheTime(long time, java.util.concurrent.TimeUnit timeUnit);
     method @Deprecated public final de.wingu.sdk.WinguSDKBuilder channelNotificationsConfig(java.util.concurrent.Callable<de.wingu.sdk.notification.ChannelNotificationsConfig>? configFactory);
     method public final de.wingu.sdk.WinguSDKBuilder channelNotificationsConfig(de.wingu.sdk.notification.ChannelNotificationsConfig? config);
+    method public final void couponStorage(boolean enabled);
     method public final de.wingu.sdk.WinguSDKBuilder deckStyle(de.wingu.sdk.deckstyles.DeckUIConfig deckUIConfig);
     method public final de.wingu.sdk.WinguSDKBuilder eddystoneUrl(boolean enabled, kotlin.jvm.functions.Function1<? super de.wingu.sdk.data.api.model.ChannelKey,? extends android.content.Intent>? urlIntentCreator = null);
     method public final de.wingu.sdk.WinguSDKBuilder eddystoneUrl(boolean enabled);
@@ -38,12 +43,12 @@ package de.wingu.sdk {
     method public final de.wingu.sdk.WinguSDKBuilder loggingLevel(java.util.logging.Level level);
     method public final de.wingu.sdk.WinguSDKBuilder nfc(boolean enabled, kotlin.jvm.functions.Function1<? super de.wingu.sdk.data.api.model.ChannelKey,? extends android.content.Intent>? nfcIntentCreator = null);
     method public final de.wingu.sdk.WinguSDKBuilder nfc(boolean enabled);
+    method public final de.wingu.sdk.WinguSDKBuilder preferredContentLanguages(java.util.LinkedHashSet<java.lang.String> languageCodes);
     method public final de.wingu.sdk.WinguSDKBuilder registerComponent(de.wingu.sdk.data.api.model.components.ComponentSpec componentSpec);
     method public final de.wingu.sdk.WinguSDKBuilder staging(boolean isStaging);
-    method @Deprecated public static final de.wingu.sdk.WinguSDKBuilder with(android.app.Application application, String? apiKey);
-    method public static final de.wingu.sdk.WinguSDKBuilder with(String apiKey);
+    method public static final de.wingu.sdk.WinguSDKBuilder with(android.app.Application application, String appKey);
     field public static final de.wingu.sdk.WinguSDKBuilder.Companion! Companion;
-    field public static final String DEMO_APP_ID = "94686f2f-6c1f-4c53-aaf2-38c351ceb5af";
+    field public static final String DEMO_APP_KEY = "94686f2f-6c1f-4c53-aaf2-38c351ceb5af";
   }
 
   public static interface WinguSDKBuilder.BuildListener {
@@ -51,15 +56,14 @@ package de.wingu.sdk {
   }
 
   public static final class WinguSDKBuilder.Companion {
-    method @Deprecated public de.wingu.sdk.WinguSDKBuilder with(android.app.Application application, String? apiKey);
-    method public de.wingu.sdk.WinguSDKBuilder with(String apiKey);
+    method public de.wingu.sdk.WinguSDKBuilder with(android.app.Application application, String appKey);
   }
 
 }
 
 package de.wingu.sdk.channel.filter {
 
-  public abstract class ChannelFilter implements rx.functions.Func1<de.wingu.sdk.data.api.model.ChannelEvents,de.wingu.sdk.data.api.model.ChannelEvents> {
+  public abstract class ChannelFilter implements io.reactivex.functions.Function<de.wingu.sdk.data.api.model.ChannelEvents,de.wingu.sdk.data.api.model.ChannelEvents> {
     method protected abstract boolean shouldPass(de.wingu.sdk.data.api.model.ChannelEventType channelEventType);
     method protected abstract boolean shouldPass(de.wingu.sdk.data.api.model.Channel channel, de.wingu.sdk.data.timestamps.ChannelTimestamps channelTimestamps);
   }
@@ -82,6 +86,155 @@ package de.wingu.sdk.channel.filter {
 
 }
 
+package de.wingu.sdk.content {
+
+  public final class ContentView extends androidx.recyclerview.widget.RecyclerView {
+    ctor public ContentView(android.content.Context context, de.wingu.sdk.data.api.model.Content content, de.wingu.sdk.data.api.model.Channel? channel, androidx.fragment.app.FragmentManager? fragmentManager);
+    ctor public ContentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public ContentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyle);
+    method public de.wingu.sdk.data.api.model.Channel? getChannel();
+    method public de.wingu.sdk.data.api.model.Content? getContent();
+    method public void setChannel(de.wingu.sdk.data.api.model.Channel? p);
+    method public void setContent(de.wingu.sdk.data.api.model.Content? value);
+    property public final de.wingu.sdk.data.api.model.Channel? channel;
+    property public final de.wingu.sdk.data.api.model.Content? content;
+    field public androidx.fragment.app.FragmentManager fragmentManager;
+  }
+
+}
+
+package de.wingu.sdk.content.component {
+
+  public final class ActionComponentView extends androidx.cardview.widget.CardView {
+    ctor public ActionComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.ActionComponent component);
+    ctor public ActionComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public ActionComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class AudioComponentView extends androidx.cardview.widget.CardView {
+    ctor public AudioComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.audio.AudioComponent component);
+    ctor public AudioComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public AudioComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class BrandBarComponentView extends androidx.cardview.widget.CardView {
+    ctor public BrandBarComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.BrandBarComponent component);
+    ctor public BrandBarComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public BrandBarComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public interface ComponentView<C extends de.wingu.sdk.data.api.model.components.Component> {
+    method public C getComponent();
+    method public void setComponent(C component);
+  }
+
+  public final class ContactComponentView extends androidx.cardview.widget.CardView {
+    ctor public ContactComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.contact.ContactComponent component);
+    ctor public ContactComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public ContactComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class CouponComponentView extends androidx.cardview.widget.CardView {
+    ctor public CouponComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.coupon.CouponComponent component);
+    ctor public CouponComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public CouponComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class FilesComponentView extends androidx.cardview.widget.CardView {
+    ctor public FilesComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.files.FilesComponent component);
+    ctor public FilesComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public FilesComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class FormComponentView extends androidx.cardview.widget.CardView {
+    ctor public FormComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.form.FormComponent component, de.wingu.sdk.data.api.model.Deck deck);
+    ctor public FormComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public FormComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+    method public void setDeck(de.wingu.sdk.data.api.model.Deck deck);
+  }
+
+  public final class HtmlComponentView extends androidx.cardview.widget.CardView {
+    ctor public HtmlComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.HtmlComponent component);
+    ctor public HtmlComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public HtmlComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class ImageGalleryComponentView extends androidx.cardview.widget.CardView {
+    ctor public ImageGalleryComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent component);
+    ctor public ImageGalleryComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public ImageGalleryComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class LocationComponentImageView extends androidx.cardview.widget.CardView {
+    ctor public LocationComponentImageView(android.content.Context context, de.wingu.sdk.data.api.model.components.LocationComponent component, String? googleApiKey, byte[]? urlSigningSecret);
+    ctor public LocationComponentImageView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public LocationComponentImageView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+    method public void setGoogleApiKey(String? value);
+    method public void setUrlSigningSecret(byte[]? value);
+  }
+
+  public final class LocationComponentMapView extends androidx.cardview.widget.CardView {
+    ctor public LocationComponentMapView(android.content.Context context, de.wingu.sdk.data.api.model.components.LocationComponent component);
+    ctor public LocationComponentMapView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public LocationComponentMapView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class RatingComponentView extends androidx.cardview.widget.CardView implements android.widget.RatingBar.OnRatingBarChangeListener {
+    ctor public RatingComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.RatingComponent component, de.wingu.sdk.data.api.model.Content content, de.wingu.sdk.data.api.model.Channel? channel);
+    ctor public RatingComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public RatingComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+    method public void setChannel(de.wingu.sdk.data.api.model.Channel? channel);
+    method public void setContent(de.wingu.sdk.data.api.model.Content content);
+  }
+
+  public final class SeparatorComponentView extends androidx.cardview.widget.CardView {
+    ctor public SeparatorComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.SeparatorComponent component);
+    ctor public SeparatorComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public SeparatorComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class SurveyMonkeyComponentView extends androidx.cardview.widget.CardView {
+    ctor public SurveyMonkeyComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent component);
+    ctor public SurveyMonkeyComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public SurveyMonkeyComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class TextComponentView extends androidx.cardview.widget.CardView {
+    ctor public TextComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.TextComponent component);
+    ctor public TextComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public TextComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class UnsupportedComponentView extends androidx.cardview.widget.CardView {
+    ctor public UnsupportedComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.Component component);
+    ctor public UnsupportedComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public UnsupportedComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+  public final class WebhookComponentView extends androidx.cardview.widget.CardView {
+    ctor public WebhookComponentView(android.content.Context context, de.wingu.sdk.data.api.model.components.WebhookComponent component);
+    ctor public WebhookComponentView(android.content.Context context, android.util.AttributeSet? attrs);
+    ctor public WebhookComponentView(android.content.Context context, android.util.AttributeSet? attrs, int defStyleAttr);
+  }
+
+}
+
+package de.wingu.sdk.data {
+
+  public interface WinguStorage {
+    method public void batch(kotlin.jvm.functions.Function1<? super de.wingu.sdk.data.WinguStorage,kotlin.Unit> block);
+    method public <T extends de.wingu.sdk.data.api.model.WinguModel> void delete(T winguModel);
+    method public void deleteAll();
+    method public <T extends de.wingu.sdk.data.api.model.WinguModel> void deleteAll(Class<T> modelClass);
+    method public <T extends de.wingu.sdk.data.api.model.WinguModel> org.reactivestreams.Publisher<java.util.List<T>> findAllAsPublisher(Class<T> modelClass);
+    method public <T extends de.wingu.sdk.data.api.model.WinguModel> org.reactivestreams.Publisher<T> findAsPublisher(Class<T> modelClass);
+    method public <T extends de.wingu.sdk.data.api.model.WinguModel> T? findById(String winguModelId, Class<T> modelClass);
+    method public <T extends de.wingu.sdk.data.api.model.WinguModel> kotlin.sequences.Sequence<T> findSeq(Class<T> modelClass);
+    method public <T extends de.wingu.sdk.data.api.model.WinguModel> void save(T winguModel);
+  }
+
+}
+
 package de.wingu.sdk.data.api.model {
 
   public final class Card implements java.lang.Comparable<de.wingu.sdk.data.api.model.Card> android.os.Parcelable {
@@ -90,10 +243,9 @@ package de.wingu.sdk.data.api.model {
     method public de.wingu.sdk.data.api.model.Position getPosition();
   }
 
-  public abstract class Channel implements android.os.Parcelable {
+  public abstract class Channel implements android.os.Parcelable de.wingu.sdk.data.api.model.WinguModel {
     method public abstract de.wingu.sdk.data.api.model.Channel.ChannelType getChannelType();
     method public abstract de.wingu.sdk.data.api.model.Content getContent();
-    method public abstract String getId();
     method public abstract String getName();
     property public abstract de.wingu.sdk.data.api.model.Content content;
     property public abstract String id;
@@ -138,6 +290,7 @@ package de.wingu.sdk.data.api.model {
   }
 
   public final class Content implements android.os.Parcelable {
+    ctor public Content(String id, de.wingu.sdk.data.api.model.WinguDate lastChange, de.wingu.sdk.data.api.model.Pack pack);
     method public String getId();
     method public de.wingu.sdk.data.api.model.WinguDate getLastChange();
     method public de.wingu.sdk.data.api.model.Pack getPack();
@@ -254,417 +407,11 @@ package de.wingu.sdk.data.api.model {
     method public String getQrcodeId();
   }
 
-  public final class WinguDate implements java.lang.Comparable<de.wingu.sdk.data.api.model.WinguDate> android.os.Parcelable {
-    method public long getTimestamp();
-  }
-
 }
 
 package de.wingu.sdk.data.api.model.components {
 
-  public final class ActionComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String getActionPayload();
-    method public String getActionType();
-    method public String getButtonCaption();
-    method public String getDiscriminator();
-    method public String getId();
-    field public static final String ACTION_TYPE_OPEN_URL = "open-url";
-    field public static final de.wingu.sdk.data.api.model.components.ActionComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "action";
-  }
-
-  public static final class ActionComponent.Companion {
-  }
-
-  public final class BrandBarComponent implements de.wingu.sdk.data.api.model.components.Component android.os.Parcelable {
-    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.Background? getBackground();
-    method public String getDiscriminator();
-    method public String getId();
-    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.ImageContainer? getImageContainer();
-    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.Text? getText();
-    method public de.wingu.sdk.data.api.model.WinguDate getUpdatedAt();
-    field public static final de.wingu.sdk.data.api.model.components.BrandBarComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "brand_bar";
-  }
-
-  public static enum BrandBarComponent.Alignment {
-  }
-
-  public static final class BrandBarComponent.Background implements android.os.Parcelable {
-    method public int getColor();
-  }
-
-  public static final class BrandBarComponent.Companion {
-  }
-
-  public static final class BrandBarComponent.ImageContainer implements android.os.Parcelable {
-    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment getAlignment();
-    method public de.wingu.sdk.data.api.model.components.common.Image getImage();
-  }
-
-  public static final class BrandBarComponent.Text implements android.os.Parcelable {
-    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment getAlignment();
-    method public int getColor();
-    method public String getText();
-  }
-
-  public final class CMSComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String getContent();
-    method public String getDiscriminator();
-    method public String getId();
-    method public String getType();
-    field public static final String CONTENT_TYPE_HTML = "html";
-    field public static final String CONTENT_TYPE_MARKDOWN = "markdown";
-    field public static final de.wingu.sdk.data.api.model.components.CMSComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "cms";
-  }
-
-  public static final class CMSComponent.Companion {
-  }
-
-  public interface Component extends android.os.Parcelable {
-    method public String getDiscriminator();
-    method public String getId();
-    property public abstract String discriminator;
-    property public abstract String id;
-  }
-
   public final class ComponentSpec {
-  }
-
-  public final class LocationComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public de.wingu.sdk.data.api.model.components.common.Coordinates getCoordinates();
-    method public String getDiscriminator();
-    method public String getId();
-    method public int getRadius();
-    field public static final de.wingu.sdk.data.api.model.components.LocationComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "location";
-  }
-
-  public static final class LocationComponent.Companion {
-  }
-
-  public final class RatingComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String? getDescription();
-    method public String getDiscriminator();
-    method public String getId();
-    method public String? getTitle();
-    method public String? getType();
-    field public static final de.wingu.sdk.data.api.model.components.RatingComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "rating";
-  }
-
-  public static final class RatingComponent.Companion {
-  }
-
-  public final class SeparatorComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String? getColorHex();
-    method public String getDiscriminator();
-    method public String getId();
-    method public String? getType();
-    field public static final de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "separator";
-    field public static final String SEPARATOR_ARTICLE_END = "end_of_article";
-    field public static final String SEPARATOR_BASIC_LINE = "basic_line";
-    field public static final String SEPARATOR_DASHES = "dashes";
-    field public static final String SEPARATOR_DOTS = "dots";
-    field public static final String SEPARATOR_MORSE = "morse_code";
-    field public static final String SEPARATOR_WAVE = "wave";
-  }
-
-  public static final class SeparatorComponent.Companion {
-  }
-
-  public final class SurveyMonkeyComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String? getDescription();
-    method public String getDiscriminator();
-    method public String getId();
-    method public String? getSurveyURL();
-    method public String? getTitle();
-    field public static final de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "survey_monkey";
-  }
-
-  public static final class SurveyMonkeyComponent.Companion {
-  }
-
-  public final class UnsupportedComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String getDiscriminator();
-    method public String getId();
-  }
-
-  public final class VideoComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String? getDescription();
-    method public String getDiscriminator();
-    method public String getId();
-    method public String? getPayload();
-    method public String? getType();
-    field public static final de.wingu.sdk.data.api.model.components.VideoComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "video";
-  }
-
-  public static final class VideoComponent.Companion {
-  }
-
-  public final class WebhookComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String? getButtonCaption();
-    method public String getDiscriminator();
-    method public String getId();
-    field public static final de.wingu.sdk.data.api.model.components.WebhookComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "webhook";
-  }
-
-  public static final class WebhookComponent.Companion {
-  }
-
-}
-
-package de.wingu.sdk.data.api.model.components.audio {
-
-  public final class AudioComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String getDiscriminator();
-    method public String getId();
-    method public java.util.ArrayList<de.wingu.sdk.data.api.model.components.audio.AudioItem>? getMedia();
-    method public String? getName();
-    field public static final de.wingu.sdk.data.api.model.components.audio.AudioComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "audio_playlist";
-  }
-
-  public static final class AudioComponent.Companion {
-  }
-
-  public final class AudioItem implements android.os.Parcelable {
-    method public de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum? getAlbum();
-    method public String? getFileUrl();
-    method public String getId();
-    method public int getLength();
-    method public String? getName();
-    method public int getPosition();
-  }
-
-  public final class AudioItemAlbum implements android.os.Parcelable {
-    method public de.wingu.sdk.data.api.model.components.audio.CloudinaryImage? getCover();
-    method public String? getName();
-  }
-
-  public final class CloudinaryImage implements android.os.Parcelable {
-    method public String? getCloudinaryId();
-    method public String? getType();
-    field public static final de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.Companion! Companion;
-    field public static final String TYPE_CLOUDINARY = "cloudinary";
-  }
-
-  public static final class CloudinaryImage.Companion {
-  }
-
-}
-
-package de.wingu.sdk.data.api.model.components.common {
-
-  public final class Coordinates implements android.os.Parcelable {
-    method public double getLatitude();
-    method public double getLongitude();
-  }
-
-  public final class Image implements android.os.Parcelable {
-    method public String? getCloudinaryId();
-    method public de.wingu.sdk.data.api.model.components.common.ImageMetadata getMetadata();
-    method public String getType();
-  }
-
-  public final class ImageMetadata implements android.os.Parcelable {
-    method public String? getFormat();
-    method public int getHeight();
-    method public int getWidth();
-  }
-
-}
-
-package de.wingu.sdk.data.api.model.components.contact {
-
-  public final class Address implements android.os.Parcelable {
-    method public String? getCity();
-    method public String? getCountry();
-    method public String getId();
-    method public String? getStreet();
-    method public String? getStreetNumber();
-    method public String? getZipCode();
-  }
-
-  public final class ContactComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public de.wingu.sdk.data.api.model.components.contact.Address? getAddress();
-    method public String? getCompanyName();
-    method public String getDiscriminator();
-    method public String? getEmail();
-    method public de.wingu.sdk.data.api.model.components.contact.ExternalLinks? getExternalLinks();
-    method public String? getExtraInfo();
-    method public String? getFirstName();
-    method public String getId();
-    method public String? getLastName();
-    method public String? getMobile();
-    method public String? getOpeningHours();
-    method public String? getPersonalTitle();
-    method public String? getPhone();
-    method public String? getWebsite();
-    field public static final de.wingu.sdk.data.api.model.components.contact.ContactComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "contact";
-  }
-
-  public static final class ContactComponent.Companion {
-  }
-
-  public final class ExternalLinks implements android.os.Parcelable {
-    method public String? getFacebookName();
-    method public String? getFacebookUrl();
-    method public String? getGooglePlusName();
-    method public String? getGooglePlusUrl();
-    method public String getId();
-    method public String? getTwitterName();
-    method public String? getTwitterUrl();
-    method public String? getYelpName();
-    method public String? getYelpUrl();
-  }
-
-}
-
-package de.wingu.sdk.data.api.model.components.coupon {
-
-  public final class Barcode implements android.os.Parcelable {
-    method public String? getType();
-    method public String? getValue();
-  }
-
-  public final class CouponComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public de.wingu.sdk.data.api.model.components.common.Image? getBackgroundImage();
-    method public de.wingu.sdk.data.api.model.components.coupon.Barcode? getBarcode();
-    method public String? getDescription();
-    method public String? getDisclaimer();
-    method public String getDiscriminator();
-    method public String? getHeader();
-    method public String getId();
-    field public static final de.wingu.sdk.data.api.model.components.coupon.CouponComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "coupon";
-  }
-
-  public static final class CouponComponent.Companion {
-  }
-
-}
-
-package de.wingu.sdk.data.api.model.components.files {
-
-  public final class FileData implements android.os.Parcelable {
-    method public String getFileUrl();
-    method public String getId();
-    method public String getName();
-    method public int getSize();
-  }
-
-  public final class FilesComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String getDiscriminator();
-    method public java.util.ArrayList<de.wingu.sdk.data.api.model.components.files.FileData> getFiles();
-    method public String getId();
-    field public static final de.wingu.sdk.data.api.model.components.files.FilesComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "files";
-  }
-
-  public static final class FilesComponent.Companion {
-  }
-
-}
-
-package de.wingu.sdk.data.api.model.components.form {
-
-  public enum ElementType {
-  }
-
-  public final class FormComponent implements de.wingu.sdk.data.api.model.components.Component android.os.Parcelable {
-    method public String getDiscriminator();
-    method public java.util.List<de.wingu.sdk.data.api.model.components.form.FormElement> getElements();
-    method public String getId();
-    method public de.wingu.sdk.data.api.model.components.form.FormResubmit getResubmit();
-    method public String getTitle();
-    field public static final de.wingu.sdk.data.api.model.components.form.FormComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "form";
-  }
-
-  public static final class FormComponent.Companion {
-  }
-
-  public interface FormElement extends android.os.Parcelable {
-    method public String getDiscriminator();
-    method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
-    method public String getLabel();
-    method public String getName();
-    method public boolean getPersistent();
-    method public boolean getRequired();
-    property public abstract String discriminator;
-    property public abstract String label;
-    property public abstract String name;
-    property public abstract boolean persistent;
-    property public abstract boolean required;
-  }
-
-  public final class FormResubmit implements android.os.Parcelable {
-    method public boolean getAllowed();
-    method public Integer? getAllowedAfterSeconds();
-  }
-
-  public final class InputFormElement implements de.wingu.sdk.data.api.model.components.form.FormElement {
-    method public String getDiscriminator();
-    method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
-    method public String getLabel();
-    method public String getName();
-    method public boolean getPersistent();
-    method public boolean getRequired();
-    method public String getType();
-  }
-
-  public final class SelectFormElement implements de.wingu.sdk.data.api.model.components.form.FormElement {
-    method public String getDiscriminator();
-    method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
-    method public String getLabel();
-    method public boolean getMultiple();
-    method public String getName();
-    method public java.util.List<de.wingu.sdk.data.api.model.components.form.SelectFormOption> getOptions();
-    method public boolean getPersistent();
-    method public boolean getRequired();
-  }
-
-  public final class SelectFormOption implements android.os.Parcelable {
-    method public String getLabel();
-    method public String getValue();
-  }
-
-  public final class UnknownFormElement implements de.wingu.sdk.data.api.model.components.form.FormElement {
-    method public String getDiscriminator();
-    method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
-    method public String getLabel();
-    method public String getName();
-    method public boolean getPersistent();
-    method public boolean getRequired();
-  }
-
-}
-
-package de.wingu.sdk.data.api.model.components.image {
-
-  public final class ImageEntry implements android.os.Parcelable {
-    method public String? getCaption();
-    method public String getId();
-    method public de.wingu.sdk.data.api.model.components.common.Image getImage();
-    method public int getPosition();
-  }
-
-  public final class ImageGalleryComponent implements de.wingu.sdk.data.api.model.components.Component {
-    method public String getDiscriminator();
-    method public String getId();
-    method public java.util.ArrayList<de.wingu.sdk.data.api.model.components.image.ImageEntry>? getImages();
-    field public static final de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.Companion! Companion;
-    field public static final String DISCRIMINATOR = "image_gallery";
-  }
-
-  public static final class ImageGalleryComponent.Companion {
   }
 
 }
@@ -687,6 +434,10 @@ package de.wingu.sdk.deckstyles {
 
   public final class DeckUIConfig {
     ctor public DeckUIConfig(@ColorInt int actionColor, @ColorInt int actionColorText, boolean roundButtonCorners, @FontRes Integer? fontId);
+    method public int getActionColor();
+    method public int getActionColorText();
+    method public Integer? getFontId();
+    method public boolean getRoundButtonCorners();
   }
 
 }
@@ -744,7 +495,7 @@ package de.wingu.sdk.ui.component.location {
 
 package de.wingu.sdk.ui.details {
 
-  public final class ChannelDetailsActivity extends android.support.v7.app.AppCompatActivity {
+  public final class ChannelDetailsActivity extends androidx.appcompat.app.AppCompatActivity {
     method public static android.content.Intent newInstance(android.content.Context context, de.wingu.sdk.data.api.model.Channel channel, String? title);
     method public static android.content.Intent newInstance(android.content.Context context, de.wingu.sdk.data.api.model.ChannelKey channelKey, String? title);
     field public static final de.wingu.sdk.ui.details.ChannelDetailsActivity.Companion! Companion;
@@ -755,13 +506,13 @@ package de.wingu.sdk.ui.details {
     method public android.content.Intent newInstance(android.content.Context context, de.wingu.sdk.data.api.model.ChannelKey channelKey, String? title);
   }
 
-  public final class ChannelDetailsFragment extends android.support.v4.app.Fragment {
-    method public static android.support.v4.app.Fragment newInstance(de.wingu.sdk.data.api.model.ChannelKey channelKey);
+  public final class ChannelDetailsFragment extends androidx.fragment.app.Fragment {
+    method public static androidx.fragment.app.Fragment newInstance(de.wingu.sdk.data.api.model.ChannelKey channelKey);
     field public static final de.wingu.sdk.ui.details.ChannelDetailsFragment.Companion! Companion;
   }
 
   public static final class ChannelDetailsFragment.Companion {
-    method public android.support.v4.app.Fragment newInstance(de.wingu.sdk.data.api.model.ChannelKey channelKey);
+    method public androidx.fragment.app.Fragment newInstance(de.wingu.sdk.data.api.model.ChannelKey channelKey);
   }
 
   @Deprecated public static interface ChannelDetailsFragment.OptionalFragmentCallbacks {
@@ -779,7 +530,7 @@ package de.wingu.sdk.utils {
 
   public interface NearbyChannelObserver {
     method public de.wingu.blescanner.ibeacon.model.IbeaconDevice? findBeaconDevice(de.wingu.sdk.data.api.model.Channel channel);
-    method public rx.Observable<de.wingu.sdk.data.api.model.ChannelEvents> getChannelEvents();
+    method public org.reactivestreams.Publisher<de.wingu.sdk.data.api.model.ChannelEvents> getChannelEventPublisher();
     method public de.wingu.sdk.data.timestamps.ChannelTimestamps? getChannelTimestamps(de.wingu.sdk.data.api.model.Channel channel);
     method public java.util.Collection<de.wingu.sdk.data.api.model.Channel> getCurrentNearbyChannels();
     method public boolean isChannelNearby(de.wingu.sdk.data.api.model.Channel channel);
@@ -820,6 +571,7 @@ package de.wingu.sdk.utils.prerequisite {
     method public static boolean checkWithDefaultDialogs(android.app.Activity activity, int requestCode);
     method public static de.wingu.sdk.utils.prerequisite.ResolveResults? getResolveResults(android.content.Intent? data);
     method public static boolean resolveWithDefaultDialogs(android.app.Activity activity, int requestCode, de.wingu.sdk.utils.prerequisite.Prerequisite... toResolve);
+    method public static boolean resolveWithDefaultDialogs(androidx.fragment.app.Fragment fragment, int requestCode, de.wingu.sdk.utils.prerequisite.Prerequisite... toResolve);
     field public static final de.wingu.sdk.utils.prerequisite.PrerequisitesChecker! INSTANCE;
   }
 

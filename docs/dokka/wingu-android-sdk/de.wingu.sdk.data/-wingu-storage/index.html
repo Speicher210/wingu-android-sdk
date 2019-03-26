@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WinguStorage - wingu-android-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">wingu-android-sdk</a>&nbsp;/&nbsp;<a href="../index.html">de.wingu.sdk.data</a>&nbsp;/&nbsp;<a href="./index.html">WinguStorage</a><br/>
+<br/>
+<h1>WinguStorage</h1>
+<code><span class="keyword">interface </span><span class="identifier">WinguStorage</span></code>
+<p>Allows for storing <a href="../../de.wingu.sdk.data.api.model/-wingu-model/index.html">WinguModel</a>s in device's local storage.
+The operations may be blocking, so you should perform them on separate thread.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="batch.html">batch</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">batch</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.data.WinguStorage$batch(kotlin.Function1((de.wingu.sdk.data.WinguStorage, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="./index.html"><span class="identifier">WinguStorage</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.data.WinguStorage$delete(de.wingu.sdk.data.WinguStorage.delete.T)/winguModel">winguModel</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes given object from local storage.
+Does nothing if given object doesn't exist in the storage.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="delete-all.html">deleteAll</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">deleteAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all objects from the storage.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">deleteAll</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.data.WinguStorage$deleteAll(java.lang.Class((de.wingu.sdk.data.WinguStorage.deleteAll.T)))/modelClass">modelClass</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all object matching given class.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="find-all-as-publisher.html">findAllAsPublisher</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findAllAsPublisher</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.data.WinguStorage$findAllAsPublisher(java.lang.Class((de.wingu.sdk.data.WinguStorage.findAllAsPublisher.T)))/modelClass">modelClass</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Publisher</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Finds all objects for given model class.
+All objects are loaded into memory as a single list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="find-as-publisher.html">findAsPublisher</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findAsPublisher</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.data.WinguStorage$findAsPublisher(java.lang.Class((de.wingu.sdk.data.WinguStorage.findAsPublisher.T)))/modelClass">modelClass</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Publisher</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>Finds objects for given model class.
+Objects are loaded lazily, when the subscriber requests it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="find-by-id.html">findById</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findById</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.data.WinguStorage$findById(kotlin.String, java.lang.Class((de.wingu.sdk.data.WinguStorage.findById.T)))/winguModelId">winguModelId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="de.wingu.sdk.data.WinguStorage$findById(kotlin.String, java.lang.Class((de.wingu.sdk.data.WinguStorage.findById.T)))/modelClass">modelClass</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span><span class="symbol">?</span></code>
+<p>Finds an object with given Id.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="find-seq.html">findSeq</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findSeq</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.data.WinguStorage$findSeq(java.lang.Class((de.wingu.sdk.data.WinguStorage.findSeq.T)))/modelClass">modelClass</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html"><span class="identifier">Sequence</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>Finds objects for given model class.
+Objects are loaded lazily, when requested.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="save.html">save</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">save</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk.data.WinguStorage$save(de.wingu.sdk.data.WinguStorage.save.T)/winguModel">winguModel</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Stores given object locally.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../de.wingu.sdk_rxjava2/find.html">find</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">WinguStorage</span></a><span class="symbol">.</span><span class="identifier">find</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk_rxjava2$find(de.wingu.sdk.data.WinguStorage, java.lang.Class((de.wingu.sdk_rxjava2.find.T)))/modelClass">modelClass</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Observable</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>Finds objects for given model class.
+Objects are loaded lazily, when the subscriber requests it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../de.wingu.sdk_rxjava2/find-all.html">findAll</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">WinguStorage</span></a><span class="symbol">.</span><span class="identifier">findAll</span><span class="symbol">(</span><span class="identifier" id="de.wingu.sdk_rxjava2$findAll(de.wingu.sdk.data.WinguStorage, java.lang.Class((de.wingu.sdk_rxjava2.findAll.T)))/modelClass">modelClass</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Observable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Finds all objects for given model class.
+All objects are loaded into memory as a single list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

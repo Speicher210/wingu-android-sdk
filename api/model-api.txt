@@ -1,0 +1,479 @@
+// Signature format: 2.0
+package de.wingu.sdk.data.api.model {
+
+  public final class WinguDate implements java.lang.Comparable<de.wingu.sdk.data.api.model.WinguDate> android.os.Parcelable {
+    method public long getTimestamp();
+  }
+
+  public interface WinguModel {
+    method public String getId();
+    property public abstract String id;
+  }
+
+}
+
+package de.wingu.sdk.data.api.model.components {
+
+  public final class ActionComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public ActionComponent(String id, String actionType, String actionPayload, String buttonCaption, String discriminator);
+    method public String getActionPayload();
+    method public String getActionType();
+    method public String getButtonCaption();
+    method public String getDiscriminator();
+    method public String getId();
+    field public static final String ACTION_TYPE_OPEN_URL = "open-url";
+    field public static final de.wingu.sdk.data.api.model.components.ActionComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "action";
+  }
+
+  public static final class ActionComponent.Companion {
+  }
+
+  public final class BrandBarComponent implements de.wingu.sdk.data.api.model.components.Component android.os.Parcelable {
+    ctor public BrandBarComponent(String id, de.wingu.sdk.data.api.model.WinguDate updatedAt, de.wingu.sdk.data.api.model.components.BrandBarComponent.Background? background, de.wingu.sdk.data.api.model.components.BrandBarComponent.ImageContainer? imageContainer, de.wingu.sdk.data.api.model.components.BrandBarComponent.Text? text, String discriminator);
+    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.Background? getBackground();
+    method public String getDiscriminator();
+    method public String getId();
+    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.ImageContainer? getImageContainer();
+    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.Text? getText();
+    method public de.wingu.sdk.data.api.model.WinguDate getUpdatedAt();
+    field public static final de.wingu.sdk.data.api.model.components.BrandBarComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "brand_bar";
+  }
+
+  public static enum BrandBarComponent.Alignment {
+    enum_constant public static final de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment CENTER;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment LEFT;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment RIGHT;
+  }
+
+  public static final class BrandBarComponent.Background implements android.os.Parcelable {
+    ctor public BrandBarComponent.Background(int color);
+    method public int getColor();
+  }
+
+  public static final class BrandBarComponent.Companion {
+  }
+
+  public static final class BrandBarComponent.ImageContainer implements android.os.Parcelable {
+    ctor public BrandBarComponent.ImageContainer(de.wingu.sdk.data.api.model.components.common.Image image, de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment alignment);
+    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment getAlignment();
+    method public de.wingu.sdk.data.api.model.components.common.Image getImage();
+  }
+
+  public static final class BrandBarComponent.Text implements android.os.Parcelable {
+    ctor public BrandBarComponent.Text(String text, de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment alignment, int color);
+    method public de.wingu.sdk.data.api.model.components.BrandBarComponent.Alignment getAlignment();
+    method public int getColor();
+    method public String getText();
+  }
+
+  public interface Component extends android.os.Parcelable de.wingu.sdk.data.api.model.WinguModel {
+    method public String getDiscriminator();
+    property public abstract String discriminator;
+    property public abstract String id;
+  }
+
+  public final class HtmlComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public HtmlComponent(String id, String content, String discriminator);
+    method public String getContent();
+    method public String getDiscriminator();
+    method public String getId();
+    field public static final de.wingu.sdk.data.api.model.components.HtmlComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "html";
+  }
+
+  public static final class HtmlComponent.Companion {
+  }
+
+  public final class LocationComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public LocationComponent(String id, de.wingu.sdk.data.api.model.components.common.Coordinates coordinates, int radius, String discriminator);
+    method public de.wingu.sdk.data.api.model.components.common.Coordinates getCoordinates();
+    method public String getDiscriminator();
+    method public String getId();
+    method public int getRadius();
+    field public static final de.wingu.sdk.data.api.model.components.LocationComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "location";
+  }
+
+  public static final class LocationComponent.Companion {
+  }
+
+  public final class RatingComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public RatingComponent(String id, String? title, String? description, String? type, String discriminator);
+    method public String? getDescription();
+    method public String getDiscriminator();
+    method public String getId();
+    method public String? getTitle();
+    method public String? getType();
+    field public static final de.wingu.sdk.data.api.model.components.RatingComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "rating";
+  }
+
+  public static final class RatingComponent.Companion {
+  }
+
+  public final class SeparatorComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public SeparatorComponent(String id, String color, String type, String discriminator);
+    method public String getColor();
+    method public String getDiscriminator();
+    method public String getId();
+    method public String getType();
+    field public static final de.wingu.sdk.data.api.model.components.SeparatorComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "separator";
+    field public static final String SEPARATOR_ARTICLE_END = "end_of_article";
+    field public static final String SEPARATOR_BASIC_LINE = "basic_line";
+    field public static final String SEPARATOR_DASHES = "dashes";
+    field public static final String SEPARATOR_DOTS = "dots";
+    field public static final String SEPARATOR_MORSE = "morse_code";
+    field public static final String SEPARATOR_WAVE = "wave";
+  }
+
+  public static final class SeparatorComponent.Companion {
+  }
+
+  public final class SurveyMonkeyComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public SurveyMonkeyComponent(String id, String? description, String? surveyURL, String? title, String discriminator);
+    method public String? getDescription();
+    method public String getDiscriminator();
+    method public String getId();
+    method public String? getSurveyURL();
+    method public String? getTitle();
+    field public static final de.wingu.sdk.data.api.model.components.SurveyMonkeyComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "survey_monkey";
+  }
+
+  public static final class SurveyMonkeyComponent.Companion {
+  }
+
+  public final class TextComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public TextComponent(String id, String content, String discriminator, String type);
+    method public String getContent();
+    method public String getDiscriminator();
+    method public String getId();
+    method public String getType();
+    field public static final String CONTENT_TYPE_MARKDOWN = "markdown";
+    field public static final String CONTENT_TYPE_PLAINTEXT = "plaintext";
+    field public static final de.wingu.sdk.data.api.model.components.TextComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "text";
+  }
+
+  public static final class TextComponent.Companion {
+  }
+
+  public final class UnsupportedComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public UnsupportedComponent(String id, String discriminator);
+    method public String getDiscriminator();
+    method public String getId();
+  }
+
+  public final class VideoComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public VideoComponent(String id, String? description, String? type, String? payload, String discriminator);
+    method public String? getDescription();
+    method public String getDiscriminator();
+    method public String getId();
+    method public String? getPayload();
+    method public String? getType();
+    field public static final de.wingu.sdk.data.api.model.components.VideoComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "video";
+    field public static final String TYPE_YOUTUBE = "youtube";
+  }
+
+  public static final class VideoComponent.Companion {
+  }
+
+  public final class WebhookComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public WebhookComponent(String id, String? buttonCaption, String discriminator);
+    method public String? getButtonCaption();
+    method public String getDiscriminator();
+    method public String getId();
+    field public static final de.wingu.sdk.data.api.model.components.WebhookComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "webhook";
+  }
+
+  public static final class WebhookComponent.Companion {
+  }
+
+}
+
+package de.wingu.sdk.data.api.model.components.audio {
+
+  public final class AudioComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public AudioComponent(String id, java.util.ArrayList<de.wingu.sdk.data.api.model.components.audio.AudioItem> media, String? name, String discriminator);
+    method public String getDiscriminator();
+    method public String getId();
+    method public java.util.ArrayList<de.wingu.sdk.data.api.model.components.audio.AudioItem> getMedia();
+    method public String? getName();
+    field public static final de.wingu.sdk.data.api.model.components.audio.AudioComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "audio_playlist";
+  }
+
+  public static final class AudioComponent.Companion {
+  }
+
+  public final class AudioItem implements android.os.Parcelable {
+    ctor public AudioItem(String id, int position, int length, String? name, String? fileUrl, de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum? album);
+    method public de.wingu.sdk.data.api.model.components.audio.AudioItemAlbum? getAlbum();
+    method public String? getFileUrl();
+    method public String getId();
+    method public int getLength();
+    method public String? getName();
+    method public int getPosition();
+  }
+
+  public final class AudioItemAlbum implements android.os.Parcelable {
+    ctor public AudioItemAlbum(String? name, de.wingu.sdk.data.api.model.components.audio.CloudinaryImage? cover);
+    method public de.wingu.sdk.data.api.model.components.audio.CloudinaryImage? getCover();
+    method public String? getName();
+  }
+
+  public final class CloudinaryImage implements android.os.Parcelable {
+    ctor public CloudinaryImage(String? type, String? cloudinaryId);
+    method public String? getCloudinaryId();
+    method public String? getType();
+    field public static final de.wingu.sdk.data.api.model.components.audio.CloudinaryImage.Companion! Companion;
+    field public static final String TYPE_CLOUDINARY = "cloudinary";
+  }
+
+  public static final class CloudinaryImage.Companion {
+  }
+
+}
+
+package de.wingu.sdk.data.api.model.components.common {
+
+  public final class Coordinates implements android.os.Parcelable {
+    ctor public Coordinates(double latitude, double longitude);
+    method public double getLatitude();
+    method public double getLongitude();
+  }
+
+  public final class Image implements android.os.Parcelable {
+    ctor public Image(String? cloudinaryId, String type, de.wingu.sdk.data.api.model.components.common.ImageMetadata metadata);
+    method public String? getCloudinaryId();
+    method public de.wingu.sdk.data.api.model.components.common.ImageMetadata getMetadata();
+    method public String getType();
+  }
+
+  public final class ImageMetadata implements android.os.Parcelable {
+    ctor public ImageMetadata(int width, int height, String? format);
+    method public String? getFormat();
+    method public int getHeight();
+    method public int getWidth();
+  }
+
+}
+
+package de.wingu.sdk.data.api.model.components.contact {
+
+  public final class Address implements android.os.Parcelable {
+    ctor public Address(String id, String? country, String? city, String? zipCode, String? street, String? streetNumber);
+    method public String? getCity();
+    method public String? getCountry();
+    method public String getId();
+    method public String? getStreet();
+    method public String? getStreetNumber();
+    method public String? getZipCode();
+  }
+
+  public final class ContactComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public ContactComponent(String id, String? companyName, String? personalTitle, String? openingHours, String? extraInfo, String? email, String? firstName, String? lastName, String? mobile, String? phone, String? website, de.wingu.sdk.data.api.model.components.contact.Address? address, de.wingu.sdk.data.api.model.components.contact.ExternalLinks? externalLinks, String discriminator);
+    method public de.wingu.sdk.data.api.model.components.contact.Address? getAddress();
+    method public String? getCompanyName();
+    method public String getDiscriminator();
+    method public String? getEmail();
+    method public de.wingu.sdk.data.api.model.components.contact.ExternalLinks? getExternalLinks();
+    method public String? getExtraInfo();
+    method public String? getFirstName();
+    method public String getId();
+    method public String? getLastName();
+    method public String? getMobile();
+    method public String? getOpeningHours();
+    method public String? getPersonalTitle();
+    method public String? getPhone();
+    method public String? getWebsite();
+    field public static final de.wingu.sdk.data.api.model.components.contact.ContactComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "contact";
+  }
+
+  public static final class ContactComponent.Companion {
+  }
+
+  public final class ExternalLinks implements android.os.Parcelable {
+    ctor public ExternalLinks(String id, String? facebookName, String? facebookUrl, String? twitterName, String? twitterUrl, String? googlePlusName, String? googlePlusUrl, String? yelpName, String? yelpUrl);
+    method public String? getFacebookName();
+    method public String? getFacebookUrl();
+    method public String? getGooglePlusName();
+    method public String? getGooglePlusUrl();
+    method public String getId();
+    method public String? getTwitterName();
+    method public String? getTwitterUrl();
+    method public String? getYelpName();
+    method public String? getYelpUrl();
+  }
+
+}
+
+package de.wingu.sdk.data.api.model.components.coupon {
+
+  public final class Barcode implements android.os.Parcelable {
+    ctor public Barcode(String? type, String? value);
+    method public String? getType();
+    method public String? getValue();
+  }
+
+  public final class CouponComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public CouponComponent(String id, de.wingu.sdk.data.api.model.components.coupon.Barcode? barcode, String? description, String? disclaimer, String? header, de.wingu.sdk.data.api.model.components.common.Image? backgroundImage, String discriminator);
+    method public de.wingu.sdk.data.api.model.components.common.Image? getBackgroundImage();
+    method public de.wingu.sdk.data.api.model.components.coupon.Barcode? getBarcode();
+    method public String? getDescription();
+    method public String? getDisclaimer();
+    method public String getDiscriminator();
+    method public String? getHeader();
+    method public String getId();
+    field public static final de.wingu.sdk.data.api.model.components.coupon.CouponComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "coupon";
+  }
+
+  public static final class CouponComponent.Companion {
+  }
+
+}
+
+package de.wingu.sdk.data.api.model.components.files {
+
+  public final class FileData implements android.os.Parcelable {
+    ctor public FileData(String id, String name, String fileUrl, int size);
+    method public String getFileUrl();
+    method public String getId();
+    method public String getName();
+    method public int getSize();
+  }
+
+  public final class FilesComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public FilesComponent(String id, String discriminator, java.util.ArrayList<de.wingu.sdk.data.api.model.components.files.FileData> files);
+    method public String getDiscriminator();
+    method public java.util.ArrayList<de.wingu.sdk.data.api.model.components.files.FileData> getFiles();
+    method public String getId();
+    field public static final de.wingu.sdk.data.api.model.components.files.FilesComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "files";
+  }
+
+  public static final class FilesComponent.Companion {
+  }
+
+}
+
+package de.wingu.sdk.data.api.model.components.form {
+
+  public enum ElementType {
+    enum_constant public static final de.wingu.sdk.data.api.model.components.form.ElementType DATE;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.form.ElementType DATETIME;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.form.ElementType EMAIL;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.form.ElementType MULTI_SELECT;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.form.ElementType RADIO_SELECT;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.form.ElementType TEXT;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.form.ElementType TIME;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.form.ElementType UNKNOWN;
+    enum_constant public static final de.wingu.sdk.data.api.model.components.form.ElementType URL;
+  }
+
+  public final class FormComponent implements de.wingu.sdk.data.api.model.components.Component android.os.Parcelable {
+    ctor public FormComponent(String id, String discriminator, java.util.List<? extends de.wingu.sdk.data.api.model.components.form.FormElement> elements, de.wingu.sdk.data.api.model.components.form.FormResubmit resubmit, String title);
+    method public String getDiscriminator();
+    method public java.util.List<de.wingu.sdk.data.api.model.components.form.FormElement> getElements();
+    method public String getId();
+    method public de.wingu.sdk.data.api.model.components.form.FormResubmit getResubmit();
+    method public String getTitle();
+    field public static final de.wingu.sdk.data.api.model.components.form.FormComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "form";
+  }
+
+  public static final class FormComponent.Companion {
+  }
+
+  public interface FormElement extends android.os.Parcelable {
+    method public String getDiscriminator();
+    method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
+    method public String getLabel();
+    method public String getName();
+    method public boolean getPersistent();
+    method public boolean getRequired();
+    property public abstract String discriminator;
+    property public abstract String label;
+    property public abstract String name;
+    property public abstract boolean persistent;
+    property public abstract boolean required;
+  }
+
+  public final class FormResubmit implements android.os.Parcelable {
+    ctor public FormResubmit(boolean allowed, Integer? allowedAfterSeconds);
+    method public boolean getAllowed();
+    method public Integer? getAllowedAfterSeconds();
+  }
+
+  public final class InputFormElement implements de.wingu.sdk.data.api.model.components.form.FormElement {
+    ctor public InputFormElement(String discriminator, String label, String name, boolean required, boolean persistent, String type);
+    method public String getDiscriminator();
+    method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
+    method public String getLabel();
+    method public String getName();
+    method public boolean getPersistent();
+    method public boolean getRequired();
+    method public String getType();
+  }
+
+  public final class SelectFormElement implements de.wingu.sdk.data.api.model.components.form.FormElement {
+    ctor public SelectFormElement(String discriminator, String label, String name, boolean required, boolean multiple, java.util.List<de.wingu.sdk.data.api.model.components.form.SelectFormOption> options, boolean persistent);
+    method public String getDiscriminator();
+    method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
+    method public String getLabel();
+    method public boolean getMultiple();
+    method public String getName();
+    method public java.util.List<de.wingu.sdk.data.api.model.components.form.SelectFormOption> getOptions();
+    method public boolean getPersistent();
+    method public boolean getRequired();
+  }
+
+  public final class SelectFormOption implements android.os.Parcelable {
+    ctor public SelectFormOption(String label, String value);
+    method public String getLabel();
+    method public String getValue();
+  }
+
+  public final class UnknownFormElement implements de.wingu.sdk.data.api.model.components.form.FormElement {
+    ctor public UnknownFormElement(String discriminator, String label, String name, boolean required, boolean persistent);
+    method public String getDiscriminator();
+    method public de.wingu.sdk.data.api.model.components.form.ElementType getElementType();
+    method public String getLabel();
+    method public String getName();
+    method public boolean getPersistent();
+    method public boolean getRequired();
+  }
+
+}
+
+package de.wingu.sdk.data.api.model.components.image {
+
+  public final class ImageEntry implements android.os.Parcelable {
+    ctor public ImageEntry(String id, String? caption, int position, de.wingu.sdk.data.api.model.components.common.Image image);
+    method public String? getCaption();
+    method public String getId();
+    method public de.wingu.sdk.data.api.model.components.common.Image getImage();
+    method public int getPosition();
+  }
+
+  public final class ImageGalleryComponent implements de.wingu.sdk.data.api.model.components.Component {
+    ctor public ImageGalleryComponent(String id, java.util.ArrayList<de.wingu.sdk.data.api.model.components.image.ImageEntry>? images, String discriminator);
+    method public String getDiscriminator();
+    method public String getId();
+    method public java.util.ArrayList<de.wingu.sdk.data.api.model.components.image.ImageEntry>? getImages();
+    field public static final de.wingu.sdk.data.api.model.components.image.ImageGalleryComponent.Companion! Companion;
+    field public static final String DISCRIMINATOR = "image_gallery";
+  }
+
+  public static final class ImageGalleryComponent.Companion {
+  }
+
+}
+

@@ -25,11 +25,13 @@ Returns null if the channel is not nearby, or is not a beacon channel.</p>
 </tr>
 <tr>
 <td>
-<p><a href="get-channel-events.html">getChannelEvents</a></p>
+<p><a href="get-channel-event-publisher.html">getChannelEventPublisher</a></p>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getChannelEvents</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://reactivex.io/RxJava/1.x/javadoc/rx/Observable.html"><span class="identifier">Observable</span></a><span class="symbol">&lt;</span><a href="../../de.wingu.sdk.data.api.model/-channel-events/index.html"><span class="identifier">ChannelEvents</span></a><span class="symbol">&gt;</span></code>
-<p>Emits channel events with related channels.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getChannelEventPublisher</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Publisher</span><span class="symbol">&lt;</span><a href="../../de.wingu.sdk.data.api.model/-channel-events/index.html"><span class="identifier">ChannelEvents</span></a><span class="symbol">&gt;</span></code>
+<p>Emits channel events.
+When a channel (e.g. beacon or geofence) has been discovered, updated or lost,
+you will receive a callback.</p>
 </td>
 </tr>
 <tr>
@@ -67,6 +69,20 @@ not cause rescan, it returns last scan's results.</p>
 <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">rescan</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Triggers a fresh scan for nearby channels.
 The use of this method is optional.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../de.wingu.sdk_rxjava2/get-channel-events.html">getChannelEvents</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">NearbyChannelObserver</span></a><span class="symbol">.</span><span class="identifier">getChannelEvents</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flowable</span><span class="symbol">&lt;</span><a href="../../de.wingu.sdk.data.api.model/-channel-events/index.html"><span class="identifier">ChannelEvents</span></a><span class="symbol">&gt;</span></code>
+<p>Emits channel events with related channels.</p>
 </td>
 </tr>
 </tbody>

@@ -6,7 +6,7 @@
 
 # wingu-android-sdk
 
-wingu-android-sdk is an SDK for [wingu.de](www.wingu.de) service. This framework will allow you to find nearby beacons and geofences at user's location, and display content attached to those channels. It also supports discovering content via QR codes and NFC tags.
+wingu-android-sdk is an SDK for [wingu.de](http://www.wingu.de) service. This framework will allow you to find nearby beacons and geofences at user's location, and display content attached to those channels. It also supports discovering content via QR codes and NFC tags.
 
 # Table of contents
 
